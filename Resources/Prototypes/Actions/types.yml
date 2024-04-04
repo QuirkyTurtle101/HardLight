@@ -336,40 +336,11 @@
       event: !type:ToggleActionEvent
 
 - type: entity
-  id: FakeMindShieldToggleAction
-  name: '[color=green]Toggle Fake Mindshield[/color]'
-  description: Turn the Fake Mindshield implant's transmission on/off
+  id: ActionToggleDome
+  name: Toggle energy dome
+  description: Turn the energy barrier on or off.
+  noSpawn: true
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_fakemindshield.rsi, state: icon }
-    iconOn: { sprite: Interface/Actions/actions_fakemindshield.rsi, state: icon-on }
-    itemIconStyle: NoItem
-    useDelay: 1
-    event: !type:FakeMindShieldToggleEvent
-
-- type: entity
-  id: ActionToggleParamedicSiren
-  name: Toggle Paramedic Siren
-  description: Toggles the paramedic siren on and off.
-  components:
-  - type: InstantAction
-    icon:
-      sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
-      state: icon-siren
-    useDelay: 1
-    itemIconStyle: BigAction
+    icon: { sprite: Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
     event: !type:ToggleActionEvent
-
-# Generic toggle for sprite-state swapping via SpriteStateToggleComponent
-- type: entity
-  id: ActionToggleSpriteState
-  name: toggle balls
-  description: Deploy if boy
-  components:
-  - type: InstantAction
-    # Keep a short delay to avoid rapid spam while still feeling responsive
-    useDelay: 1
-    # Generic toggle icons; override per-item if you want custom art
-    icon: Interface/Actions/nuts/nuts.png
-    iconOn: Interface/Actions/nuts/nuts.png
-    event: !type:SpriteStateToggleActionEvent
