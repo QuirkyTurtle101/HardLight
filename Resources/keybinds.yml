@@ -1,4 +1,4 @@
-version: 1 # Not used right now, whatever.
+﻿version: 1 # Not used right now, whatever.
 binds:
 - function: UIClick
   type: State
@@ -66,6 +66,7 @@ binds:
 - function: ShuttleBrake
   type: State
   key: Space
+# Camera
 - function: CameraRotateLeft
   type: State
   key: NumpadNum7
@@ -170,9 +171,6 @@ binds:
 - function: RotateStoredItem
   type: State
   key: MouseRight
-- function: SaveItemLocation
-  type: State
-  key: MouseMiddle
 - function: Drop
   type: State
   key: Q
@@ -186,9 +184,9 @@ binds:
 - function: OpenCharacterMenu
   type: State
   key: C
-- function: OpenEmotesMenu
+- function: OpenLanguageMenu
   type: State
-  key: Y
+  key: L
 - function: TextCursorSelect
   # TextCursorSelect HAS to be above ExamineEntity
   # So that LineEdit receives it correctly.
@@ -257,13 +255,9 @@ binds:
   type: State
   key: V
   mod1: Shift
-- function: ToggleStanding # EE
+- function: OfferItem
   type: State
-  key: R
-- function: ToggleCrawlingUnder # EE
-  type: State
-  mod1: Shift
-  key: R
+  key: F
 - function: ShowDebugConsole
   type: State
   key: Tilde
@@ -275,16 +269,6 @@ binds:
   type: State
   key: MouseMiddle
   canFocus: true
-- function: RotateObjectClockwise
-  type: State
-  key: R
-- function: RotateObjectCounterclockwise
-  type: State
-  key: R
-  mod1: Shift
-- function: FlipObject
-  type: State
-  key: F
 - function: TextCursorLeft
   type: State
   key: Left
@@ -471,9 +455,6 @@ binds:
 - function: OpenDecalSpawnWindow
   type: State
   key: F8
-- function: ToggleRoundEndSummaryWindow
-  type: Toggle
-  key: F9
 - function: OpenSandboxWindow
   type: State
   key: B
@@ -505,19 +486,15 @@ binds:
 - function: ArcadeUp
   type: State
   key: Up
-  priority: -1
 - function: ArcadeDown
   type: State
   key: Down
-  priority: -1
 - function: ArcadeLeft
   type: State
   key: Left
-  priority: -1
 - function: ArcadeRight
   type: State
   key: Right
-  priority: -1
 - function: Arcade1
   type: State
   key: Space
@@ -560,84 +537,3 @@ binds:
 - function: Hotbar9
   type: State
   key: Num9
-- function: HotbarShift0
-  type: State
-  key: Num0
-  mod1: Shift
-- function: HotbarShift1
-  type: State
-  key: Num1
-  mod1: Shift
-- function: HotbarShift2
-  type: State
-  key: Num2
-  mod1: Shift
-- function: HotbarShift3
-  type: State
-  key: Num3
-  mod1: Shift
-- function: HotbarShift4
-  type: State
-  key: Num4
-  mod1: Shift
-- function: HotbarShift5
-  type: State
-  key: Num5
-  mod1: Shift
-- function: HotbarShift6
-  type: State
-  key: Num6
-  mod1: Shift
-- function: HotbarShift7
-  type: State
-  key: Num7
-  mod1: Shift
-- function: HotbarShift8
-  type: State
-  key: Num8
-  mod1: Shift
-- function: HotbarShift9
-  type: State
-  key: Num9
-  mod1: Shift
-- function: MappingUnselect
-  type: State
-  key: MouseRight
-  canFocus: true
-- function: SaveMap
-  type: State
-  key: S
-  mod1: Control
-- function: MappingEnablePick
-  type: State
-  key: Num5
-- function: MappingEnableDelete
-  type: State
-  key: Num6
-- function: MappingPick
-  type: State
-  key: MouseLeft
-  canFocus: true
-- function: MappingRemoveDecal
-  type: State
-  key: MouseLeft
-  canFocus: true
-- function: MappingCancelEraseDecal
-  type: State
-  key: MouseRight
-  canFocus: true
-- function: MappingOpenContextMenu
-  type: State
-  key: MouseRight
-  canFocus: true
-# region Frontier
-- function: SwapHandsPrevious
-  type: State
-  key: X
-  mod1: Shift
-# endregion Frontier
-# region EE
-- function: LookUp
-  type: State
-  key: Space
-# endregion EE

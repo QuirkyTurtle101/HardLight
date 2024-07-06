@@ -32,22 +32,17 @@ namespace Content.Client.Input
             common.AddFunction(ContentKeyFunctions.ToggleFullscreen);
             common.AddFunction(ContentKeyFunctions.MoveStoredItem);
             common.AddFunction(ContentKeyFunctions.RotateStoredItem);
-            common.AddFunction(ContentKeyFunctions.SaveItemLocation);
             common.AddFunction(ContentKeyFunctions.Point);
             common.AddFunction(ContentKeyFunctions.ZoomOut);
             common.AddFunction(ContentKeyFunctions.ZoomIn);
             common.AddFunction(ContentKeyFunctions.ResetZoom);
             common.AddFunction(ContentKeyFunctions.InspectEntity);
-            common.AddFunction(ContentKeyFunctions.ToggleRoundEndSummaryWindow);
 
             // Not in engine, because engine cannot check for sanbox/admin status before starting placement.
             common.AddFunction(ContentKeyFunctions.EditorCopyObject);
 
             // Not in engine because the engine doesn't understand what a flipped object is
             common.AddFunction(ContentKeyFunctions.EditorFlipObject);
-
-            // Not in engine so that the RCD can rotate objects
-            common.AddFunction(EngineKeyFunctions.EditorRotateObject);
 
             var human = contexts.GetContext("human");
             human.AddFunction(EngineKeyFunctions.MoveUp);
@@ -56,12 +51,11 @@ namespace Content.Client.Input
             human.AddFunction(EngineKeyFunctions.MoveRight);
             human.AddFunction(EngineKeyFunctions.Walk);
             human.AddFunction(ContentKeyFunctions.SwapHands);
-            human.AddFunction(ContentKeyFunctions.SwapHandsPrevious); // Frontier
             human.AddFunction(ContentKeyFunctions.Drop);
             human.AddFunction(ContentKeyFunctions.UseItemInHand);
             human.AddFunction(ContentKeyFunctions.AltUseItemInHand);
             human.AddFunction(ContentKeyFunctions.OpenCharacterMenu);
-            human.AddFunction(ContentKeyFunctions.OpenEmotesMenu);
+            human.AddFunction(ContentKeyFunctions.OpenLanguageMenu);
             human.AddFunction(ContentKeyFunctions.ActivateItemInWorld);
             human.AddFunction(ContentKeyFunctions.ThrowItemInHand);
             human.AddFunction(ContentKeyFunctions.AltActivateItemInWorld);
@@ -72,16 +66,10 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.OpenInventoryMenu);
             human.AddFunction(ContentKeyFunctions.SmartEquipBackpack);
             human.AddFunction(ContentKeyFunctions.SmartEquipBelt);
-            human.AddFunction(ContentKeyFunctions.SmartEquipWallet); // Frontier
             human.AddFunction(ContentKeyFunctions.OpenBackpack);
             human.AddFunction(ContentKeyFunctions.OpenBelt);
-            human.AddFunction(ContentKeyFunctions.ToggleStanding); // EE
-            human.AddFunction(ContentKeyFunctions.ToggleCrawlingUnder); // EE
-            human.AddFunction(ContentKeyFunctions.OpenWallet); // Frontier
+            human.AddFunction(ContentKeyFunctions.OfferItem);
             human.AddFunction(ContentKeyFunctions.MouseMiddle);
-            human.AddFunction(ContentKeyFunctions.RotateObjectClockwise);
-            human.AddFunction(ContentKeyFunctions.RotateObjectCounterclockwise);
-            human.AddFunction(ContentKeyFunctions.FlipObject);
             human.AddFunction(ContentKeyFunctions.ArcadeUp);
             human.AddFunction(ContentKeyFunctions.ArcadeDown);
             human.AddFunction(ContentKeyFunctions.ArcadeLeft);
@@ -89,19 +77,6 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.Arcade1);
             human.AddFunction(ContentKeyFunctions.Arcade2);
             human.AddFunction(ContentKeyFunctions.Arcade3);
-            human.AddFunction(ContentKeyFunctions.LookUp); // EE
-            // Shitmed Change Start - TODO: Add hands, feet and groin targeting.
-            human.AddFunction(ContentKeyFunctions.TargetHead);
-            human.AddFunction(ContentKeyFunctions.TargetTorso);
-            human.AddFunction(ContentKeyFunctions.TargetLeftArm);
-            human.AddFunction(ContentKeyFunctions.TargetLeftHand);
-            human.AddFunction(ContentKeyFunctions.TargetRightArm);
-            human.AddFunction(ContentKeyFunctions.TargetRightHand);
-            human.AddFunction(ContentKeyFunctions.TargetLeftLeg);
-            human.AddFunction(ContentKeyFunctions.TargetLeftFoot);
-            human.AddFunction(ContentKeyFunctions.TargetRightLeg);
-            human.AddFunction(ContentKeyFunctions.TargetRightFoot);
-            // Shitmed Change End
 
             // actions should be common (for ghosts, mobs, etc)
             common.AddFunction(ContentKeyFunctions.OpenActionsMenu);
@@ -118,7 +93,6 @@ namespace Content.Client.Input
             aghost.AddFunction(EngineKeyFunctions.MoveRight);
             aghost.AddFunction(EngineKeyFunctions.Walk);
             aghost.AddFunction(ContentKeyFunctions.SwapHands);
-            aghost.AddFunction(ContentKeyFunctions.SwapHandsPrevious); // Frontier
             aghost.AddFunction(ContentKeyFunctions.Drop);
             aghost.AddFunction(ContentKeyFunctions.UseItemInHand);
             aghost.AddFunction(ContentKeyFunctions.AltUseItemInHand);
@@ -140,7 +114,6 @@ namespace Content.Client.Input
             common.AddFunction(ContentKeyFunctions.OpenSandboxWindow);
             common.AddFunction(ContentKeyFunctions.OpenTileSpawnWindow);
             common.AddFunction(ContentKeyFunctions.OpenDecalSpawnWindow);
-            common.AddFunction(ContentKeyFunctions.OpenConsentWindow); // Floofstation
             common.AddFunction(ContentKeyFunctions.OpenAdminMenu);
             common.AddFunction(ContentKeyFunctions.OpenGuidebook);
         }
