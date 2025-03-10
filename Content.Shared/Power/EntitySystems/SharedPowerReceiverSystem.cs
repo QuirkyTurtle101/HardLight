@@ -33,21 +33,40 @@ public abstract class SharedPowerReceiverSystem : EntitySystem
         Dirty(uid, receiver);
     }
 
-    // Frontier: upstream (#28984) - MIT
-    public bool TryTogglePower(EntityUid uid, bool playSwitchSound = true, SharedApcPowerReceiverComponent? receiver = null, EntityUid? user = null)
-    {
-        if (HasComp<EmpDisabledComponent>(uid))
-            return false;
-
-        return TogglePower(uid, playSwitchSound, receiver, user);
-    }
-    // End Frontier: upstream (#28984) - MIT
-
     /// <summary>
     /// Turn this machine on or off.
     /// Returns true if we turned it on, false if we turned it off.
     /// </summary>
-    protected bool TogglePower(EntityUid uid, bool playSwitchSound = true, SharedApcPowerReceiverComponent? receiver = null, EntityUid? user = null) // Frontier: public<protected (intentional with upstream EMP cherry-pick, should show breaks)
+    public bool TogglePower(EntityUid uid, bool playSwitchSound = true, SharedApcPowerReceiverComponent? receiver = null, EntityUid? user = null)
+    {
+        if (!ResolveApc(uid, ref receiver))
+            return true;
+
+        // it'll save a lot of confusion if 'always powered' means 'always powered'
+        if (!receiver.NeedsPower)
+        {
+            SetPowerDisabled(uid, false, receiver);
+            return true;
+        }
+
+        SetPowerDisabled(uid, !receiver.PowerDisabled, receiver);
+
+        if (user != null)
+            _adminLogger.Add(LogType.Action, LogImpact.Low, $"{ToPrettyString(user.Value):player} hit power button on {ToPrettyString(uid)}, it's now {(!receiver.PowerDisabled ? "on" : "off")}");
+
+        if (playSwitchSound)
+        {
+            _audio.PlayPredicted(new SoundPathSpecifier("/Audio/Machines/machine_switch.ogg"), uid, user: user,
+                AudioParams.Default.WithVolume(-2f));
+        }
+
+        return !receiver.PowerDisabled; // i.e. PowerEnabled
+    }
+
+    /// <summary>
+    /// Checks if entity is APC-powered device, and if it have power.
+    /// </summary>
+    public bool TogglePower(EntityUid uid, bool playSwitchSound = true, SharedApcPowerReceiverComponent? receiver = null, EntityUid? user = null) // Frontier: public<protected (intentional with upstream EMP cherry-pick, should show breaks)
     {
         if (!ResolveApc(uid, ref receiver))
             return true;
