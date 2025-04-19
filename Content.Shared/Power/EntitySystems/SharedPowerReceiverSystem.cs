@@ -78,8 +78,8 @@ public abstract class SharedPowerReceiverSystem : EntitySystem
         // NOOP on server because client has 0 idea of load so we can't raise it properly in shared.
     }
 
-    /// <summary>
-    /// Checks if entity is APC-powered device, and if it have power.
+	/// <summary>
+	/// Checks if entity is APC-powered device, and if it have power.
     /// </summary>
     public bool IsPowered(Entity<SharedApcPowerReceiverComponent?> entity)
     {

@@ -86,7 +86,7 @@ public sealed class DumpableSystem : EntitySystem
         if (!TryComp<StorageComponent>(uid, out var storage) || !storage.Container.ContainedEntities.Any())
             return;
 
-        if (HasComp<DisposalUnitComponent>(args.Target) || HasComp<SmartFridgeComponent>(args.Target)) // DeltaV - ough why do you not use events for this)
+        if (HasComp<DisposalUnitComponent>(args.Target))
         {
             UtilityVerb verb = new()
             {
@@ -165,7 +165,7 @@ public sealed class DumpableSystem : EntitySystem
 
         var dumped = false;
 
-        if (HasComp<DisposalUnitComponent>(target))
+        if (HasComp<DisposalUnitComponent>(args.Args.Target))
         {
             dumped = true;
 
