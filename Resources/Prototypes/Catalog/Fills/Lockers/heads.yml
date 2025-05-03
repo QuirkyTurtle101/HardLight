@@ -17,7 +17,9 @@
     - id: RubberStampApproved
     - id: RubberStampDenied
     - id: RubberStampQm
-    - id: AstroNavCartridge # Frontier
+    - id: AstroNavCartridge
+    - id: ClothingHandsKnuckleDustersQM
+    - id: MailTeleporterMachineCircuitboard
     - id: ClothingBeltUtilityEngineering # Frontier
 
 - type: entity

@@ -186,3 +186,11 @@
   description: A cardboard tube shaped into a rough sword.  Give it a swing, you know you want to.
   icon: { sprite: Objects/Fun/card_sword.rsi, state: icon }
   objectType: Item
+
+- type: construction
+  id: ClothingHandsKnuckleDustersBrass
+  graph: ClothingHandsKnuckleDustersBrass
+  startNode: start
+  targetNode: icon
+  category: construction-category-weapons
+  objectType: Item
