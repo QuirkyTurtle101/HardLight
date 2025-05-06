@@ -19,6 +19,7 @@
     - Oni # DeltaV
     - Feroxi # Flooftier
     - Resomi
+    - Protogen # Monolith
     - Avali
 
 - type: guideEntry
@@ -66,7 +67,7 @@
   id: IPC
   name: species-name-ipc
   text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"
-  
+
 - type: guideEntry
   id: Resomi
   name: species-name-resomi
@@ -78,3 +79,7 @@
   text: "/ServerInfo/Guidebook/Mobs/Avali.xml"
 
 
+- type: guideEntry
+  id: Protogen
+  name: species-name-protogen
+  text: "/ServerInfo/Guidebook/Mobs/Protogen.xml"
