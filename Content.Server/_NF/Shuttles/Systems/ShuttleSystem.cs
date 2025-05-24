@@ -13,7 +13,8 @@ namespace Content.Server.Shuttles.Systems;
 public sealed partial class ShuttleSystem
 {
     private const float SpaceFrictionStrength = 0.0015f;
-    private const float AnchorDampeningStrength = 0.5f;
+    private const float DampenDampingStrength = 0.05f; // FRONTIER MERGE: this should be valuable
+    private const float AnchorDampingStrength = 0.5f;
     private void NfInitialize()
     {
         SubscribeLocalEvent<ShuttleConsoleComponent, SetInertiaDampeningRequest>(OnSetInertiaDampening);
@@ -44,13 +45,21 @@ public sealed partial class ShuttleSystem
         var modifier = mode switch
         {
             InertiaDampeningMode.Off => SpaceFrictionStrength,
-            InertiaDampeningMode.Dampen => shuttleComponent.BodyModifier,
-            InertiaDampeningMode.Anchor => AnchorDampeningStrength,
-            _ => shuttleComponent.BodyModifier,
+            InertiaDampeningMode.Dampen => DampenDampingStrength,
+            InertiaDampeningMode.Anchor => AnchorDampingStrength,
+            _ => DampenDampingStrength, // other values: default to some sane behaviour (assume normal dampening)
         };
 
-        shuttleComponent.DampingModifier = modifier;
-        Dirty(transform.GridUid.Value, shuttleComponent);
+        var angularDampeningStrength = mode switch
+        {
+            InertiaDampeningMode.Off => SpaceFrictionStrength,
+            InertiaDampeningMode.Dampen => DampenDampingStrength,
+            InertiaDampeningMode.Anchor => AnchorDampingStrength,
+            _ => DampenDampingStrength, // other values: default to some sane behaviour (assume normal dampening)
+        };
+
+        _physics.SetLinearDamping(transform.GridUid.Value, physicsComponent, linearDampeningStrength);
+        _physics.SetAngularDamping(transform.GridUid.Value, physicsComponent, angularDampeningStrength);
         _console.RefreshShuttleConsoles(transform.GridUid.Value);
         return true;
     }
@@ -83,9 +92,7 @@ public sealed partial class ShuttleSystem
         if (!EntityManager.TryGetComponent(xform.GridUid, out ShuttleComponent? shuttleComponent))
             return InertiaDampeningMode.Dampen;
 
-        var current = shuttleComponent.DampingModifier;
-
-        if (current >= AnchorDampeningStrength)
+        if (physicsComponent.LinearDamping >= AnchorDampingStrength)
             return InertiaDampeningMode.Anchor;
         else if (current <= SpaceFrictionStrength)
             return InertiaDampeningMode.Off;
@@ -161,5 +168,4 @@ public sealed partial class ShuttleSystem
         _console.RefreshShuttleConsoles(gridUid);
         Dirty(gridUid, iffComponent);
     }
-
 }
