@@ -14,13 +14,13 @@ namespace Content.Shared._DV.SmartFridge;
 
 public sealed class SmartFridgeSystem : EntitySystem
 {
+    [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly AccessReaderSystem _accessReader = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IGameTiming _timing = default!; // Frontier
 
     public override void Initialize()
     {
@@ -33,7 +33,22 @@ public sealed class SmartFridgeSystem : EntitySystem
             sub =>
             {
                 sub.Event<SmartFridgeDispenseItemMessage>(OnDispenseItem);
+                sub.Event<SmartFridgeRemoveEntryMessage>(OnRemoveEntry);
             });
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        var query = EntityQueryEnumerator<SmartFridgeComponent>();
+        while (query.MoveNext(out var uid, out var comp))
+        {
+            if (!comp.Ejecting || _timing.CurTime <= comp.EjectEnd)
+                continue;
+            comp.EjectEnd = null;
+            Dirty(uid, comp);
+        }
     }
 
     private void OnInteractUsing(Entity<SmartFridgeComponent> ent, ref InteractUsingEvent args)
@@ -46,9 +61,6 @@ public sealed class SmartFridgeSystem : EntitySystem
 
         if (!Allowed(ent, args.User))
             return;
-
-        if (container.Count >= ent.Comp.MaxContainedCount) // Frontier
-            return; // Frontier
 
         if (!_hands.TryDrop(args.User, args.Used))
             return;
@@ -72,13 +84,6 @@ public sealed class SmartFridgeSystem : EntitySystem
         if (ent.Comp.ContainedEntries.TryGetValue(key, out var contained))
         {
             contained.Remove(GetNetEntity(args.Entity));
-            // Frontier: remove listing when empty
-            if (contained.Count <= 0)
-            {
-                ent.Comp.ContainedEntries.Remove(key);
-                ent.Comp.Entries.Remove(key);
-            }
-            // End Frontier: remove listing when empty
         }
 
         Dirty(ent);
@@ -96,10 +101,7 @@ public sealed class SmartFridgeSystem : EntitySystem
 
     private void OnDispenseItem(Entity<SmartFridgeComponent> ent, ref SmartFridgeDispenseItemMessage args)
     {
-        if (!_timing.IsFirstTimePredicted) // Frontier: less prediction jank in the UI
-            return; // Frontier
-
-        if (!Allowed(ent, args.Actor))
+        if (!_timing.IsFirstTimePredicted || ent.Comp.Ejecting || !Allowed(ent, args.Actor))
             return;
 
         if (!ent.Comp.ContainedEntries.TryGetValue(args.Entry, out var contained))
@@ -116,13 +118,7 @@ public sealed class SmartFridgeSystem : EntitySystem
 
             _audio.PlayPredicted(ent.Comp.SoundVend, ent, args.Actor);
             contained.Remove(item);
-            // Frontier: remove listing when empty
-            if (contained.Count <= 0)
-            {
-                ent.Comp.ContainedEntries.Remove(args.Entry);
-                ent.Comp.Entries.Remove(args.Entry);
-            }
-            // End Frontier: remove listing when empty
+            ent.Comp.EjectEnd = _timing.CurTime + ent.Comp.EjectCooldown;
             Dirty(ent);
             return;
         }
@@ -131,32 +127,17 @@ public sealed class SmartFridgeSystem : EntitySystem
         _popup.PopupPredicted(Loc.GetString("smart-fridge-component-try-eject-out-of-stock"), ent, args.Actor);
     }
 
-    // Frontier: hacky function to insert an object
-    public bool TryAddItem(Entity<SmartFridgeComponent> ent, EntityUid item, EntityUid? user)
+    private void OnRemoveEntry(Entity<SmartFridgeComponent> ent, ref SmartFridgeRemoveEntryMessage args)
     {
-        if (!_container.TryGetContainer(ent, ent.Comp.Container, out var container))
-            return false;
+        if (!_timing.IsFirstTimePredicted || !Allowed(ent, args.Actor))
+            return;
 
-        if (_whitelist.IsWhitelistFail(ent.Comp.Whitelist, item) || _whitelist.IsBlacklistPass(ent.Comp.Blacklist, item))
-            return false;
+        if (ent.Comp.ContainedEntries.TryGetValue(args.Entry, out var contained)
+            && contained.Count > 0
+            || !ent.Comp.Entries.Contains(args.Entry))
+            return;
 
-        if (user is { Valid: true } userUid && !Allowed(ent, userUid))
-            return false;
-
-        if (container.Count >= ent.Comp.MaxContainedCount)
-            return false;
-
-        _audio.PlayPredicted(ent.Comp.InsertSound, ent, user);
-        _container.Insert(item, container);
-        var key = new SmartFridgeEntry(Identity.Name(item, EntityManager));
-        if (!ent.Comp.Entries.Contains(key))
-            ent.Comp.Entries.Add(key);
-        ent.Comp.ContainedEntries.TryAdd(key, new());
-        var entries = ent.Comp.ContainedEntries[key];
-        if (!entries.Contains(GetNetEntity(item)))
-            entries.Add(GetNetEntity(item));
+        ent.Comp.Entries.Remove(args.Entry);
         Dirty(ent);
-        return true;
     }
-    // End Frontier: hacky function to insert an object
 }
