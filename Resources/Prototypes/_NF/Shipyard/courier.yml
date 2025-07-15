@@ -1,6 +1,6 @@
 # Author Info
-# GitHub: Shodhans
-# Discord: ???
+# GitHub: dustylens (https://github.com/dustylens)
+# Discord: dustylens
 
 # Maintainer Info
 # GitHub: dustylens (https://github.com/dustylens)
@@ -9,32 +9,31 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Comet
+  id: Courier
   parent: BaseVessel
-  name: NT Comet
-  description: A mining and construction vessel intended to help build or repair quickly.
-  price: 62000 # 47022 0.3 61128.6 
-  category: Medium
+  name: FSB Courier
+  description: A compact cargo ship designed for hauling shipments.
+  price: 31000 # 19390 0.06 20553.4 + 10k EMU rental because Whatstone is a reasonable person who makes reasonable choices. 
+  category: Small
   group: Shipyard
-  shuttlePath: /Maps/_NF/Shuttles/comet.yml
-  guidebookPage: ShipyardComet
+  shuttlePath: /Maps/_NF/Shuttles/courier.yml
+  guidebookPage: ShipyardCourier
   class:
-  - Salvage
-  - Engineering
+  - Cargo
   engine:
-  - Uranium
+  - Plasma
 
 - type: gameMap
-  id: Comet
-  mapName: 'NT Comet'
-  mapPath: /Maps/_NF/Shuttles/comet.yml
+  id: Courier
+  mapName: 'FSB Courier'
+  mapPath: /Maps/_NF/Shuttles/courier.yml
   minPlayers: 0
-  stations: 
-    Comet:
+  stations:
+    Courier:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Comet {1}'
+          mapNameTemplate: 'Courier {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
