@@ -897,7 +897,7 @@
 - type: entity
   parent: ClothingHeadHelmetHardsuitFSB
   id: ClothingHeadHelmetHardsuitFSC
-  name: Far Star Commerce voidsuit helmet
+  name: far star corporation voidsuit helmet
   description: A lightweight suit helmet that doesn't restrict your head movements. It has a light!
   components:
   - type: Sprite
