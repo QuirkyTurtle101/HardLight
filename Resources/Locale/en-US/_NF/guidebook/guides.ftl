@@ -10,6 +10,8 @@ guide-entry-sector-topology = Sector Topology
 guide-entry-cargo-hauling = Cargo Hauling
 guide-entry-shipyard = Shipyard
 guide-entry-frontier-rules = Server Rules
+guide-entry-frontier-definitions = Definitions
+guide-entry-preflightchecklist = Preflight Checklist
 
 # Engineering entries
 guide-entry-offshore-gas-mining = Offshore Gas Mining
