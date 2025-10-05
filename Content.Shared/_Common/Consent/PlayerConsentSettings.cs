@@ -1,15 +1,21 @@
+// SPDX-FileCopyrightText: Copyright (c) 2024-2025 Space Wizards Federation
+// SPDX-License-Identifier: MIT
+
 using System.Linq;
-using Content.Shared.Floofstation; // Flooftier
+using Content.Shared._Common.CCVar;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Consent;
+namespace Content.Shared._Common.Consent;
 
 [Serializable, NetSerializable]
 public sealed class PlayerConsentSettings
 {
+    [ViewVariables]
     public string Freetext;
+
+    [ViewVariables]
     public Dictionary<ProtoId<ConsentTogglePrototype>, string> Toggles;
 
     public PlayerConsentSettings()
@@ -28,7 +34,7 @@ public sealed class PlayerConsentSettings
 
     public void EnsureValid(IConfigurationManager configManager, IPrototypeManager prototypeManager)
     {
-        var maxLength = configManager.GetCVar(FloofCCVars.ConsentFreetextMaxLength); // Flooftier
+        var maxLength = configManager.GetCVar(ConsentSystemCCVars.ConsentFreetextMaxLength);
         Freetext = Freetext.Trim();
         if (Freetext.Length > maxLength)
             Freetext = Freetext.Substring(0, maxLength);

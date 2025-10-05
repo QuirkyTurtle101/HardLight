@@ -1,3 +1,4 @@
+using Content.Server._Common.Consent;
 using Content.Server._NF.Auth;
 using Content.Server.Acz;
 using Content.Server.Administration;
@@ -5,7 +6,6 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Server.Chat.Managers;
-using Content.Server.Consent; // Floofstation
 using Content.Server.Connection;
 using Content.Server.Database;
 using Content.Server.EUI;
