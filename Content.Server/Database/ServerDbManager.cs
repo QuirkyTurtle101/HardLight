@@ -254,13 +254,6 @@ namespace Content.Server.Database
 
         #endregion
 
-        #region Consent Settings
-
-        Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings);
-        Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId);
-
-        #endregion
-
         #region Whitelist
 
         Task<bool> GetWhitelistStatusAsync(NetUserId player);
@@ -342,6 +335,15 @@ namespace Content.Server.Database
         Task AddGhostRoleWhitelist(Guid player, ProtoId<GhostRolePrototype> ghostRole); // Frontier
         Task<bool> IsGhostRoleWhitelisted(Guid player, ProtoId<GhostRolePrototype> ghostRole); // Frontier
         Task<bool> RemoveGhostRoleWhitelist(Guid player, ProtoId<GhostRolePrototype> ghostRole); // Frontier
+
+        #endregion
+
+        #region Consent Settings
+
+        Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings);
+        Task<ConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId);
+        Task<ConsentFreetextReadReceipt?> GetPlayerConsentReadReceipt(NetUserId readerUserId, int consentSettingsId);
+        Task<ConsentFreetextReadReceipt> UpdatePlayerConsentReadReceipt(NetUserId readerUserId, int readConsentSettingsId);
 
         #endregion
 
@@ -1014,17 +1016,6 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.MarkMessageAsSeen(id, dismissedToo));
         }
-        public Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings) // Floofstation
-        {
-            DbWriteOpsMetric.Inc();
-            return RunDbCommand(() => _db.SavePlayerConsentSettingsAsync(userId, consentSettings));
-        }
-
-        public Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId) // Floofstation
-        {
-            DbReadOpsMetric.Inc();
-            return RunDbCommand(() => _db.GetPlayerConsentSettingsAsync(userId));
-        }
 
         public Task AddJobWhitelist(Guid player, ProtoId<JobPrototype> job)
         {
@@ -1114,6 +1105,30 @@ namespace Content.Server.Database
                     handler(notification);
                 }
             }
+        }
+
+        public Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SavePlayerConsentSettingsAsync(userId, consentSettings));
+        }
+
+        public Task<ConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetPlayerConsentSettingsAsync(userId));
+        }
+
+        public Task<ConsentFreetextReadReceipt?> GetPlayerConsentReadReceipt(NetUserId readerUserId, int consentSettingsId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetPlayerConsentReadReceipt(readerUserId, consentSettingsId));
+        }
+
+        public Task<ConsentFreetextReadReceipt> UpdatePlayerConsentReadReceipt(NetUserId readerUserId, int readConsentSettingsId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UpdatePlayerConsentReadReceipt(readerUserId, readConsentSettingsId));
         }
 
         // Wrapper functions to run DB commands from the thread pool.
