@@ -15,7 +15,7 @@
     - state: fab-o
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
-    board: ExosuitFabricatorMachineCircuitboard
+    board: CargoCratePrinterMachineCircuitboard
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
@@ -34,3 +34,23 @@
   - type: AccessReader # HardLight
     access: [["Cargo"]]
   - type: ActivatableUIRequiresAccess # HardLight
+
+- type: entity
+  id: CargoCratePrinterMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Cargo Crate Printer machine board
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: CratePrinter
+    requirements: # Frontier
+      MatterBin: 4 # Frontier stackRequirements<requirements
+      Manipulator: 4 # Frontier stackRequirements<requirements
+    stackRequirements:
+      Glass: 20
+      Steel: 20
+      Gold: 10
+      Silver: 10
+      Diamond: 5
+      Bluespace: 5
