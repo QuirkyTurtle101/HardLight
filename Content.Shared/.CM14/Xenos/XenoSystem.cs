@@ -2,6 +2,7 @@
 using Content.Shared.Actions;
 using Content.Shared.Popups;
 using Content.Shared.CM14.Xenos.Evolution;
+using Content.Shared.CM14.Xenos.Construction;
 using Content.Shared.Mind;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -31,18 +32,37 @@ public sealed class XenoSystem : EntitySystem
 
     private void OnXenoMapInit(Entity<XenoComponent> ent, ref MapInitEvent args)
     {
-        // Legacy action list registration
-        foreach (var actionId in ent.Comp.ActionIds)
+        Log.Info($"[Xeno] ({(_net.IsServer ? "server" : "client")}) MapInit {ToPrettyString(ent)} actionIds={ent.Comp.ActionIds.Count}");
+        if (_net.IsServer)
         {
-            if (!ent.Comp.Actions.ContainsKey(actionId) &&
-                _action.AddAction(ent, actionId) is { } newAction)
+            // Server-authoritative action registration (replicated to clients)
+            foreach (var actionId in ent.Comp.ActionIds)
             {
-                ent.Comp.Actions[actionId] = newAction;
+                if (!ent.Comp.Actions.ContainsKey(actionId) &&
+                    _action.AddAction(ent, actionId) is { } newAction)
+                {
+                    ent.Comp.Actions[actionId] = newAction;
+                }
             }
+
+            // Ensure the Plant Weeds action always has an InstantAction event instance available and is user-raised.
+            if (ent.Comp.Actions.TryGetValue("ActionXenoPlantWeeds", out var weedsAction))
+            {
+                if (TryComp<InstantActionComponent>(weedsAction, out var instant))
+                {
+                    instant.Event ??= new XenoPlantWeedsEvent();
+                    instant.RaiseOnUser = true;
+                    instant.RaiseOnAction = false;
+                    Dirty(weedsAction, instant);
+                    _action.SetEnabled(weedsAction, true);
+                }
+            }
+
+            Log.Info($"[Xeno] (server) Actions registered={ent.Comp.Actions.Count}");
         }
 
         // Evolution action
-        if (ent.Comp.EvolvesTo.Count > 0)
+        if (_net.IsServer && ent.Comp.EvolvesTo.Count > 0)
         {
             _action.AddAction(ent, ref ent.Comp.EvolveAction, ent.Comp.EvolveActionId);
             _action.SetCooldown(ent.Comp.EvolveAction, _timing.CurTime, _timing.CurTime + ent.Comp.EvolveIn);
