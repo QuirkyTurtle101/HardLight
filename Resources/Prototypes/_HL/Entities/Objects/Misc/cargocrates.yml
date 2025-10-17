@@ -124,7 +124,7 @@
     valueElsewhere: 100
 
 - type: entity
-  parent: [[BaseTradeItem],[BaseC2ContrabandUnredeemable]]
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
   id: TradeGoodGunParts
   name: Gun Parts Crate
   description: A sealed crate of Gun Parts, Permits are needed for transportation and production.
@@ -138,7 +138,7 @@
     valueElsewhere: 750
 
 - type: entity
-  parent: [[BaseTradeItem],[BaseC2ContrabandUnredeemable]]
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
   id: TradeGoodMilitaryCybernetics
   name: Military Grade Cybernetics Crate
   description: A hermetically sealed crate of Military Grade Cybernetic parts, Handle with extreme care.
@@ -152,7 +152,7 @@
     valueElsewhere: 1000
 
 - type: entity
-  parent: [[BaseTradeItem],[BaseC2ContrabandUnredeemable]]
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
   id: TradeGoodMilitarySurplus
   name: Military Surplus Crate
   description: A Sealed crate of Military Surplus uniforms and gear, Keep upright.
@@ -166,7 +166,7 @@
     valueElsewhere: 750
 
 - type: entity
-  parent: [[BaseTradeItem],[BaseC2ContrabandUnredeemable]]
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
   id: TradeGoodOrgans
   name: Organ Freezer
   description: A hermetically sealed frezer filled with synthetic organs, keep cool and upright.
