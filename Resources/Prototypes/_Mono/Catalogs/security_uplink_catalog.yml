@@ -66,10 +66,10 @@
       - SecurityUplink
 
 - type: listing
-  id: UplinkSecurityCash75000
-  name: uplink-security-cash75000-name
-  description: uplink-security-cash75000-desc
-  productEntity: SpaceCash10000
+  id: UplinkSecurityCash45000 # HL starts : Changes the cash from 75k to using 45k
+  name: uplink-security-cash45000-name
+  description: uplink-security-cash45000-desc
+  productEntity: SpaceCashExpeditionT5 # HL ends
   icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash_100000 }
   cost:
     FrontierUplinkCoin: 10

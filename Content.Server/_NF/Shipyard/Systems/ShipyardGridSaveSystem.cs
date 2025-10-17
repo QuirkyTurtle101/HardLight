@@ -50,6 +50,7 @@ using Robust.Shared.Serialization;
 using Content.Shared.Storage.Components;
 using Robust.Shared.GameStates;
 using Content.Shared.Wall; // WallMountComponent for preserving wall-mounted fixtures
+using Robust.Shared.Physics;
 
 // Suppress RA0004 for this file. There is no Task<Result> usage here, but the analyzer
 // occasionally reports a false positive during Release/integration builds.
@@ -446,6 +447,9 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             return false; // never delete grid root or nested grids here
         // Preserve wall-mounted fixtures (buttons, levers, posters, etc.) regardless of anchored state
         if (_entityManager.HasComponent<WallMountComponent>(ent))
+            return false;
+        // Preserve entities with static body types, such as drains or sinks.
+        if (_entityManager.GetComponent<PhysicsComponent>(ent).BodyType == BodyType.Static)
             return false;
         var anchored = false;
         if (_entityManager.TryGetComponent<TransformComponent>(ent, out var xform))
