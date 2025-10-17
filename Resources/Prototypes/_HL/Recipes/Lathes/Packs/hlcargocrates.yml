@@ -1,0 +1,13 @@
+- type: latheRecipePack
+  id: HLCargoCrates
+  recipes:
+  - ScrapCrateRecipe
+  - AmmoCrateRecipe
+  - SugarCrateRecipe
+  - CyberneticsCrateRecipe
+  - FuelTankRecipe
+  - FlourSackRecipe
+  - GunPartsCrateRecipe
+  - MilitaryCyberneticsCrateRecipe
+  - MilitarySurplusCrateRecipe
+  - OrganFreezerRecipe
