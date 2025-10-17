@@ -50,7 +50,7 @@
     layers:
     - state: icon
   - type: TradeCrate
-    valueAtDestination: 2500
+    valueAtDestination: 500
     valueElsewhere: 200
 
 - type: entity
@@ -148,7 +148,7 @@
     layers:
     - state: icon
   - type: TradeCrate
-    valueAtDestination: 20000
+    valueAtDestination: 10000
     valueElsewhere: 1000
 
 - type: entity
@@ -162,7 +162,7 @@
     layers:
     - state: icon
   - type: TradeCrate
-    valueAtDestination: 15000
+    valueAtDestination: 7500
     valueElsewhere: 750
 
 - type: entity
@@ -176,7 +176,21 @@
     layers:
     - state: icon
   - type: TradeCrate
-    valueAtDestination: 30000
+    valueAtDestination: 15000
     valueElsewhere: 1500
 
-# Todo: Rice, Partydrugs, wine, and antibiotics
+# Todo: Rice, wine, and antibiotics
+
+- type: entity
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
+  id: TradeGoodPartydrugs
+  name: Party Drugs Crate
+  description: A sealed crate of recreational drugs, handle with care.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/partydrugs.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 6000
+    valueElsewhere: 600

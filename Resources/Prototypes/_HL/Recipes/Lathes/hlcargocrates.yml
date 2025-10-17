@@ -75,19 +75,29 @@
   result: TradeGoodMilitarySurplus
   completetime: 15
   materials:
-      Steel: 1000
-      Plasteel: 500
-      Cloth: 500
-      Durathread: 1000
+      Steel: 1500
+      Plasteel: 750
+      Cloth: 1000
+      Durathread: 1500
 
 - type: latheRecipe
   id: OrganFreezerRecipe
   result: TradeGoodOrgans
   completetime: 30
   materials:
-    Steel: 500
-    Glass: 200
-    Plastic: 750
-    Silver: 500
-    Gold: 750
-    Plasteel: 1000
+    Steel: 2500
+    Glass: 750
+    Plastic: 1500
+    Silver: 750
+    Gold: 1250
+    Plasteel: 1500
+
+- type: latheRecipe
+  id: PartyDrugsCrateRecipe
+  result: TradeGoodPartydrugs
+  completetime: 15
+  materials:
+    Steel: 1000
+    Plasma: 1000
+    Glass: 1000
+    Uranium: 500
