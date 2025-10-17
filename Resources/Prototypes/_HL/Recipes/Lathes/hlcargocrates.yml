@@ -21,9 +21,8 @@
   result: TradeGoodSugar
   completetime: 10
   materials:
-      Steel: 1000
-      Plastic: 500
-      Glass: 1000
+      Cloth: 1500
+      Plastic: 750
 
 - type: latheRecipe
   id: CyberneticsCrateRecipe

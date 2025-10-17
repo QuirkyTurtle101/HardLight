@@ -56,8 +56,8 @@
 - type: entity
   parent: BaseTradeItem
   id: TradeGoodSugar
-  name: Sugar Crate
-  description: A sealed crate of Sugar, Produced by local botanists.
+  name: Sugar Sack
+  description: A sealed Sack of Sugar, Produced by local botanists.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/TradeGoods/sugar.rsi
