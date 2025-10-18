@@ -7,7 +7,7 @@
   category: Medium
   group: Security
   access: Security
-  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/mayhem.yml
+  shuttlePath: /Maps/_HL/Shuttles/mayhem.yml
   guidebookPage: Null
   class:
   - Pursuit
@@ -17,7 +17,7 @@
 - type: gameMap
   id: Mayhem
   mapName: 'Mayhem'
-  mapPath: /Maps/_Mono/Shuttles/Nfsd/mayhem.yml
+  mapPath: /Maps/_HL/Shuttles/mayhem.yml
   minPlayers: 0
   stations:
     Mayhem:

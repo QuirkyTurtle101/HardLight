@@ -14,3 +14,5 @@
     checkConsciousness: true
     useDelay: 10
     event: !type:XenoPlantWeedsEvent
+  # Note: The server handler uses the Xeno's Weedprototype datafield. Ensure that is set to a valid
+  # weeds entity such as XenoWeeds or XenoWeedsEntity. No direct reference to XenoWeedsSourceEntity exists.
