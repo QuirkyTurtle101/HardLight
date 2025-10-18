@@ -41,8 +41,20 @@
   - type: NpcFactionMember
     factions:
     - Xeno
+  - type: Inventory
+    templateId: friendxeno
+  - type: IdExaminable
+  - type: InventorySlots
+  - type: Stripping
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
   - type: Hands
+  - type: Cuffable
   - type: ComplexInteraction
+  - type: Access
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/burrower.rsi
