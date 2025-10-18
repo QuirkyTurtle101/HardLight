@@ -38,13 +38,18 @@ public sealed partial class XenoComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     public int Plasma;
 
-    [DataField(required: true), AutoNetworkedField]
+    // Make MaxPlasma optional; default to 300 if not specified on the prototype.
+    [DataField, AutoNetworkedField]
     [ViewVariables(VVAccess.ReadWrite)]
     public int MaxPlasma = 300;
 
-    [DataField(required: true), AutoNetworkedField]
+    // PlasmaRegen was previously required across all prototypes, which caused
+    // RequiredFieldNotMappedException for any xeno that didn't explicitly set it.
+    // Make it optional with a conservative default (no passive regen) and let
+    // specific prototypes override as needed.
+    [DataField, AutoNetworkedField]
     [ViewVariables(VVAccess.ReadWrite)]
-    public int PlasmaRegen;
+    public int PlasmaRegen = 0;
 
     [DataField, AutoNetworkedField]
     [ViewVariables(VVAccess.ReadWrite)]

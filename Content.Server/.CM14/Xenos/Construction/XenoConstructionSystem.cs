@@ -1,12 +1,13 @@
 ﻿using System.Numerics;
 using Content.Server.Spreader;
 using Content.Shared.Actions;
-using Content.Shared.CM14.Xenos.Construction;
 using Content.Shared.Atmos;
+using Content.Shared.CM14.Xenos;
+using Content.Shared.CM14.Xenos.Construction;
 using Content.Shared.Coordinates;
 using Content.Shared.Coordinates.Helpers;
-using Robust.Server.GameObjects;
 using JetBrains.Annotations;
+using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
@@ -89,7 +90,7 @@ public sealed class XenoConstructionServerSystem : SharedXenoConstructionSystem
             return;
 
         var coordinates = _transform.GetMoverCoordinates(ent).SnapToGrid(EntityManager, _map);
-    Log.Info("[XenoWeeds] (server) Received XenoPlantWeedsEvent from " + ToPrettyString(ent) + " at " + coordinates + " cfgProto=" + ent.Comp.Weedprototype);
+        Log.Info($"[XenoWeeds] (server) Received XenoPlantWeedsEvent from {ToPrettyString(ent)} at {coordinates} cfgProto={ent.Comp.Weedprototype}");
 
         // Prefer to check grid for duplication, but don’t hard-fail if we’re not on a grid.
         var hasGrid = coordinates.GetGridUid(EntityManager) is { } gridUid && TryComp(gridUid, out MapGridComponent? grid);
@@ -192,7 +193,7 @@ public sealed class XenoConstructionServerSystem : SharedXenoConstructionSystem
             var sourceLocal = _mapSystem.CoordinatesToTile(gridOwner, neighbor.Grid, transform.Coordinates);
             var diff = Vector2.Abs(neighbor.Tile - sourceLocal);
             if (diff.X >= ent.Comp.Range || diff.Y >= ent.Comp.Range)
-                break;
+                continue;
 
             var neighborWeeds = Spawn(prototype, coords);
             var neighborWeedsComp = EnsureComp<XenoWeedsComponent>(neighborWeeds);
@@ -203,6 +204,11 @@ public sealed class XenoConstructionServerSystem : SharedXenoConstructionSystem
             EnsureComp<ActiveEdgeSpreaderComponent>(neighborWeeds);
 
             any = true;
+
+            // Respect spread budget per tick
+            args.Updates--;
+            if (args.Updates <= 0)
+                return;
 
             for (var i = 0; i < 4; i++)
             {
@@ -230,8 +236,6 @@ public sealed class XenoConstructionServerSystem : SharedXenoConstructionSystem
 
         if (!any)
             RemCompDeferred<ActiveEdgeSpreaderComponent>(ent);
-
-        args.Updates--;
     }
 
     private void OnWeedableAnchorStateChanged(Entity<XenoWeedableComponent> ent, ref AnchorStateChangedEvent args)

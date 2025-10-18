@@ -19,6 +19,7 @@
   - type: Xeno
     actionIds:
     - ActionXenoRest
+    - ActionXenoLayEgg
     - ActionXenoPlantWeeds
     - ActionXenoAcid
     - ActionXenoRegurgitate
