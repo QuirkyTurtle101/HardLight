@@ -51,6 +51,8 @@ using Content.Shared.Storage.Components;
 using Robust.Shared.GameStates;
 using Content.Shared.Wall; // WallMountComponent for preserving wall-mounted fixtures
 using Robust.Shared.Physics;
+using Content.Shared.Chemistry.Components;
+using Content.Shared.Chemistry.Components.SolutionManager;
 
 // Suppress RA0004 for this file. There is no Task<Result> usage here, but the analyzer
 // occasionally reports a false positive during Release/integration builds.
@@ -449,7 +451,10 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
         if (_entityManager.HasComponent<WallMountComponent>(ent))
             return false;
         // Preserve entities with static body types, such as drains or sinks.
-        if (_entityManager.GetComponent<PhysicsComponent>(ent).BodyType == BodyType.Static)
+        if (_entityManager.TryGetComponent<PhysicsComponent>(ent, out var physics) && physics.BodyType == BodyType.Static)
+            return false;
+        // Preserve solutions
+        if (_entityManager.HasComponent<ContainedSolutionComponent>(ent) || _entityManager.HasComponent<SolutionComponent>(ent))
             return false;
         var anchored = false;
         if (_entityManager.TryGetComponent<TransformComponent>(ent, out var xform))
