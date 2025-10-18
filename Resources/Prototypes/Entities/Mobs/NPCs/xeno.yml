@@ -202,12 +202,12 @@
     evolvesTo:
     - MobXenoHivelord
     restHealing:
-    types:
-      Blunt: -0.5
-      Slash: -0.3
-      Piercing: -0.3
-      Heat: -0.05
-      Shock: -0.05
+      types:
+        Blunt: -0.5
+        Slash: -0.3
+        Piercing: -0.3
+        Heat: -0.05
+        Shock: -0.05
     restHealingCritMultiplier: 2.0
   - type: Fixtures
     fixtures:
@@ -255,12 +255,12 @@
     evolvesTo:
     - MobXenoPraetorianNPC
     restHealing:
-    types:
-      Blunt: -0.5
-      Slash: -0.3
-      Piercing: -0.3
-      Heat: -0.05
-      Shock: -0.05
+      types:
+        Blunt: -0.5
+        Slash: -0.3
+        Piercing: -0.3
+        Heat: -0.05
+        Shock: -0.05
     restHealingCritMultiplier: 2.0
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
@@ -310,12 +310,12 @@
     - ActionXenoAcid
     - ActionXenoLayEgg
     restHealing:
-    types:
-      Blunt: -0.5
-      Slash: -0.3
-      Piercing: -0.3
-      Heat: -0.05
-      Shock: -0.05
+      types:
+        Blunt: -0.5
+        Slash: -0.3
+        Piercing: -0.3
+        Heat: -0.05
+        Shock: -0.05
     restHealingCritMultiplier: 2.0
   - type: Fixtures
     fixtures:
