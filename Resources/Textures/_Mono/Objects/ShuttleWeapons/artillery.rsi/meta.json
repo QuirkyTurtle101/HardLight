@@ -1,15 +1,19 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from double_flak_cannon_hardpoint_base.png and double_flak_cannon_hardpoint_recoil.png from Starsector.",
+  "copyright": "Made by kyres1 (discord)",
   "size": {
     "x": 48,
     "y": 48
   },
   "states": [
     {
+      "name": "space_artillery",
+      "directions": 4
+    },
+    {
       "name": "artillery",
       "directions": 4
-    }
+    } 
   ]
 }

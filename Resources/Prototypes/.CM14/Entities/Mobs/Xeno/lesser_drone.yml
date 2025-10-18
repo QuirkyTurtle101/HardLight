@@ -4,7 +4,7 @@
   name: Lesser Drone
   components:
   - type: Sprite
-    sprite: .CM14/Mobs/Xenos/Drone/drone.rsi
+    sprite: Mobs/Aliens/Xenos/drone.rsi
   - type: MobState
     allowedStates:
     - Alive
@@ -21,3 +21,9 @@
     - ActionXenoRegurgitate
     maxPlasma: 300
     plasmaRegen: 12
+    restHealing:
+      types:
+        Blunt: -0.4
+        Slash: -0.25
+        Piercing: -0.25
+    restHealingCritMultiplier: 1.8

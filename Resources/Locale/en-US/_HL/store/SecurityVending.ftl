@@ -1,8 +1,8 @@
 # Bug fixs these items are from Mono or NF #
 uplink-security-cash1000-name = 1,000 Spesos
 uplink-security-cash1000-desc = Cold, hard cash.
-uplink-security-cash75000-name = 75,000 Spesos
-uplink-security-cash75000-desc = Cold, hard cash.
+uplink-security-cash45000-name = 45,000 Spesos
+uplink-security-cash45000-desc = Cold, hard cash.
 
 uplink-security-portable-recharger-name = portable recharger
 uplink-security-portable-recharger-desc = High-tech recharger adapted for portability.

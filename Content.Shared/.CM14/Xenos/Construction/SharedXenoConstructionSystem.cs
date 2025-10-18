@@ -19,6 +19,7 @@ public abstract class SharedXenoConstructionSystem : EntitySystem
     {
         base.Initialize();
 
+        Log.Info($"[XenoWeeds] ({(_net.IsServer ? "server" : "client")}) SharedXenoConstructionSystem.Initialize()");
         SubscribeLocalEvent<XenoComponent, XenoPlantWeedsEvent>(OnXenoPlantWeeds);
         SubscribeLocalEvent<XenoWeedsComponent, AnchorStateChangedEvent>(OnWeedsAnchorChanged);
     }
@@ -26,30 +27,12 @@ public abstract class SharedXenoConstructionSystem : EntitySystem
     private void OnXenoPlantWeeds(Entity<XenoComponent> ent, ref XenoPlantWeedsEvent args)
     {
         var coordinates = _transform.GetMoverCoordinates(ent).SnapToGrid(EntityManager, _map);
+        Log.Info("[XenoWeeds] (" + (_net.IsServer ? "server" : "client") + ") Plant attempt by " + ToPrettyString(ent) + " at " + coordinates);
 
-        if (coordinates.GetGridUid(EntityManager) is not { } gridUid ||
-            !TryComp(gridUid, out MapGridComponent? grid))
-        {
-            return;
-        }
-
-        var position = _mapSystem.LocalToTile(gridUid, grid, coordinates);
-        var enumerator = _mapSystem.GetAnchoredEntitiesEnumerator(gridUid, grid, position);
-
-        while (enumerator.MoveNext(out var anchored))
-        {
-            if (HasComp<XenoWeedsComponent>(anchored))
-            {
-                _popup.PopupClient(Loc.GetString("cm-xeno-weeds-already-here"), ent.Owner, ent.Owner);
-                return;
-            }
-        }
-
-        if (!_xeno.TryRemovePlasmaPopup(ent, args.PlasmaCost))
-            return;
-
+        // Do not spawn on the client. Server handler will perform authoritative spawn and set Handled.
+        // On server, let the server-specific system handle it to avoid double-processing.
         if (_net.IsServer)
-            Spawn(args.Prototype, coordinates);
+            return;
     }
 
     private void OnWeedsAnchorChanged(Entity<XenoWeedsComponent> ent, ref AnchorStateChangedEvent args)

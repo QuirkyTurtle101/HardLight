@@ -2,6 +2,7 @@
 using Content.Shared.Actions;
 using Content.Shared.Popups;
 using Content.Shared.CM14.Xenos.Evolution;
+using Content.Shared.CM14.Xenos.Construction;
 using Content.Shared.Mind;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -31,21 +32,54 @@ public sealed class XenoSystem : EntitySystem
 
     private void OnXenoMapInit(Entity<XenoComponent> ent, ref MapInitEvent args)
     {
-        // Legacy action list registration
-        foreach (var actionId in ent.Comp.ActionIds)
+        Log.Info($"[Xeno] ({(_net.IsServer ? "server" : "client")}) MapInit {ToPrettyString(ent)} actionIds={ent.Comp.ActionIds.Count}");
+        if (_net.IsServer)
         {
-            if (!ent.Comp.Actions.ContainsKey(actionId) &&
-                _action.AddAction(ent, actionId) is { } newAction)
+            // Server-authoritative action registration (replicated to clients)
+            foreach (var actionId in ent.Comp.ActionIds)
             {
-                ent.Comp.Actions[actionId] = newAction;
+                if (!ent.Comp.Actions.ContainsKey(actionId) &&
+                    _action.AddAction(ent, actionId) is { } newAction)
+                {
+                    ent.Comp.Actions[actionId] = newAction;
+                }
             }
+
+            // Ensure the Plant Weeds action always has an InstantAction event instance available and is user-raised.
+            if (ent.Comp.Actions.TryGetValue("ActionXenoPlantWeeds", out var weedsAction))
+            {
+                if (TryComp<InstantActionComponent>(weedsAction, out var instant))
+                {
+                    instant.Event ??= new XenoPlantWeedsEvent();
+                    instant.RaiseOnUser = true;
+                    instant.RaiseOnAction = false;
+                    Dirty(weedsAction, instant);
+                    _action.SetEnabled(weedsAction, true);
+                }
+            }
+
+            Log.Info($"[Xeno] (server) Actions registered={ent.Comp.Actions.Count}");
         }
 
-        // Evolution action
-        if (ent.Comp.EvolvesTo.Count > 0)
+        // Evolution action: prefer an existing evolve action from ActionIds to avoid duplicates.
+        if (_net.IsServer && ent.Comp.EvolvesTo.Count > 0)
         {
-            _action.AddAction(ent, ref ent.Comp.EvolveAction, ent.Comp.EvolveActionId);
-            _action.SetCooldown(ent.Comp.EvolveAction, _timing.CurTime, _timing.CurTime + ent.Comp.EvolveIn);
+            // Prefer ActionXenoEvolve60 if present, otherwise use configured EvolveActionId
+            EntityUid? evolveAction = null;
+            if (ent.Comp.Actions.TryGetValue("ActionXenoEvolve60", out var evo60))
+                evolveAction = evo60;
+            else if (ent.Comp.Actions.TryGetValue(ent.Comp.EvolveActionId, out var evo))
+                evolveAction = evo;
+            else
+                _action.AddAction(ent, ref evolveAction, ent.Comp.EvolveActionId);
+
+            ent.Comp.EvolveAction = evolveAction;
+
+            // Only set cooldown here if the action doesn't have a specialized cooldown component.
+            if (evolveAction != null && !HasComp<CM14.Xenos.Evolution.XenoEvolveActionComponent>(evolveAction.Value))
+            {
+                _action.SetCooldown(evolveAction, _timing.CurTime, _timing.CurTime + ent.Comp.EvolveIn);
+            }
         }
     }
 
@@ -94,16 +128,44 @@ public sealed class XenoSystem : EntitySystem
         if (xeno.Comp.EvolvesTo.Count == 0)
             return;
 
-        _action.AddAction(xeno, ref xeno.Comp.EvolveAction, xeno.Comp.EvolveActionId);
-        _action.SetCooldown(xeno.Comp.EvolveAction, _timing.CurTime, _timing.CurTime + xeno.Comp.EvolveIn);
+        // Ensure evolve action exists and set cooldown if needed (but avoid overriding specialized component cooldowns)
+        if (xeno.Comp.EvolvesTo.Count > 0)
+        {
+            EntityUid? evolveAction = null;
+            if (xeno.Comp.Actions.TryGetValue("ActionXenoEvolve60", out var evo60))
+                evolveAction = evo60;
+            else if (xeno.Comp.Actions.TryGetValue(xeno.Comp.EvolveActionId, out var evo))
+                evolveAction = evo;
+            else
+                _action.AddAction(xeno, ref evolveAction, xeno.Comp.EvolveActionId);
+
+            xeno.Comp.EvolveAction = evolveAction;
+
+            if (evolveAction != null && !HasComp<CM14.Xenos.Evolution.XenoEvolveActionComponent>(evolveAction.Value))
+                _action.SetCooldown(evolveAction, _timing.CurTime, _timing.CurTime + xeno.Comp.EvolveIn);
+        }
     }
 
     private void OnXenoEvolve(Entity<XenoComponent> ent, ref XenoOpenEvolutionsEvent args)
     {
-        if (_net.IsClient || !TryComp(ent, out ActorComponent? actor))
+        if (_net.IsClient)
             return;
 
-        _ui.OpenUi(ent.Owner, XenoEvolutionUIKey.Key, actor.PlayerSession);
+        // Require an actor to show UI. If no actor or UI fails to open, fall back to auto-evolve to first option.
+        if (TryComp(ent, out ActorComponent? actor))
+        {
+            if (_ui.TryOpenUi(ent.Owner, XenoEvolutionUIKey.Key, actor.Owner))
+                return;
+        }
+
+        // Fallback: no UI available; auto-evolve to the first available option if any.
+        if (ent.Comp.EvolvesTo.Count > 0 && _mind.TryGetMind(ent, out var mindId, out _))
+        {
+            var evolution = Spawn(ent.Comp.EvolvesTo[0], _transform.GetMoverCoordinates(ent.Owner));
+            _mind.TransferTo(mindId, evolution);
+            _mind.UnVisit(mindId);
+            Del(ent.Owner);
+        }
     }
 
     private void OnXenoEvolveBui(Entity<XenoComponent> ent, ref EvolveBuiMessage args)
