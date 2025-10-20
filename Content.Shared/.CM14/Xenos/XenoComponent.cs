@@ -121,7 +121,7 @@ public sealed partial class XenoComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan BuildDelay = TimeSpan.FromSeconds(4);
 
-    [DataField(customTypeSerializer: typeof(PrototypeIdHashSetSerializer<AccessLevelPrototype>))]
+    [DataField]
     [ViewVariables(VVAccess.ReadWrite)]
     public HashSet<ProtoId<AccessLevelPrototype>> AccessLevels = new() { "Xeno" };
 }
