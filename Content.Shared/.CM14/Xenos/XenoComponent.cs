@@ -123,5 +123,5 @@ public sealed partial class XenoComponent : Component
 
     [DataField(customTypeSerializer: typeof(PrototypeIdHashSetSerializer<AccessLevelPrototype>))]
     [ViewVariables(VVAccess.ReadWrite)]
-    public HashSet<string> AccessLevels = new() { "Xeno" };
+    public HashSet<ProtoId<AccessLevelPrototype>> AccessLevels = new() { "Xeno" };
 }

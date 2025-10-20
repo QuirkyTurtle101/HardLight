@@ -1,6 +1,6 @@
-﻿using Content.Client._CM14.Xenos.UI;
-using Content.Shared._CM14.Xenos;
+﻿using Content.Shared.CM14.Xenos;
 using Content.Shared._CM14.Xenos.Construction;
+using Content.Client._Shitmed.Xenonids.UI; // XenoChoiceControl
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
 using Robust.Shared.Prototypes;
