@@ -11,6 +11,8 @@
     anchored: true
   - type: XenoWeeds
   - type: Clickable
+  - type: Physics
+    bodyType: Static
   - type: EdgeSpreader
     id: XenoWeeds
   - type: ActiveEdgeSpreader
@@ -132,6 +134,8 @@
     anchored: true
   - type: XenoWeeds
   - type: Clickable
+  - type: Physics
+    bodyType: Static
   - type: EdgeSpreader
     id: XenoWeeds
   - type: ActiveEdgeSpreader
@@ -215,6 +219,8 @@
     snap:
     - Wall
   components:
+  - type: Physics
+    bodyType: Static
   - type: XenoWeeds
     spawns: XenoHiveWeeds
   - type: EdgeSpreader

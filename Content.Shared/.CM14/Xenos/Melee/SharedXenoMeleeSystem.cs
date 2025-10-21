@@ -18,7 +18,7 @@ using Robust.Shared.Timing;
 using Content.Shared.CM14.Xenos; // XenoComponent
 using Robust.Shared.Audio.Systems; // SharedAudioSystem
 
-namespace Content.Shared._CM14.Xenos.Melee;
+namespace Content.Shared.CM14.Xenos.Melee;
 
 public abstract class SharedXenoMeleeSystem : EntitySystem
 {
