@@ -12,5 +12,8 @@
       - material: Cloth
         amount: 1
         doAfter: 5
+        icon:
+          sprite: _Starlight/Objects/Tools/improvised_screwdriver.rsi
+          state: screwdriver
   - node: tool
     entity: UnfinishedImprovisedScrewdriver

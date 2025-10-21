@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingBeltStorageBase, BaseMajorContraband ]
+  parent: [ ClothingBeltStorageBase, BaseC2Contraband ]
   id: ClothingAbductorBelt
   name: abductor belt
   description: Can hold various OUR things.
@@ -52,7 +52,7 @@
     price: 1000
 
 - type: entity
-  parent: [ClothingBeltMedical, ClothingBeltSecurity, BaseSecurityContraband]
+  parent: [ClothingBeltMedical, ClothingBeltSecurity, BaseC1Contraband]
   id: ClothingBeltBrigmedic
   name: tactical trauma belt
   description: Because why choose between being a medic or a security guard when you can be both?
@@ -146,7 +146,7 @@
   - type: Appearance
 
 - type: entity
-  parent: [ClothingBeltStorageBase, BaseSovietContraband]
+  parent: [ClothingBeltStorageBase, BaseC2Contraband]
   id: ClothingSovietBandolier
   name: marine bandolier
   description: Smells of oil, sweat, and questionable decisions.
@@ -171,7 +171,7 @@
 # USSP 
 
 - type: entity
-  parent: [ClothingBeltStorageBase, BaseSovietContraband]
+  parent: [ClothingBeltStorageBase, BaseC2Contraband]
   id: ClothingSovietBelt
   name: soviet belt
   description: Can hold various OUR things.
@@ -292,7 +292,7 @@
     price: 1000
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSovietContraband]
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC2Contraband]
   id: ClothingBeltSovietMarineWebbing
   name: SSF marine chest rig
   description:  A set of tactical webbing worn by the iconic soviet elite marines.

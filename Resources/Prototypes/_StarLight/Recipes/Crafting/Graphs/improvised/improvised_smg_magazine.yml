@@ -1,5 +1,5 @@
 - type: constructionGraph
-  id: ImprovisedMagazinePistolSubMachineGunGraph
+  id: Improvised9x19mmSMGMagazineGraph
   start: start
   graph:
     - node: start
@@ -9,5 +9,8 @@
             - material: Steel
               amount: 8
               doAfter: 6
+              icon:
+                sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Magazine/SMGs/improvised_smg_magazine.rsi
+                state: base
     - node: shell
-      entity: MagazinePistolSubMachineGunImprovised
+      entity: Magazine9x19mmSubMachineGunImprovised

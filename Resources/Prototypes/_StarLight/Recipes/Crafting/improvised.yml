@@ -1,5 +1,5 @@
 - type: construction
-  name: crafting-menu-name-FDB
+  name: forged double-barrel shotgun
   id: WeaponShotgunForged
   graph: ForgedShotgunGraph
   startNode: start
@@ -7,9 +7,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FDB
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Shotguns/forged_shotgun.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MP
+  name: makeshift pistol
   id: WeaponPistolMakeshiftCrafted
   graph: MakeshiftPistolCraftedGraph
   startNode: start
@@ -17,9 +20,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-MP
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Pistols/makeshift_pistol_crafted.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IP
+  name: improvised pistol
   id: WeaponPistolImprovised
   graph: ImprovisedPistolGraph
   startNode: start
@@ -27,9 +33,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IP
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Pistols/improvised_pistol.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FP
+  name: forged pistol
   id: WeaponPistolForged
   graph: ForgedPistolGraph
   startNode: start
@@ -37,29 +46,38 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FP
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Pistols/forged_pistol.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IPB
-  id: CartridgePistolImprovised
-  graph: ImprovisedPistolBulletGraph
+  name: improvised pistol bullet
+  id: Cartridge9x19mmImprovised
+  graph: Improvised9x19mmBulletGraph
   startNode: start
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IPB
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Casings/improvised_casing.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IPM
-  id: MagazinePistolImprovised
-  graph: ImprovisedPistolMagazineGraph
+  name: improvised pistol magazine
+  id: Magazine9x19mmImprovised
+  graph: Improvised9x19mmMagazineGraph
   startNode: start
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IPM
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/improvised_pistol_magazine.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MR
+  name: makeshift revolver
   id: WeaponRevolverMakeshift
   graph: MakeshiftRevolverGraph
   startNode: start
@@ -67,9 +85,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-MR
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Revolvers/makeshift_revolver.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IR
+  name: improvised revolver
   id: WeaponRevolverImprovised
   graph: ImprovisedRevolverGraph
   startNode: start
@@ -77,9 +98,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IR
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Revolvers/improvised_revolver.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FR
+  name: forged revolver
   id: WeaponRevolverForged
   graph: ForgedRevolverGraph
   startNode: start
@@ -87,29 +111,38 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FR
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Revolvers/forged_revolver.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IMB
-  id: CartridgeMagnumImprovised
-  graph: ImprovisedMagnumBulletGraph
+  name: improvised magnum bullet
+  id: Cartridge45MagnumImprovised
+  graph: Improvised45MagnumBulletGraph
   startNode: start
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IMB
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Casings/improvised_casing.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IMS
-  id: SpeedLoaderMagnumImprovised
-  graph: ImprovisedMagnumSpeedLoaderGraph
+  name: improvised magnum speedloader
+  id: SpeedLoader45MagnumImprovised
+  graph: Improvised45MagnumSpeedLoaderGraph
   startNode: start
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IMS
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/improvised_magnum_speed_loader.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MB
+  name: modular barrel
   id: ModularBarrel
   graph: ModularBarrelGraph
   startNode: start
@@ -117,9 +150,12 @@
   category: construction-category-misc
   objectType: Item
   description: crafting-menu-text-MB
+  icon:
+    sprite: _Starlight/Objects/Misc/modular_barrel.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MSH
+  name: makeshift shotgun
   id: WeaponShotgunMakeshift
   graph: MakeshiftShotgunGraph
   startNode: start
@@ -127,9 +163,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-MSH
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Shotguns/makeshift_shotgun.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MS
+  name: makeshift smg
   id: WeaponSMGMakeshift
   graph: MakeshiftSMGGraph
   startNode: start
@@ -137,9 +176,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-MS
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/SMGs/makeshift_smg.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IS
+  name: improvised smg
   id: WeaponSubMachineGunImprovised
   graph: ImprovisedSMGGraph
   startNode: start
@@ -147,9 +189,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IS
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/SMGs/improvised_smg.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FS
+  name: forged smg
   id: WeaponSubMachineGunForged
   graph: ForgedSMGGraph
   startNode: start
@@ -157,19 +202,25 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FS
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/SMGs/forged_smg.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-ISM
-  id: MagazinePistolSubMachineGunImprovised
-  graph: ImprovisedMagazinePistolSubMachineGunGraph
+  name: improvised smg magazine
+  id: Magazine9x19mmSubMachineGunImprovised
+  graph: Improvised9x19mmSMGMagazineGraph
   startNode: start
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-ISM
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Magazine/SMGs/improvised_smg_magazine.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MRR
+  name: makeshift repeater rifle
   id: WeaponSniperMakeshift
   graph: MakeshiftSniperGraph
   startNode: start
@@ -177,9 +228,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-MRR
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Snipers/makeshift_rifle.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IRR
+  name: improvised repeater rifle
   id: WeaponSniperImprovised
   graph: ImprovisedSniperGraph
   startNode: start
@@ -187,9 +241,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IRR
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Snipers/improvised_rifle.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FRR
+  name: forged repeater rifle
   id: WeaponSniperForged
   graph: ForgedSniperGraph
   startNode: start
@@ -197,19 +254,25 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FRR
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Snipers/forged_rifle.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IRB
-  id: CartridgeLightRifleImprovised
-  graph: ImprovisedLightRifleBulletGraph
+  name: improvised rifle bullet
+  id: Cartridge5.56x45mmImprovised
+  graph: Improvised556x45mmBulletGraph
   startNode: start
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IRB
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Casings/improvised_casing.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IMGB
+  name: improvised ammo box
   id: BaseMagazineBoxImprovised
   graph: ImprovisedMagazineBoxGraph
   startNode: start
@@ -217,9 +280,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IMGB
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Boxes/improvised.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IMGP
+  name: improvised ammo box (9x19mm)
   id: MagazineBoxImprovisedPistol
   graph: ImprovisedMagazineBoxGraph
   startNode: startpistol
@@ -227,9 +293,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IMGP
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Boxes/improvised.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IMGR
+  name: improvised ammo box (5.56x45mm)
   id: MagazineBoxImprovisedRifle
   graph: ImprovisedMagazineBoxGraph
   startNode: startrifle
@@ -237,9 +306,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IMGR
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Boxes/improvised.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IMGM
+  name: improvised ammo box (.45 magnum)
   id: MagazineBoxImprovisedMagnum
   graph: ImprovisedMagazineBoxGraph
   startNode: startmagnum
@@ -247,9 +319,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IMGM
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Boxes/improvised.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IMGS
+  name: improvised ammo box (.50 shotgun)
   id: MagazineBoxImprovisedShotgun
   graph: ImprovisedMagazineBoxGraph
   startNode: startshotgun
@@ -257,9 +332,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IMGS
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Boxes/improvised.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MC
+  name: makeshift crowbar
   id: CrowbarMakeshift
   graph: MakeshiftCrowbarGraph
   startNode: start
@@ -267,9 +345,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-MC
+  icon:
+    sprite: _Starlight/Objects/Tools/makeshift_omnitool.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IC
+  name: improvised crowbar
   id: CrowbarImprovised
   graph: ImprovisedCrowbarGraph
   startNode: start
@@ -277,9 +358,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-IC
+  icon:
+    sprite: _Starlight/Objects/Tools/improvised_crowbar.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-ISC
+  name: improvised screwdriver
   id: ScrewdriverImprovised
   graph: ImprovisedScrewdriverGraph
   startNode: start
@@ -287,9 +371,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-IC
+  icon:
+    sprite: _Starlight/Objects/Tools/improvised_screwdriver.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IW
+  name: improvised wirecutter
   id: WirecutterImprovised
   graph: ImprovisedWirecutterGraph
   startNode: start
@@ -297,9 +384,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-IC
+  icon:
+    sprite: _Starlight/Objects/Tools/improvised_wirecutters.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IWR
+  name: improvised wrench
   id: WrenchImprovised
   graph: ImprovisedWrenchGraph
   startNode: start
@@ -307,9 +397,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-IC
+  icon:
+    sprite: _Starlight/Objects/Tools/improvised_wrench.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IM
+  name: improvised multitool
   id: MultitoolImprovised
   graph: ImprovisedMultitoolGraph
   startNode: start
@@ -317,9 +410,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-IM
+  icon:
+    sprite: _Starlight/Objects/Tools/improvised_multitool.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IO
+  name: improvised omnitool
   id: OmnitoolImprovised
   graph: ImprovisedOmnitoolGraph
   startNode: start
@@ -327,9 +423,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-IO
+  icon:
+    sprite: _Starlight/Objects/Tools/improvised_omnitool.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FO
+  name: forged omnitool
   id: OmnitoolForged
   graph: ForgedOmnitoolGraph
   startNode: start
@@ -337,9 +436,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-FO
+  icon:
+    sprite: _Starlight/Objects/Tools/forged_omnitool.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-WH
+  name: wooden hilt
   id: HiltWood
   graph: HiltWoodGraph
   startNode: start
@@ -347,9 +449,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-WH
+  icon:
+    sprite: _Starlight/Objects/Misc/wooden_hilt.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-PH
+  name: plasteel hilt
   id: HiltPlasteel
   graph: HiltPlasteelGraph
   startNode: start
@@ -357,9 +462,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-PH
+  icon:
+    sprite: _Starlight/Objects/Misc/plasteel_hilt.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-SB
+  name: steel blade
   id: BladeSteel
   graph: BladeSteelGraph
   startNode: start
@@ -367,9 +475,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-SB
+  icon:
+    sprite: _Starlight/Objects/Misc/steel_blade.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-PB
+  name: plasteel blade
   id: BladePlasteel
   graph: BladePlasteelGraph
   startNode: start
@@ -377,9 +488,12 @@
   category: construction-category-tools
   objectType: Item
   description: crafting-menu-text-PB
+  icon:
+    sprite: _Starlight/Objects/Misc/plasteel_blade.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MSW
+  name: makeshift sword
   id: SwordMakeshift
   graph: SwordMakeshiftGraph
   startNode: start
@@ -387,9 +501,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-MSW
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/makeshift_sword.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-ISW
+  name: improvised sword
   id: SwordImprovised
   graph: SwordImprovisedGraph
   startNode: start
@@ -397,9 +514,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-ISW
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/improvised_sword.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FSW
+  name: forged sword
   id: SwordForged
   graph: SwordForgedGraph
   startNode: start
@@ -407,9 +527,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FSW
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/forged_sword.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-DSW
+  name: dawnbreaker
   id: SwordFlaming
   graph: SwordFlamingGraph
   startNode: start
@@ -417,9 +540,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-DSW
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/dawnbreaker.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-TSW
+  name: tidebreaker
   id: ClaymoreForged
   graph: ClaymoreForgedGraph
   startNode: start
@@ -427,9 +553,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-TSW
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/tidebreaker.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-ISH
+  name: improvised shield
   id: ImprovisedShield
   graph: ImprovisedShieldGraph
   startNode: start
@@ -437,9 +566,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-ISH
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/improvised_shield.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FSH
+  name: forged buckler shield
   id: ForgedShieldBuckler
   graph: ForgedShieldBucklerGraph
   startNode: start
@@ -447,9 +579,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FSH
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/forged_buckler_shield.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FSHT
+  name: forged tower shield
   id: ForgedShieldTower
   graph: ForgedShieldTowerGraph
   startNode: start
@@ -457,9 +592,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FSHT
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/forged_tower_shield.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-PSH
+  name: paladin shield
   id: PaladinShield
   graph: PaladinShieldGraph
   startNode: start
@@ -467,9 +605,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-PSH
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/paladin_shield.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-PSHG
+  name: paladin greatshield
   id: PaladinShieldGreat
   graph: PaladinShieldGreatGraph
   startNode: start
@@ -477,9 +618,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-PSHG
+  icon:
+    sprite: _Starlight/Objects/Weapons/Melee/paladin_greatshield.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MVT
+  name: makeshift vest
   id: ClothingOuterArmorMakeshift
   graph: ClothingOuterArmorMakeshiftGraph
   startNode: start
@@ -487,9 +631,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-MVT
+  icon:
+    sprite: _Starlight/Clothing/OuterClothing/Armor/makeshift.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IVT
+  name: improvised vest
   id: ClothingOuterArmorImprovised
   graph: ClothingOuterArmorImprovisedGraph
   startNode: start
@@ -497,9 +644,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IVT
+  icon:
+    sprite: _Starlight/Clothing/OuterClothing/Armor/improvised.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FVT
+  name: forged vest
   id: ClothingOuterArmorForged
   graph: ClothingOuterArmorForgedGraph
   startNode: start
@@ -507,9 +657,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FVT
+  icon:
+    sprite: _Starlight/Clothing/OuterClothing/Armor/forged.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-PVT
+  name: paladin suit
   id: ClothingOuterArmorPaladin
   graph: ClothingOuterArmorPaladinGraph
   startNode: start
@@ -517,9 +670,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-PVT
+  icon:
+    sprite: _Starlight/Clothing/OuterClothing/Armor/paladin.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-MVTH
+  name: makeshift helmet
   id: ClothingHeadHelmetMakeshift
   graph: ClothingHeadHelmetMakeshiftGraph
   startNode: start
@@ -527,9 +683,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-MVTH
+  icon:
+    sprite: _Starlight/Clothing/Head/Helmets/makeshift.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IVTH
+  name: improvised helmet
   id: ClothingHeadHelmetImprovised
   graph: ClothingHeadHelmetImprovisedGraph
   startNode: start
@@ -537,9 +696,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IVTH
+  icon:
+    sprite: _Starlight/Clothing/Head/Helmets/improvised.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-FVTH
+  name: forged helmet
   id: ClothingHeadHelmetForged
   graph: ClothingHeadHelmetForgedGraph
   startNode: start
@@ -547,9 +709,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-FVTH
+  icon:
+    sprite: _Starlight/Clothing/Head/Helmets/forged.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-PVTH
+  name: paladin helmet
   id: ClothingHeadHelmetPaladin
   graph: ClothingHeadHelmetPaladinGraph
   startNode: start
@@ -557,9 +722,12 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-PVTH
+  icon:
+    sprite: _Starlight/Clothing/Head/Helmets/paladin.rsi
+    state: icon
 
 - type: construction
-  name: crafting-menu-name-IRS
+  name: improvised 5.56mm/.45 magnum speed loader
   id: SpeedLoaderMagnumLeverImprovised
   graph: SpeedLoaderMagnumLeverImprovisedGraph
   startNode: start
@@ -567,4 +735,7 @@
   category: construction-category-weapons
   objectType: Item
   description: crafting-menu-text-IRS
+  icon:
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/improvised_lever_action_speed_loader.rsi
+    state: icon
 

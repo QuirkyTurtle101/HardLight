@@ -9,5 +9,8 @@
       - material: Steel
         amount: 3
         doAfter: 10
+        icon:
+          sprite: _Starlight/Objects/Tools/improvised_wrench.rsi
+          state: icon
   - node: tool
     entity: UnfinishedImprovisedWrench

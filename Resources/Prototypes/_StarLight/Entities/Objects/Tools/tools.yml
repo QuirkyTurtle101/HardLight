@@ -1,6 +1,6 @@
 - type: entity
   name: abductor's wirecutter
-  parent: [ BaseItem, BaseMajorContraband ]
+  parent: [ BaseItem, BaseC2Contraband ]
   id: WirecutterAbductor
   components:
   - type: EmitSoundOnLand
@@ -40,7 +40,7 @@
   
 - type: entity
   name: abductor's screwdriver
-  parent: [ BaseItem, BaseMajorContraband ]
+  parent: [ BaseItem, BaseC2Contraband ]
   id: ScrewdriverAbductor
   components:
   - type: EmitSoundOnLand
@@ -79,7 +79,7 @@
     
 - type: entity
   name: abductor's wrench
-  parent: [ Wrench, BaseMajorContraband ]
+  parent: [ Wrench, BaseC2Contraband ]
   id: WrenchAbductor
   components:
   - type: Sprite
@@ -100,7 +100,7 @@
       
 - type: entity
   name: abductor's multitool
-  parent: [ Multitool, BaseMajorContraband ]
+  parent: [ Multitool, BaseC2Contraband ]
   id: MultitoolAbductor
   components:
   - type: Sprite
@@ -413,13 +413,9 @@
     - state: welder_flame
       visible: false
       shader: unshaded
-      map: ["enum.ToggleableVisuals.Layer"]
+      map: ["enum.ToggleVisuals.Layer"]
   - type: RefillableSolution
     solution: Welder
-  - type: Tool
-    useSound:
-      collection: Welder
-    qualities: Welding
   - type: SolutionContainerManager
     solutions:
       Welder:
@@ -427,11 +423,10 @@
         - ReagentId: WeldingFuel
           Quantity: 50
         maxVol: 50
-  - type: Welder
   - type: GenericVisualizer
     visuals:
-      enum.ToggleableVisuals.Enabled:
-        enum.ToggleableVisuals.Layer:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
   - type: Item
@@ -667,13 +662,9 @@
     - state: welder_flame
       visible: false
       shader: unshaded
-      map: ["enum.ToggleableVisuals.Layer"]
+      map: ["enum.ToggleVisuals.Layer"]
   - type: RefillableSolution
     solution: Welder
-  - type: Tool
-    useSound:
-      collection: Welder
-    qualities: Welding
   - type: SolutionContainerManager
     solutions:
       Welder:
@@ -681,11 +672,10 @@
         - ReagentId: WeldingFuel
           Quantity: 50
         maxVol: 100
-  - type: Welder
   - type: GenericVisualizer
     visuals:
-      enum.ToggleableVisuals.Enabled:
-        enum.ToggleableVisuals.Layer:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
   - type: Item

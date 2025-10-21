@@ -241,7 +241,7 @@
 
 - type: entity
   name: makeshift shield
-  parent: [ PaladinShield, BaseMinorContraband ]
+  parent: [ PaladinShield, BaseC3Contraband ]
   id: MakeshiftShield
   description: A rundown looking shield, not good for much.
   components:

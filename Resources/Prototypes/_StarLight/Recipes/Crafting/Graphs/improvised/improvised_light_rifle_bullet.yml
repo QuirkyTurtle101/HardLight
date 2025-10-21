@@ -1,5 +1,5 @@
 - type: constructionGraph
-  id: ImprovisedLightRifleBulletGraph
+  id: Improvised556x45mmBulletGraph
   start: start
   graph:
     - node: start
@@ -12,5 +12,8 @@
             - material: CrushedPhosphorus
               amount: 3
               doAfter: 0.5
+              icon:
+                sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Casings/improvised_casing.rsi
+                state: base
     - node: shell
-      entity: CartridgeLightRifleImprovised
+      entity: Cartridge5.56x45mmImprovised

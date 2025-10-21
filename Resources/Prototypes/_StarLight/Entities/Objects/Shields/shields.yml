@@ -1,6 +1,6 @@
 - type: entity
   name: paladin shield
-  parent: [ BaseItem, BaseMajorContraband ] # Easier to remake it than inheret it, due to wiz keeping all shields in one folder and mine doing the opposite, due to the suitslot sprites.
+  parent: [ BaseItem, BaseC2Contraband ] # Easier to remake it than inheret it, due to wiz keeping all shields in one folder and mine doing the opposite, due to the suitslot sprites.
   id: PaladinShield
   description: A shield for a true paladin! Good at deflecting hits with swords and absorbing the impact from bats, but not much else.
   components:
@@ -70,7 +70,7 @@
 
 - type: entity
   name: paladin greatshield
-  parent: [ PaladinShield, BaseMajorContraband ]
+  parent: [ PaladinShield, BaseC2Contraband ]
   id: PaladinShieldGreat
   description: You're up against the wall and I! AM! THE! FUCKING! WALL!
   components:
@@ -136,7 +136,7 @@
 
 - type: entity
   name: forged buckler shield
-  parent: [ PaladinShield, BaseMinorContraband ]
+  parent: [ PaladinShield, BaseC1Contraband ]
   id: ForgedShieldBuckler
   description: Made from the best plasteel the tidersmiths could offer. Decent all-arounder, however being made out of solid metal makes it get hot real fast.
   components:
@@ -194,7 +194,7 @@
 
 - type: entity
   name: forged tower shield
-  parent: [ ForgedShieldBuckler, BaseMinorContraband ]
+  parent: [ ForgedShieldBuckler, BaseC1Contraband ]
   id: ForgedShieldTower
   description: Tall and menacing. A bit on the heavy side, however.
   components:
@@ -247,7 +247,7 @@
 
 - type: entity
   name: improvised shield
-  parent: [ PaladinShield, BaseMinorContraband ]
+  parent: [ PaladinShield, BaseC1Contraband ]
   id: ImprovisedShield
   description: Steel welded together in a interlocking pattern to hold up better to various kinds of blows. Don't expect it to do well in a gunfight, however.
   components:

@@ -9,5 +9,8 @@
       - material: Plasteel
         amount: 6
         doAfter: 15
+        icon:
+          sprite: _Starlight/Objects/Misc/plasteel_blade.rsi
+          state: icon
   - node: blade
     entity: BladePlasteel

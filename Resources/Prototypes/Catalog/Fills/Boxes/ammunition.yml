@@ -150,10 +150,10 @@
 # 4.6x30mmmm
 
 - type: entity
-  name: box of WT550 9x19mm magazines
+  name: box of WT550 4.6x30mm magazines
   parent: BoxMagazine
   id: BoxMagazine4.6x30mmSubMachineGunTopMountedFMJ
-  description: A box full of WT550 9x19mm magazines.
+  description: A box full of WT550 4.6x30mm magazines.
   components:
   - type: StorageFill
     contents:

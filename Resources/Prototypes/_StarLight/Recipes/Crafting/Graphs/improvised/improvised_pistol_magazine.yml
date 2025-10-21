@@ -1,5 +1,5 @@
 - type: constructionGraph
-  id: ImprovisedPistolMagazineGraph
+  id: Improvised9x19mmMagazineGraph
   start: start
   graph:
     - node: start
@@ -9,5 +9,8 @@
             - material: Steel
               amount: 5
               doAfter: 2
+              icon:
+                sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/improvised_pistol_magazine.rsi
+                state: base
     - node: shell
-      entity: MagazinePistolImprovised
+      entity: Magazine9x19mmImprovised

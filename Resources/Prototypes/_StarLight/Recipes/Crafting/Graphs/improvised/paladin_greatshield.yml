@@ -20,5 +20,8 @@
         amount: 10
       - material: Cloth
         amount: 12
+        icon:
+          sprite: _Starlight/Objects/Shields/paladin_greatshield.rsi
+          state: icon
   - node: shield
     entity: UnfinishedPaladinShieldGreat

@@ -90,9 +90,8 @@
         whitelist:
           tags:
           - Multitool
-
-            #Starlight
-            - ImprovisedMultitool
+          #Starlight
+          - ImprovisedMultitool
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
 
@@ -179,9 +178,8 @@
         whitelist:
           tags:
           - Multitool
-            
-            #Starlight
-            - ImprovisedMultitool
+          #Starlight
+          - ImprovisedMultitool
       wrench:
         whitelist:
           tags:

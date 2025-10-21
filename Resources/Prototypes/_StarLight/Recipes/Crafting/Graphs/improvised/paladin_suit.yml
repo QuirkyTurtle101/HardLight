@@ -17,5 +17,8 @@
       - material: Cloth
         amount: 15
         doAfter: 15
+        icon:
+          sprite: _Starlight/Clothing/OuterClothing/Armor/paladin.rsi
+          state: icon
   - node: vest
     entity: UnfinishedClothingOuterArmorPaladin

@@ -1,178 +1,9 @@
-# Rubber
-- type: entity
-  name: Drozd
-  parent: [WeaponSubMachineGunDrozd, BaseSecurityContraband]
-  id: WeaponSubMachineGunDrozdRubber
-  suffix: Non-Lethal
-  components:
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          name: Magazine
-          startingItem: MagazinePistolSubMachineGunRubber
-          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-          priority: 2
-          whitelist:
-            tags:
-              - MagazinePistolSubMachineGunSP
-        gun_chamber:
-          name: Chamber
-          startingItem: CartridgePistolRubber
-          priority: 1
-          whitelist:
-            tags:
-              - CartridgePistol
-            
-- type: entity
-  name: SP-91-RC
-  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband]
-  id: WeaponSubMachineGunSP91RC
-  description: Compact submachine gun designed for riot control.
-  components:
-  - type: Sprite
-    sprite: _Starlight/Objects/Weapons/Guns/SMGs/sp91rc.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Wieldable
-    unwieldOnUse: false
-  - type: GunWieldBonus
-    minAngle: -19
-    maxAngle: -16
-  - type: Gun
-    fireRate: 13
-    selectedMode: Burst
-    shotsPerBurst: 5
-    availableModes:
-      - Burst
-    soundGunshot:
-      path: /Audio/_Starlight/Weapons/Guns/Gunshots/1sp_91.ogg
-  - type: MagazineVisuals
-    magState: mag
-    steps: 5
-    zeroVisible: true
-  - type: Appearance
-  - type: ChamberMagazineAmmoProvider
-    autoEject: true
-    
-- type: entity
-  name: Type U3 Uzi
-  parent: [BaseWeaponSubMachineGun, BaseMajorContraband]
-  id: WeaponSubMachineGunUzi
-  description: Lightweight submachine gun with a 32-round magazine that has single or 4 round firing modes.
-  components:
-  - type: Sprite
-    sprite: _Starlight/Objects/Weapons/Guns/SMGs/uzi.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Gun
-    fireRate: 12
-    selectedMode: FullAuto
-    shotsPerBurst: 4
-    availableModes:
-    - SemiAuto
-    - Burst
-    - FullAuto
-    soundGunshot:
-      path: /Audio/_Starlight/Weapons/Guns/Gunshots/uzi.ogg
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
-  - type: ChamberMagazineAmmoProvider
-    autoEject: true
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazinePistolSubMachineGunUzi
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineSMGUzi
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgePistolSP
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgePistol
-
-#PPSH
-- type: entity
-  name: PPSH 59 SMG
-  parent: [BaseWeaponSubMachineGun, BaseSovietContraband]
-  id: WeaponSubMachineGunPPSH
-  description: Beloved by USSP veterans and feared by friendly fire protocols everywhere. Uses .35 ammo.
-  components:
-  - type: Sprite
-    sprite: _Starlight/Objects/Weapons/Guns/SMGs/PPSh59.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: _Starlight/Objects/Weapons/Guns/SMGs/PPSh59.rsi
-    quickEquip: false
-    slots:
-    - Back
-    - suitStorage
-  - type: Wieldable
-    unwieldOnUse: false
-  - type: GunWieldBonus
-    minAngle: -9
-    maxAngle: -9
-  - type: Gun
-    minAngle: 21
-    maxAngle: 32
-    fireRate: 15
-    selectedMode: FullAuto
-    availableModes:
-    - SemiAuto
-    - FullAuto
-    soundGunshot:
-      path: /Audio/_Starlight/Weapons/Guns/Gunshots/ppsh.ogg
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
-  - type: ChamberMagazineAmmoProvider
-    autoEject: true
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazinePistolSubMachineGunPPSH
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineSMGPPSH
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgePistolSP
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgePistol
+# Improvised SMGs Only
+# All regular Starlight SMGs removed - only improvised weapons kept
 
 - type: entity
   name: makeshift SMG
-  parent: [BaseWeaponSubMachineGun, BaseMinorContraband]
+  parent: [BaseWeaponSubMachineGun, BaseC1Contraband]
   id: WeaponSubMachineGunMakeshift
   description: Held together with cloth and dreams, it rattles ominously with every shot.
   components:
@@ -186,7 +17,7 @@
   - type: Clothing
     sprite: _Starlight/Objects/Weapons/Guns/SMGs/makeshift_smg.rsi
   - type: Item
-    size: Normal  
+    size: Normal
   - type: Gun
     fireRate: 9
     minAngle: 32
@@ -212,7 +43,7 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineSMGImprovised
+            - Magazine9x19mmSMGImprovised
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -220,7 +51,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgePistolImprovised
+            - Cartridge9x19mmImprovised
   - type: Construction
     graph: MakeshiftSMGGraph
     node: shotgun
@@ -240,7 +71,7 @@
       - id: RifleStock
         launchAngle: 180
         prob: 0.80
-      - id: MagazinePistolSubMachineGunImprovised
+      - id: Magazine9x19mmSubMachineGunImprovised
         launchAngle: 190
         prob: 1
 
@@ -258,7 +89,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Starlight/Objects/Weapons/Guns/SMGs/makeshift_smg.rsi  
+    sprite: _Starlight/Objects/Weapons/Guns/SMGs/makeshift_smg.rsi
   - type: Item
     size: Large
   - type: Wieldable
@@ -311,7 +142,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Starlight/Objects/Weapons/Guns/SMGs/forged_smg.rsi  
+    sprite: _Starlight/Objects/Weapons/Guns/SMGs/forged_smg.rsi
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus

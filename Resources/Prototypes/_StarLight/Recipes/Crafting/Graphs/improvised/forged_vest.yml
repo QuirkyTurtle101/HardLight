@@ -17,5 +17,8 @@
       - material: Cloth
         amount: 10
         doAfter: 10
+        icon:
+          sprite: _Starlight/Clothing/OuterClothing/Armor/forged.rsi
+          state: icon
   - node: vest
     entity: UnfinishedClothingOuterArmorForged

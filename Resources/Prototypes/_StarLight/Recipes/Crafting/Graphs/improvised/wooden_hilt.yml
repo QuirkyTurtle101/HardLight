@@ -9,5 +9,8 @@
       - material: WoodPlank
         amount: 3
         doAfter: 4
+        icon:
+          sprite: _Starlight/Objects/Misc/wooden_hilt.rsi
+          state: icon
   - node: hilt
     entity: HiltWood

@@ -10,6 +10,18 @@
         Piercing: 14
 
 - type: entity
+  id: Bullet4.6x30mmImprovised
+  name: bullet (4.6x30mm improvised)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 6
+        Blunt: 6
+
+- type: entity
   id: Bullet4.6x30mmPractice
   name: bullet (4.6x30mm practice)
   parent: BaseBulletPractice

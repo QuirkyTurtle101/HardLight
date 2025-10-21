@@ -9,5 +9,8 @@
       - material: Steel
         amount: 5
         doAfter: 10
+        icon:
+          sprite: _Starlight/Objects/Tools/improvised_crowbar.rsi
+          state: icon
   - node: tool
     entity: UnfinishedImprovisedCrowbar

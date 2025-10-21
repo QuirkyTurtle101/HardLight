@@ -17,5 +17,8 @@
       - material: Cloth
         amount: 6
         doAfter: 7
+        icon:
+          sprite: _Starlight/Clothing/Head/Helmets/paladin.rsi
+          state: icon
   - node: helmet
     entity: UnfinishedClothingHeadHelmetPaladin

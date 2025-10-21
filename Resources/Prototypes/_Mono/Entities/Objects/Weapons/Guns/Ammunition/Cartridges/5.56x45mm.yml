@@ -40,7 +40,6 @@
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
       - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#dbdbdb"
 
 - type: entity
@@ -55,7 +54,6 @@
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
       - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#ff6e52"
 
 - type: entity
@@ -70,7 +68,6 @@
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
       - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#65fe08"
 
 - type: entity
@@ -85,5 +82,29 @@
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
       - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#43c4f7"
+
+# Hardlight - Improvised
+- type: entity
+  id: Cartridge5.56x45mmImprovised
+  name: improvised cartridge (5.56x45mm)
+  description: A handmade rifle bullet, uses phosphorus as a propellent instead of gunpowder which makes it much less effective.
+  parent: [BaseCartridge5.56x45mm, BaseC1Contraband]
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.56x45mmImprovised
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Casings/improvised_casing.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        color: "#717171"
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge5.56x45mm
+      - Cartridge5.56x45mmImprovised
+  - type: Construction
+    graph: Improvised556x45mmBulletGraph
+    node: shell

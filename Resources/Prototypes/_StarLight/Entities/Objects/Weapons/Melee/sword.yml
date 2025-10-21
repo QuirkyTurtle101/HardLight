@@ -1,6 +1,6 @@
 - type: entity
   name: makeshift sword
-  parent: [ BaseSword, BaseMinorContraband ]
+  parent: [ BaseSword, BaseC1Contraband ]
   id: SwordMakeshift
   description: Some sharp steel affixed to a metal rod, it can hardly be called a sword.
   components:
@@ -25,7 +25,7 @@
 
 - type: entity
   name: improvised sword
-  parent: [ BaseSword, BaseMinorContraband ]
+  parent: [ BaseSword, BaseC1Contraband ]
   id: SwordImprovised
   description: Not too sharp, but it does the job just fine.
   components:
@@ -50,7 +50,7 @@
 
 - type: entity
   name: forged sword
-  parent: [ BaseSword, BaseMinorContraband ]
+  parent: [ BaseSword, BaseC1Contraband ]
   id: SwordForged
   description: Made with plasteel, a single touch of the blade is enough to draw blood.
   components:
@@ -77,7 +77,7 @@
 
 - type: entity
   name: dawnbreaker
-  parent: [ BaseSword, BaseMajorContraband, Welder ]
+  parent: [ BaseSword, BaseC2Contraband, Welder ]
   id: SwordFlaming
   description: How do you perfect upon perfection? Why, use fire of course! Be the shining light through maints and fight valiantly! 
   components:
@@ -88,11 +88,11 @@
     - state: welder_flame
       visible: false
       shader: unshaded
-      map: ["enum.ToggleableVisuals.Layer"]
+      map: ["enum.ToggleVisuals.Layer"]
   - type: GenericVisualizer
     visuals:
-      enum.ToggleableVisuals.Enabled:
-        enum.ToggleableVisuals.Layer:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
   - type: PointLight
@@ -149,7 +149,7 @@
 
 - type: entity
   name: tidebreaker
-  parent: [ BaseSword, BaseMajorContraband ]
+  parent: [ BaseSword, BaseC2Contraband ]
   id: ClaymoreForged
   description: The perfect weapon for an aspiring maints knight!
   components:

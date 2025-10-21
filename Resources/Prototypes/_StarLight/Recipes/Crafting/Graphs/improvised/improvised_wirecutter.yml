@@ -12,5 +12,8 @@
       - material: Cloth
         amount: 2
         doAfter: 5
+        icon:
+          sprite: _Starlight/Objects/Tools/improvised_wirecutters.rsi
+          state: cutters
   - node: tool
     entity: UnfinishedImprovisedWirecutter

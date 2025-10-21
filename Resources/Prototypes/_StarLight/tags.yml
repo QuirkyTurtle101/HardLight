@@ -26,15 +26,6 @@
   id: CartridgePistolDP
 
 - type: Tag
-  id: CartridgePistolImprovised
-
-- type: Tag
-  id: CartridgeMagnumImprovised
-
-- type: Tag
-  id: CartridgeLightRifleImprovised
-
-- type: Tag
   id: CentcommVibroblade
 
 - type: Tag
@@ -80,9 +71,6 @@
   id: ImprovisedScrewdriver
 
 - type: Tag
-  id: ImprovisedCrowbar
-
-- type: Tag
   id: LightRifleHeavy
 
 - type: Tag
@@ -92,9 +80,6 @@
   id: MagazinePistolDP
 
 - type: Tag
-  id: MagazinePistolImprovised
-
-- type: Tag
   id: MagazineRifleM52
 
 - type: Tag
@@ -102,9 +87,6 @@
 
 - type: Tag
   id: MagazineSMGUzi
-
-- type: Tag
-  id: MagazineSMGImprovised
 
 - type: Tag
   id: MedCyberEyes
@@ -156,9 +138,6 @@
 
 - type: Tag
   id: SwordForged
-
-- type: Tag
-  id: SpeedLoaderMagnumImprovised
 
 - type: Tag
   id: ShellShotgunImprovised

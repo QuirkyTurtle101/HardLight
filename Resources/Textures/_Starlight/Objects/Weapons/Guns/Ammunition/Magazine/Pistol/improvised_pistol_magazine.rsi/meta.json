@@ -8,6 +8,9 @@
     "copyright": "Made by Killer Tamashi (Discord), inhands by TiniestShark (github) then recolored by Killer Tamashi.",
     "states": [
         {
+            "name": "icon"
+        },
+        {
             "name": "base"
         },
         {

@@ -2,18 +2,18 @@
   parent: BaseItem
   id: BaseMagazineBoxImprovised
   name: improvised ammunition box (.any)
-  description: This looks suspiciously like a .20 magazine box with a crude bullet drawing ontop. Mixing ammo is not advised.
+  description: This looks suspiciously like a magazine box with a crude bullet drawing ontop. Mixing ammo is not advised.
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
         - CartridgePistol
-        - CartridgePistolImprovised
+        - Cartridge9x19mmImprovised
         - CartridgeMagnum
-        - CartridgeMagnumImprovised
+        - Cartridge45MagnumImprovised
         - CartridgeLightRifle
-        - CartridgeLightRifleImprovised
+        - Cartridge5.56x45mmImprovised
         - ShellShotgun
         - ShellShotgunImprovised
     proto: null
@@ -45,10 +45,10 @@
 - type: entity
   parent: BaseMagazineBoxImprovised
   id: MagazineBoxImprovisedPistol
-  name: improvised ammunition box (.35 auto improvised)
+  name: improvised ammunition box (9x19mm improvised)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolImprovised
+    proto: Cartridge9x19mmImprovised
   - type: Sprite
     layers:
     - state: base
@@ -62,10 +62,10 @@
 - type: entity
   parent: BaseMagazineBoxImprovised
   id: MagazineBoxImprovisedRifle
-  name: improvised ammunition box (.30 rifle improvised)
+  name: improvised ammunition box (5.56x45mm improvised)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleImprovised
+    proto: Cartridge5.56x45mmImprovised
   - type: Sprite
     layers:
     - state: base
@@ -82,7 +82,7 @@
   name: improvised ammunition box (.45 magnum improvised)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumImprovised
+    proto: Cartridge45MagnumImprovised
   - type: Sprite
     layers:
     - state: base
@@ -96,7 +96,7 @@
 - type: entity
   parent: BaseMagazineBoxImprovised
   id: MagazineBoxImprovisedShotgun
-  name: improvised ammunition box (.50 shotgun improvised)
+  name: improvised ammunition box (12 gauge improvised)
   components:
   - type: BallisticAmmoProvider
     proto: ShellShotgunImprovised

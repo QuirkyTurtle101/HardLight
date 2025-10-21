@@ -9,5 +9,8 @@
       - material: Steel
         amount: 4
         doAfter: 10
+        icon:
+          sprite: _Starlight/Objects/Misc/steel_blade.rsi
+          state: icon
   - node: blade
     entity: BladeSteel

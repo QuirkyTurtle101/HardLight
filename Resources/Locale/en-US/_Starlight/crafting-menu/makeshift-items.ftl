@@ -64,11 +64,11 @@ crafting-menu-text-IRB = Better than nothing. Fairly full with phosphorus but st
 crafting-menu-name-IMGB = improvised ammo box
 crafting-menu-text-IMGB = Organization is not the strong suit of any tider. Can hold all kinds of bullets.
 
-crafting-menu-name-IMGP = improvised ammo box (.35 auto)
-crafting-menu-text-IMGP = Organization is not the strong suit of any tider. Holds 40 improvised .35 auto rounds.
+crafting-menu-name-IMGP = improvised ammo box (9x19mm)
+crafting-menu-text-IMGP = Organization is not the strong suit of any tider. Holds 40 improvised 9x19mm rounds.
 
-crafting-menu-name-IMGR = improvised ammo box (.30 rifle)
-crafting-menu-text-IMGR = Organization is not the strong suit of any tider. Holds 40 improvised .30 rifle rounds.
+crafting-menu-name-IMGR = improvised ammo box (5.56x45mm)
+crafting-menu-text-IMGR = Organization is not the strong suit of any tider. Holds 40 improvised 5.56x45mm rounds.
 
 crafting-menu-name-IMGM = improvised ammo box (.45 magnum)
 crafting-menu-text-IMGM = Organization is not the strong suit of any tider. Holds 40 improvised .45 magnum rounds.
@@ -186,6 +186,6 @@ crafting-menu-name-CGREN = green crayon
 
 crafting-menu-name-CYELO = yellow crayon
 
-crafting-menu-name-IRS = improvised .30/.45 speed loader
+crafting-menu-name-IRS = improvised 5.56mm/.45 magnum speed loader
 crafting-menu-text-IRS = Little more than a spring-loaded tube that can hold bullets.
 

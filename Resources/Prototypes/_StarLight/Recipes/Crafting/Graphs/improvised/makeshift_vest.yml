@@ -11,5 +11,8 @@
         doAfter: 10
       - material: Cable
         amount: 5
+        icon:
+          sprite: _Starlight/Clothing/OuterClothing/Armor/makeshift.rsi
+          state: icon
   - node: vest
     entity: ClothingOuterArmorMakeshift

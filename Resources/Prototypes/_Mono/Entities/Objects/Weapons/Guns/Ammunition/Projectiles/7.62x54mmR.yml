@@ -10,6 +10,18 @@
         Piercing: 45
 
 - type: entity
+  id: Bullet7.62x54mmRImprovised
+  name: bullet (7.62x54mmR improvised)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 19
+        Blunt: 19
+
+- type: entity
   id: Bullet7.62x54mmRPractice
   name: bullet (7.62x54mmR practice)
   parent: BaseBulletPractice
