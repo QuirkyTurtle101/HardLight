@@ -109,7 +109,7 @@ public sealed partial class XenoComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     public float BuildRange = 1;
 
-    [DataField]
+    [DataField, AutoNetworkedField]
     [ViewVariables(VVAccess.ReadWrite)]
     public List<EntProtoId> CanBuild = new();
 

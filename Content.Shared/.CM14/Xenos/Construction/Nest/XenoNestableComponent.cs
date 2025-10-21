@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.GameStates;
 
-namespace Content.Shared._CM14.Xenos.Construction.Nest;
+namespace Content.Shared.CM14.Xenos.Construction.Nest;
 
 [RegisterComponent, NetworkedComponent]
 [Access(typeof(XenoNestSystem))]

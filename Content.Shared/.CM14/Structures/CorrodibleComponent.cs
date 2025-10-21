@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CM14.Structures;
+namespace Content.Shared.CM14.Structures;
 
 [RegisterComponent, NetworkedComponent, ComponentProtoName("Corrodible")]
 public sealed partial class CorrodibleComponent : Component

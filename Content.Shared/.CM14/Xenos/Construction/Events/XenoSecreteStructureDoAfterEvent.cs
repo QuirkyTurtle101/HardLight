@@ -3,7 +3,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CM14.Xenos.Construction.Events;
+namespace Content.Shared.CM14.Xenos.Construction.Events;
 
 [Serializable, NetSerializable]
 public sealed partial class XenoSecreteStructureDoAfterEvent : DoAfterEvent

@@ -17,7 +17,7 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CM14.Xenos.Construction.Nest;
+namespace Content.Shared.CM14.Xenos.Construction.Nest;
 
 public sealed class XenoNestSystem : EntitySystem
 {
