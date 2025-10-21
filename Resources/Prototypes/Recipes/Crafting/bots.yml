@@ -62,7 +62,6 @@
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-    state: supplybot
 
 - type: construction
   id: plantbot

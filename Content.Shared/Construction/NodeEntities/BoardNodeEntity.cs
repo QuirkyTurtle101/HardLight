@@ -1,6 +1,4 @@
-<<<<<<<< HEAD:Content.Server/Construction/NodeEntities/BoardNodeEntity.cs
-using Content.Server._NF.Construction.Components; // Frontier
-using Content.Shared.Construction;
+using Content.Shared._NF.Construction.Components; // Frontier
 using Content.Shared.Construction.Components;
 using JetBrains.Annotations;
 using Robust.Shared.Containers;
@@ -66,3 +64,4 @@ public sealed partial class BoardNodeEntity : IGraphNodeEntity
         Wallmount
     }
     // End Frontier
+}

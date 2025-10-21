@@ -206,7 +206,7 @@
   conditions:
   - !type:TileNotBlocked
 
-  name: cardboard wall
+- type: construction
   id: Cardwall
   graph: Cardwall
   startNode: start
@@ -1132,6 +1132,7 @@
   conditions:
     - !type:TileNotBlocked
 
+- type: construction
   id: CardDoor
   graph: DoorGraph
   startNode: start

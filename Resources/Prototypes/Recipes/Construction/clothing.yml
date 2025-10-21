@@ -30,6 +30,7 @@
   category: construction-category-clothing
   objectType: Item
 
+- type: construction
   id: cardHelmet
   graph: cardHelmet
   startNode: start
