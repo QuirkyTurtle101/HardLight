@@ -1,6 +1,9 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Collections.Generic;
 using System.Linq;
 using Content.Shared.ActionBlocker;
+using Content.Shared.CM14.Xenos;
+using Content.Shared.Coordinates.Helpers;
 using Content.Shared.Actions.Events;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
@@ -13,6 +16,8 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
+using Robust.Shared.Network;
+using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
@@ -21,6 +26,7 @@ namespace Content.Shared.Actions;
 public abstract class SharedActionsSystem : EntitySystem
 {
     [Dependency] protected readonly IGameTiming GameTiming = default!;
+    [Dependency] private   readonly IMapManager _map = default!;
     [Dependency] private   readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private   readonly ActionBlockerSystem _actionBlockerSystem = default!;
     [Dependency] private   readonly ActionContainerSystem _actionContainer = default!;
@@ -29,6 +35,10 @@ public abstract class SharedActionsSystem : EntitySystem
     [Dependency] private   readonly SharedAudioSystem _audio = default!;
     [Dependency] private   readonly SharedInteractionSystem _interactionSystem = default!;
     [Dependency] private   readonly SharedTransformSystem _transformSystem = default!;
+    [Dependency] private   readonly INetManager _net = default!;
+    [Dependency] private   readonly SharedMapSystem _mapSystem = default!;
+
+    private readonly List<EntityUid> _anchored = new();
 
     public override void Initialize()
     {
@@ -300,25 +310,45 @@ public abstract class SharedActionsSystem : EntitySystem
             return;
 
         var name = Name(actionEnt, metaData);
+        var protoId = metaData.EntityPrototype?.ID ?? "<no-proto>";
+        var isWeeds = protoId == "ActionXenoPlantWeeds";
+        if (isWeeds)
+        {
+            Log.Info($"[XenoWeeds][srv?] OnActionRequest start user={ToPrettyString(user)} actionEnt={ToPrettyString(actionEnt)} proto={protoId}");
+        }
 
         // Does the user actually have the requested action?
         if (!component.Actions.Contains(actionEnt))
         {
+            if (isWeeds)
+                Log.Info($"[XenoWeeds][srv?] User lacks action entity {ToPrettyString(actionEnt)}");
             _adminLogger.Add(LogType.Action,
                 $"{ToPrettyString(user):user} attempted to perform an action that they do not have: {name}.");
             return;
         }
 
         if (!TryGetActionData(actionEnt, out var action))
+        {
+            if (isWeeds)
+                Log.Info($"[XenoWeeds][srv?] TryGetActionData failed for {ToPrettyString(actionEnt)}");
             return;
+        }
 
         DebugTools.Assert(action.AttachedEntity == user);
         if (!action.Enabled)
+        {
+            if (isWeeds)
+                Log.Info($"[XenoWeeds][srv?] Action disabled {ToPrettyString(actionEnt)}");
             return;
+        }
 
         var curTime = GameTiming.CurTime;
         if (IsCooldownActive(action, curTime))
+        {
+            if (isWeeds)
+                Log.Info($"[XenoWeeds][srv?] Action cooldown active {ToPrettyString(actionEnt)}");
             return;
+        }
 
         // check for action use prevention
         // TODO: make code below use this event with a dedicated component
@@ -369,7 +399,7 @@ public abstract class SharedActionsSystem : EntitySystem
                 }
 
                 var entityCoordinatesTarget = GetCoordinates(netCoordinatesTarget);
-                _rotateToFaceSystem.TryFaceCoordinates(user, _transformSystem.ToMapCoordinates(entityCoordinatesTarget).Position);
+                _rotateToFaceSystem.TryFaceCoordinates(user, entityCoordinatesTarget.ToMapPos(EntityManager, _transformSystem));
 
                 if (!ValidateWorldTarget(user, entityCoordinatesTarget, (actionEnt, worldAction)))
                     return;
@@ -421,11 +451,60 @@ public abstract class SharedActionsSystem : EntitySystem
                     $"{ToPrettyString(user):user} is performing the {name:action} action provided by {ToPrettyString(action.Container ?? user):provider}.");
 
                 performEvent = instantAction.Event;
+                if (isWeeds)
+                {
+                    Log.Info($"[XenoWeeds][srv?] Instant action resolved; Event is {(performEvent == null ? "null" : performEvent.GetType().Name)}");
+                }
                 break;
+        }
+
+        // Server-authoritative short-circuit for weeds: spawn + cooldown here and skip event pipeline.
+        if (isWeeds && _net.IsServer)
+        {
+            if (TryComp(user, out XenoComponent? xeno))
+            {
+                var coords = _transformSystem.GetMoverCoordinates(user).SnapToGrid(EntityManager, _map);
+                // If on a grid, skip if weeds already present on this tile
+                if (coords.GetGridUid(EntityManager) is { } gridUid && TryComp(gridUid, out MapGridComponent? grid))
+                {
+                    var tile = _mapSystem.CoordinatesToTile(gridUid, grid, coords);
+                    var anchored = new List<EntityUid>();
+                    _mapSystem.GetAnchoredEntities((gridUid, grid), tile, anchored);
+                    foreach (var a in anchored)
+                    {
+                        if (HasComp<Content.Shared.CM14.Xenos.Construction.XenoWeedsComponent>(a))
+                        {
+                            // Already weeds here: just start cooldown and exit
+                            StartUseDelay(actionEnt);
+                            Log.Info($"[XenoWeeds][server] Short-circuit skip duplicate at {coords}");
+                            return;
+                        }
+                    }
+                }
+
+                // No duplicate found: spawn and cooldown
+                Spawn(xeno.Weedprototype, coords);
+                StartUseDelay(actionEnt);
+                Log.Info($"[XenoWeeds][server] Short-circuit spawn by SharedActions for {ToPrettyString(user)} at {coords} using {xeno.Weedprototype}");
+                return;
+            }
         }
 
         // All checks passed. Perform the action!
         PerformAction(user, component, actionEnt, action, performEvent, curTime);
+
+        // Server-side fallback: if this is the xeno weeds action and no handler marked it handled,
+        // spawn weeds at the performer’s snapped coordinates and start the use delay.
+        if (isWeeds && performEvent != null && !performEvent.Handled)
+        {
+            if (TryComp(user, out XenoComponent? xeno))
+            {
+                var coords = _transformSystem.GetMoverCoordinates(user).SnapToGrid(EntityManager, _map);
+                Spawn(xeno.Weedprototype, coords);
+                StartUseDelay(actionEnt);
+                Log.Info($"[XenoWeeds][srv?] Fallback spawn by SharedActions for {ToPrettyString(user)} at {coords} using {xeno.Weedprototype}");
+            }
+        }
     }
 
     public bool ValidateEntityTarget(EntityUid user, EntityUid target, Entity<EntityTargetActionComponent> actionEnt)

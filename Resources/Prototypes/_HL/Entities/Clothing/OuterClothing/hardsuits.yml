@@ -183,6 +183,7 @@
     walkModifier: 0.9
     sprintModifier: 0.75
 
+
 # Syndicate Navy Hardsuit
 - type: entity
   parent: [ClothingOuterHardsuitSyndie, BaseC3SyndicateContraband, ContrabandClothing]

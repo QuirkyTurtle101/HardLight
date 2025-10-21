@@ -68,6 +68,12 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         SubscribeLocalEvent<HumanoidAppearanceComponent, ExaminedEvent>(OnExamined);
     }
 
+    // Local visuals keys for humanoid appearance in this fork
+    public enum HumanoidVisuals
+    {
+        Scale
+    }
+
     public DataNode ToDataNode(HumanoidCharacterProfile profile)
     {
         var export = new HumanoidProfileExport()
@@ -179,12 +185,14 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         if (TryComp<GrammarComponent>(target, out var grammar))
             grammar.Gender = sourceHumanoid.Gender;
 
-        // Apply scaling (height and width)
+        // Apply scaling (height and width) if a scale visuals component exists in this fork
         if (sourceHumanoid.Height != 1.0f || sourceHumanoid.Width != 1.0f)
         {
-            var scaleVisuals = EnsureComp<ScaleVisualsComponent>(target);
-            var appearance = EnsureComp<AppearanceComponent>(target);
-            _appearance.SetData(target, ScaleVisuals.Scale, new Vector2(sourceHumanoid.Width, sourceHumanoid.Height), appearance);
+            if (TryComp(target, out AppearanceComponent? appearance))
+            {
+                // Fallback: store scale in appearance as a tuple under a local key to be consumed by client visuals
+                _appearance.SetData(target, HumanoidVisuals.Scale, new Vector2(sourceHumanoid.Width, sourceHumanoid.Height), appearance);
+            }
         }
 
         Dirty(target, targetHumanoid);
@@ -447,12 +455,13 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         humanoid.Height = profile.Appearance.Height;
         humanoid.Width = profile.Appearance.Width;
 
-        // Apply scaling (height and width)
+        // Apply scaling (height and width) if supported
         if (profile.Appearance.Height != 1.0f || profile.Appearance.Width != 1.0f)
         {
-            var scaleVisuals = EnsureComp<ScaleVisualsComponent>(uid);
-            var appearance = EnsureComp<AppearanceComponent>(uid);
-            _appearance.SetData(uid, ScaleVisuals.Scale, new Vector2(profile.Appearance.Width, profile.Appearance.Height), appearance);
+            if (TryComp(uid, out AppearanceComponent? appearance))
+            {
+                _appearance.SetData(uid, HumanoidVisuals.Scale, new Vector2(profile.Appearance.Width, profile.Appearance.Height), appearance);
+            }
         }
 
         RaiseLocalEvent(uid, new ProfileLoadFinishedEvent()); // Shitmed Change
