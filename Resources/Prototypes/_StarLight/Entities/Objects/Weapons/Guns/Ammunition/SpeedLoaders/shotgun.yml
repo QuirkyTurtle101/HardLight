@@ -1,6 +1,6 @@
 - type: entity
   id: BaseSpeedLoaderShotgun
-  name: "speed loader (.50)"
+  name: "speed loader (12 gauge)"
   parent: [ BaseItem ]
   abstract: true
   components:

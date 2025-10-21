@@ -33,8 +33,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
-            - Cartridge9x19mmImprovised
+            - Cartridge9x19mm
   - type: Construction
     graph: MakeshiftPistolCraftedGraph
     node: shotgun
@@ -83,8 +82,7 @@
     proto: null
     whitelist:
       tags:
-      - CartridgePistol
-      - Cartridge9x19mmImprovised
+      - Cartridge9x19mm
   - type: Item
     size: Small
     shape:
@@ -168,5 +166,4 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
-            - Cartridge9x19mmImprovised
+            - Cartridge9x19mm

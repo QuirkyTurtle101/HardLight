@@ -1,5 +1,5 @@
 - type: constructionGraph
-  id: ImprovisedMagnumSpeedLoaderGraph
+  id: Improvised45MagnumSpeedLoaderGraph
   start: start
   graph:
     - node: start
@@ -13,4 +13,4 @@
                 sprite: _Starlight/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/improvised_magnum_speed_loader.rsi
                 state: base
     - node: shell
-      entity: SpeedLoaderMagnumImprovised
+      entity: SpeedLoader45MagnumImprovised

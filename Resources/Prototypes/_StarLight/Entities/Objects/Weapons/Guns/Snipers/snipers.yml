@@ -31,8 +31,7 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - CartridgeLightRifle
-      - Cartridge5.56x45mmImprovised
+      - Cartridge5.56x45mm
     capacity: 2
     proto: null
   - type: WeaponDismantleOnShoot
@@ -130,8 +129,7 @@
     capacity: 8
     whitelist:
       tags:
-      - Cartridge5.56x45mmImprovised
+      - Cartridge5.56x45mm
       - Cartridge45Magnum
-      - Cartridge45MagnumImprovised
   - type: WeaponDismantleOnShoot
     dismantleChance: 0
