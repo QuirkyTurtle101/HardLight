@@ -9,6 +9,8 @@
   - type: CombatMode
     canDisarm: true
     disarmFailChance: 0.55
+  - type: Body
+    prototype: Friendshaped
   - type: InputMover
   - type: MobMover
   - type: HTN
@@ -28,10 +30,8 @@
     qualities:
       - Prying
   - type: Prying
-    pryPowered: !type:Bool
-        true
-    force: !type:Bool
-      true
+    pryPowered: true
+    force: true
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: Reactive
@@ -164,7 +164,7 @@
     # color: "#808080"
     # activateSound: null
     # deactivateSound: null
-  - type: PotentialPsionic #Nyano - Summary: makes potentially psionic. 
+  - type: PotentialPsionic #Nyano - Summary: makes potentially psionic.
     chance: -2
 
 - type: entity
