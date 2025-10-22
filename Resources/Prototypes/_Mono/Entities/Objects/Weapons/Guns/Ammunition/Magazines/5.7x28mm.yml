@@ -11,7 +11,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge5.7x28mmFMJ
+        - Cartridge57x28mmFMJ
     capacity: 10
   - type: Item
     size: Small
@@ -44,7 +44,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge5.7x28mmFMJ
+        - Cartridge57x28mmFMJ
     capacity: 16
   - type: Item
     size: Small
@@ -77,7 +77,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge5.7x28mmFMJ
+        - Cartridge57x28mmFMJ
     capacity: 35
   - type: Item
     size: Small
@@ -103,7 +103,7 @@
   parent: BaseMagazine57x28mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmFMJ
+    proto: Cartridge57x28mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -133,7 +133,7 @@
   parent: Magazine57x28mmPistolFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmIncendiary
+    proto: Cartridge57x28mmIncendiary
   - type: Sprite
     layers:
     - state: red
@@ -147,7 +147,7 @@
   parent: BaseMagazine57x28mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmPractice
+    proto: Cartridge57x28mmPractice
   - type: Sprite
     layers:
     - state: practice
@@ -161,7 +161,7 @@
   parent: BaseMagazine57x28mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmUranium
+    proto: Cartridge57x28mmUranium
   - type: Sprite
     layers:
     - state: uranium
@@ -190,7 +190,7 @@
   parent: BaseMagazine57x28mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmFMJ
+    proto: Cartridge57x28mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -204,7 +204,7 @@
   parent: BaseMagazine57x28mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmFMJ
+    proto: Cartridge57x28mmFMJ
   - type: Sprite
     layers:
     - state: practice
@@ -218,10 +218,10 @@
   parent: BaseMagazine57x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmFMJ
+    proto: Cartridge57x28mmFMJ
     whitelist:
       tags:
-        - Cartridge5.7x28mmFMJ
+        - Cartridge57x28mmFMJ
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
   - type: Sprite
@@ -252,7 +252,7 @@
   parent: BaseMagazine57x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmPractice
+    proto: Cartridge57x28mmPractice
   - type: Sprite
     layers:
     - state: practice
@@ -266,7 +266,7 @@
   parent: BaseMagazine57x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmUranium
+    proto: Cartridge57x28mmUranium
   - type: Sprite
     layers:
     - state: uranium
@@ -280,7 +280,7 @@
   name: SMG magazine (5.7x28mm incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmIncendiary
+    proto: Cartridge57x28mmIncendiary
   - type: Sprite
     layers:
     - state: red
@@ -294,7 +294,7 @@
   parent: BaseMagazine57x28mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmRubber
+    proto: Cartridge57x28mmRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.7x28mm/5.7x28mm_pistol_mag.rsi
     layers:
@@ -309,7 +309,7 @@
   parent: BaseMagazine57x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmRubber
+    proto: Cartridge57x28mmRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.7x28mm/5.7x28mm_smg_mag.rsi
     layers:
@@ -325,7 +325,7 @@
   parent: BaseMagazine57x28mmPistolHighCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmFMJ
+    proto: Cartridge57x28mmFMJ
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.7x28mm/5.7x28mm_pistol_high_capacity_mag.rsi
     layers:
@@ -341,7 +341,7 @@
   parent: BaseMagazine57x28mmSubMachineGunFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.7x28mmEmp
+    proto: Cartridge57x28mmEmp
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.7x28mm/5.7x28mm_smg_mag.rsi
     layers:
@@ -360,10 +360,10 @@
       - Magazine57x28mmSubMachineGunTopMountedFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: Cartridge5.7x28mmFMJ
+    proto: Cartridge57x28mmFMJ
     whitelist:
       tags:
-      - Cartridge5.7x28mmFMJ
+      - Cartridge57x28mmFMJ
     capacity: 30
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/5.7x28mm/5.7x28mm_smg_mag_top_mounted.rsi

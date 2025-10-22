@@ -31,7 +31,7 @@
     NFAmmunitionBoxRifle30Practice: 5
     NFAmmunitionBoxShellShotgunPractice: 8
   contrabandInventory:
-    SpeedLoader5.56x45mmPractice: 3
+    SpeedLoader556x45mmPractice: 3
     SpeedLoader9x19mmPractice: 3
     SpeedLoader45_magnumPractice: 3
   emaggedInventory:

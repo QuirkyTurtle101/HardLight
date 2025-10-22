@@ -27,7 +27,7 @@
   parent: BaseCartridge635x40mmCaseless
   components:
   - type: CartridgeAmmo
-    proto: Bullet6.35x40mmCaseless
+    proto: Bullet635x40mmCaseless
 
 - type: entity
   id: Cartridge635x40mmCaselessRubber
@@ -35,7 +35,7 @@
   parent: BaseCartridge635x40mmCaseless
   components:
   - type: CartridgeAmmo
-    proto: Bullet6.35x40mmCaselessRubber
+    proto: Bullet635x40mmCaselessRubber
 
 - type: entity
   id: Cartridge635x40mmCaselessPractice
@@ -43,7 +43,7 @@
   parent: BaseCartridge635x40mmCaseless
   components:
   - type: CartridgeAmmo
-    proto: Bullet6.35x40mmCaselessPractice
+    proto: Bullet635x40mmCaselessPractice
   - type: Sprite
     layers:
       - state: base

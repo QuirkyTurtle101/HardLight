@@ -63,7 +63,7 @@
   price: 0
   storage:
     back:
-    - BoxMagazine556x45mmmmFMJ
+    - BoxMagazine556x45mmFMJ
 
 - type: loadout
   id: Tsfmc9x19mmPistolMagLoadout
