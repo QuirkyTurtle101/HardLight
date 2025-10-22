@@ -31,7 +31,7 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - Cartridge5.56x45mm
+      - Cartridge556x45mm
     capacity: 2
     proto: null
   - type: WeaponDismantleOnShoot
@@ -129,7 +129,7 @@
     capacity: 8
     whitelist:
       tags:
-      - Cartridge5.56x45mm
+      - Cartridge556x45mm
       - Cartridge45Magnum
   - type: WeaponDismantleOnShoot
     dismantleChance: 0
