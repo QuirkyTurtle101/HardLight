@@ -104,7 +104,7 @@
   - type: Tag
     tags:
       - Cartridge
-      - Cartridge5.56x45mm
+      - Cartridge556x45mm
       - Cartridge5.56x45mmImprovised
   - type: Construction
     graph: Improvised556x45mmBulletGraph
