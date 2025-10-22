@@ -7,8 +7,8 @@ uplink-security-cash45000-desc = Cold, hard cash.
 uplink-security-portable-recharger-name = portable recharger
 uplink-security-portable-recharger-desc = High-tech recharger adapted for portability.
 
-uplink-security-annie-name = Annie (7.62x39mm)
-uplink-security-annie-desc = A beast designed to shoulder the weight of impossible missions. Uses 7.62x39mm ammo.
+uplink-security-annie-name = Annie (762x39mm)
+uplink-security-annie-desc = A beast designed to shoulder the weight of impossible missions. Uses 762x39mm ammo.
 
 uplink-security-eg4-name = EG-4 energy revolver
 uplink-security-eg4-desc = A highly advanced energy revolver capable of firing both lethal and disabling bullets.
