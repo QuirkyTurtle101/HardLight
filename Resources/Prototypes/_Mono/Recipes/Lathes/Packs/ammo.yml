@@ -94,7 +94,7 @@
   - AmmoBox45_magnumIncendiary
   - AmmoBox45_magnumPractice
   - AmmoBox45_magnumUranium
-  - Magazine7.62x39mmFMJ
+  - Magazine762x39mmFMJ
   - Magazine7.62x39mmRubber
   - Magazine7.62x39mmIncendiary
   - Magazine7.62x39mmPractice
@@ -348,7 +348,7 @@
   - Magazine45_magnumPistolFMJ
   - SpeedLoader45_magnumFMJ
   - AmmoBox45_magnumFMJ
-  - Magazine7.62x39mmFMJ
+  - Magazine762x39mmFMJ
   - SpeedLoader7.62x39mmFMJ
   - SpeedLoader7.62x54mmRFMJ
   - AmmoBox7.62x39mmFMJ
@@ -419,7 +419,7 @@
   - Magazine45_magnumPistolFMJ
   - SpeedLoader45_magnumFMJ
   - AmmoBox45_magnumFMJ
-  - Magazine7.62x39mmFMJ
+  - Magazine762x39mmFMJ
   - SpeedLoader7.62x39mmFMJ
   - SpeedLoader7.62x54mmRFMJ
   - AmmoBox7.62x39mmFMJ

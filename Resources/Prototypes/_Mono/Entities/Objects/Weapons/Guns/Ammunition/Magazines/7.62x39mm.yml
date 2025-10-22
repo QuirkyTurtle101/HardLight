@@ -7,7 +7,7 @@
   components:
   - type: Tag
     tags:
-      - Magazine7.62x39mmFMJ
+      - Magazine762x39mmFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -55,7 +55,7 @@
   - type: Appearance
 
 - type: entity
-  id: Magazine7.62x39mmFMJ
+  id: Magazine762x39mmFMJ
   name: "magazine (7.62x39mm FMJ)"
   parent: BaseMagazine7.62x39mm
   components:
@@ -72,7 +72,7 @@
   id: Magazine7.62x39mmEmpty
   name: "magazine (7.62x39mm any)"
   suffix: empty
-  parent: Magazine7.62x39mmFMJ
+  parent: Magazine762x39mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -114,7 +114,7 @@
 - type: entity
   id: Magazine7.62x39mmIncendiary
   name: "magazine (7.62x39mm incendiary)"
-  parent: Magazine7.62x39mmFMJ
+  parent: Magazine762x39mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x39mmIncendiary
@@ -161,7 +161,7 @@
 - type: entity
   id: Magazine7.62x39mmRubber
   name: "magazine (7.62x39mm rubber)"
-  parent: Magazine7.62x39mmFMJ
+  parent: Magazine762x39mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x39mmRubber
@@ -197,7 +197,7 @@
 - type: entity
   id: Magazine7.62x39mmLowCapacityFMJ
   name: "low cap magazine (7.62x39mm FMJ)"
-  parent: Magazine7.62x39mmFMJ
+  parent: Magazine762x39mmFMJ
   components:
   - type: Tag
     tags:
@@ -278,7 +278,7 @@
   - type: Tag
     tags:
       - Magazine762x39mmSubsonic
-      - Magazine7.62x39mmFMJ
+      - Magazine762x39mmFMJ
   - type: BallisticAmmoProvider
     proto: Cartridge762x39mmSubsonic
     mayTransfer: true

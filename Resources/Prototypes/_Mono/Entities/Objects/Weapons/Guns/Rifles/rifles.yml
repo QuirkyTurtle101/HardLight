@@ -99,13 +99,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mmFMJ
+        startingItem: Magazine762x39mmFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine7.62x39mmFMJ
+          - Magazine762x39mmFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber

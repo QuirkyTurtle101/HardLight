@@ -2,8 +2,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoFMJIntermediateMagazineRecipe
-  id: Magazine7.62x39mmFMJ
-  result: Magazine7.62x39mmFMJ
+  id: Magazine762x39mmFMJ
+  result: Magazine762x39mmFMJ
 
 - type: latheRecipe
   parent: BaseAmmoRubberIntermediateMagazineRecipe
