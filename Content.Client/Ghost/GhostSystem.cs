@@ -1,10 +1,17 @@
 using Content.Client.Movement.Systems;
+using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Actions;
 using Content.Shared.Ghost;
+using Content.Shared.Mind;
+using Content.Shared.Popups;
 using Robust.Client.Console;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
+using Robust.Client.UserInterface;
+using Robust.Shared.GameStates;
+using Robust.Shared.Timing;
 using Robust.Shared.Player;
+using Content.Client._Corvax.Respawn; // Frontier
 
 namespace Content.Client.Ghost
 {
@@ -15,7 +22,20 @@ namespace Content.Client.Ghost
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly PointLightSystem _pointLightSystem = default!;
         [Dependency] private readonly ContentEyeSystem _contentEye = default!;
-        [Dependency] private readonly SpriteSystem _sprite = default!;
+        // [Dependency] private readonly EyeSystem _eye = default!; // Frontier: suppress warnings
+        [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private readonly RespawnSystem _respawn = default!;
+
+        public override void Update(float frameTime)
+        {
+            foreach (var ghost in EntityManager.EntityQuery<GhostComponent, MindComponent>(true))
+            {
+                var ui = _uiManager.GetActiveUIWidgetOrNull<GhostGui>();
+                if (ui != null && Player != null)
+                    ui.UpdateRespawn(_respawn.RespawnResetTime);
+            }
+        }
 
         public int AvailableGhostRoleCount { get; private set; }
 
@@ -36,7 +56,7 @@ namespace Content.Client.Ghost
                 var query = AllEntityQuery<GhostComponent, SpriteComponent>();
                 while (query.MoveNext(out var uid, out _, out var sprite))
                 {
-                    _sprite.SetVisible((uid, sprite), value || uid == _playerManager.LocalEntity);
+                    sprite.Visible = value || uid == _playerManager.LocalEntity;
                 }
             }
         }
@@ -73,7 +93,7 @@ namespace Content.Client.Ghost
         private void OnStartup(EntityUid uid, GhostComponent component, ComponentStartup args)
         {
             if (TryComp(uid, out SpriteComponent? sprite))
-                _sprite.SetVisible((uid, sprite), GhostVisibility || uid == _playerManager.LocalEntity);
+                sprite.Visible = GhostVisibility || uid == _playerManager.LocalEntity;
         }
 
         private void OnToggleLighting(EntityUid uid, EyeComponent component, ToggleLightingActionEvent args)
@@ -144,6 +164,9 @@ namespace Content.Client.Ghost
 
         private void OnGhostPlayerAttach(EntityUid uid, GhostComponent component, LocalPlayerAttachedEvent localPlayerAttachedEvent)
         {
+            if (uid != _playerManager.LocalPlayer?.ControlledEntity)
+                return;
+            component.TimeOfDeath = _gameTiming.CurTime;
             GhostVisibility = true;
             PlayerAttached?.Invoke(component);
         }
@@ -151,7 +174,7 @@ namespace Content.Client.Ghost
         private void OnGhostState(EntityUid uid, GhostComponent component, ref AfterAutoHandleStateEvent args)
         {
             if (TryComp<SpriteComponent>(uid, out var sprite))
-                _sprite.LayerSetColor((uid, sprite), 0, component.Color);
+                sprite.LayerSetColor(0, component.Color);
 
             if (uid != _playerManager.LocalEntity)
                 return;
