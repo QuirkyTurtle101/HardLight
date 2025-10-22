@@ -75,7 +75,7 @@
 
 - type: stack
   id: Credit
-  name: speso
+  name: stack-credit
   icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash } # Frontier: use Frontier sprite set
   spawn: SpaceCash
 
@@ -151,6 +151,7 @@
   suffix: 10000
   components:
   - type: Icon
+
     sprite: _NF/Objects/Economy/cash.rsi # Frontier: use Frontier sprite set
     state: cash_10000 # Frontier: cash_1000<cash_10000
   - type: Stack
