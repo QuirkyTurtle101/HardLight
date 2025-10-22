@@ -9,13 +9,13 @@
     - Wall
   components:
   - type: Sprite
-    sprite: _HL/Tiles/plasmabasalt.rsi
+    sprite: _HL/Tiles/Misc/plasmabasalt.rsi
     drawdepth: BelowFloor
     layers:
       - state: plasma
         shader: unshaded
   - type: Icon
-    sprite: _HL/Tiles/plasmabasalt.rsi
+    sprite: _HL/Tiles/Misc/plasmabasalt.rsi
     state: full
   - type: IconSmooth
     key: floor
