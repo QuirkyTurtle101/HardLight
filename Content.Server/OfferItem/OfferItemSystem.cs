@@ -43,7 +43,7 @@ public sealed class OfferItemSystem : SharedOfferItemSystem
                 continue;
             }
 
-            _alertsSystem.ShowAlert(uid, AlertType.Offer);
+            _alertsSystem.ShowAlert(uid, offerItem.OfferAlert);
         }
     }
 
