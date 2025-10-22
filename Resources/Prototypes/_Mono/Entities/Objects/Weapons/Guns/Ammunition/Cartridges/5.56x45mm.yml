@@ -93,7 +93,7 @@
   parent: [BaseCartridge5.56x45mm, BaseC1Contraband]
   components:
   - type: CartridgeAmmo
-    proto: Bullet5.56x45mmImprovised
+    proto: Bullet556x45mmImprovised
   - type: Sprite
     sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Casings/improvised_casing.rsi
     layers:
