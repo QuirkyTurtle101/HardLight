@@ -113,7 +113,7 @@
   - Magazine5.56x45mmPractice
   - Magazine5.56x45mmEmpty
   - Magazine5.56x45mmUranium
-  - SpeedLoader5.56x45mmFMJ
+  - SpeedLoader556x45mmFMJ
   - SpeedLoader5.56x45mmRubber
   - SpeedLoader5.56x45mmIncendiary
   - SpeedLoader5.56x45mmPractice
@@ -353,7 +353,7 @@
   - SpeedLoader7.62x54mmRFMJ
   - AmmoBox7.62x39mmFMJ
   - Magazine5.56x45mmFMJ
-  - SpeedLoader5.56x45mmFMJ
+  - SpeedLoader556x45mmFMJ
   - AmmoBox5.56x45mmFMJ
   - Magazine7.62x54mmRFMJ
   - AmmoBox7.62x54mmRFMJ
@@ -424,7 +424,7 @@
   - SpeedLoader7.62x54mmRFMJ
   - AmmoBox7.62x39mmFMJ
   - Magazine5.56x45mmFMJ
-  - SpeedLoader5.56x45mmFMJ
+  - SpeedLoader556x45mmFMJ
   - AmmoBox5.56x45mmFMJ
   - Magazine7.62x54mmRFMJ
   - AmmoBox7.62x54mmRFMJ

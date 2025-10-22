@@ -557,7 +557,7 @@
   # id: UplinkPirateMagazineSubsonic
   # name: uplink-subsonic-mag-name
   # description: uplink-subsonic-mag-desc
-  # productEntity: Magazine7.62x39mmSubsonic
+  # productEntity: Magazine762x39mmSubsonic
   # cost:
     # Doubloon: 1
   # categories:

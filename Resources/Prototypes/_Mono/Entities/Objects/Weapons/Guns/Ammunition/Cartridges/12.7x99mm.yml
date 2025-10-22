@@ -1,12 +1,12 @@
 - type: entity
   parent: [ BaseCartridge, BaseC3PirateContraband ]
-  id: Cartridge12.7x99mm
+  id: Cartridge127x99mm
   name: cartridge (12.7x99mm anti-material)
   components:
   - type: Tag
     tags:
     - Cartridge
-    - Cartridge12.7x99mm
+    - Cartridge127x99mm
   - type: CartridgeAmmo
     proto: Bullet12.7x99mm
   - type: Sprite
@@ -21,13 +21,13 @@
 
 - type: entity
   parent: [ BaseCartridge, BaseC3PirateContraband ]
-  id: Cartridge12.7x99mmExplosive
+  id: Cartridge127x99mmExplosive
   name: cartridge (12.7x99mm high-explosive)
   components:
   - type: Tag
     tags:
     - Cartridge
-    - Cartridge12.7x99mm
+    - Cartridge127x99mm
   - type: CartridgeAmmo
     proto: Bullet12.7x99mmExplosive
   - type: Sprite

@@ -59,7 +59,7 @@
     - BoxMagazine45_ACPSubMachineGunEmp
 
 - type: loadout
-  id: Tsfmc5.56x45mmMagLoadout
+  id: Tsfmc556x45mmMagLoadout
   price: 0
   storage:
     back:
@@ -80,7 +80,7 @@
     - BoxMagazine45_ACPFMJ
 
 - type: loadout
-  id: Tsfmc7.62x51mmMagLoadout
+  id: Tsfmc762x51mmMagLoadout
   price: 50
   storage:
     back:

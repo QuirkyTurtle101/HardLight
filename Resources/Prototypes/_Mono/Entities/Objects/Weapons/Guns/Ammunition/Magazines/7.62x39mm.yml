@@ -132,7 +132,7 @@
   components:
   - type: Tag
     tags:
-      - Magazine7.62x39mmPan
+      - Magazine762x39mmPan
   - type: BallisticAmmoProvider
     proto: Cartridge7.62x39mmFMJ
     capacity: 96
@@ -271,20 +271,20 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x39mmSubsonic
+  id: Magazine762x39mmSubsonic
   name: "magazine (7.62x39mm subsonic)"
   parent: BaseMagazine7.62x39mm
   components:
   - type: Tag
     tags:
-      - Magazine7.62x39mmSubsonic
+      - Magazine762x39mmSubsonic
       - Magazine7.62x39mmFMJ
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmSubsonic
+    proto: Cartridge762x39mmSubsonic
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x39mmSubsonic
+        - Cartridge762x39mmSubsonic
     capacity: 35
   - type: Sprite
     layers:

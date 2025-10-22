@@ -1,13 +1,13 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   parent: [ BaseCartridge, BaseC2Contraband ] # Frontier: BaseMajorContraband<BaseC2Contraband
-  id: Cartridge14.5x114mm
+  id: Cartridge145x114mm
   name: cartridge (14.5x114mm)
   components:
   - type: Tag
     tags:
     - Cartridge
-    - Cartridge14.5x114mm
+    - Cartridge145x114mm
   - type: CartridgeAmmo
     proto: Bullet14.5x114mm
   - type: Sprite

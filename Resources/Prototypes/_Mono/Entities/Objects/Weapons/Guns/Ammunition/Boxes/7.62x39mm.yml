@@ -143,11 +143,11 @@
   components:
   - type: BallisticAmmoProvider
     capacity: 70
-    proto: Cartridge7.62x39mmSubsonic
+    proto: Cartridge762x39mmSubsonic
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x39mmSubsonic
+        - Cartridge762x39mmSubsonic
   - type: Sprite
     layers:
     - state: base
