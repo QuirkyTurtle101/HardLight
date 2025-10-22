@@ -41,7 +41,7 @@
 - type: stack
   id: FloorTileAbyssCrystal
   name: crystalline abyss floor tiles
-  icon: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi/crystallineabyss.png
+  icon: { sprite: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi, state: crystallineabyss }
   spawn: FloorTileItemAbyssCrystal
   maxCount: 50
 

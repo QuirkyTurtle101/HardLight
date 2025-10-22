@@ -6,6 +6,7 @@ using Content.Shared.CM14.Xenos.Evolution;
 using Content.Shared.CM14.Xenos.Construction;
 using Content.Shared.Mind;
 using Robust.Shared.Network;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
@@ -47,7 +48,10 @@ public sealed class XenoSystem : EntitySystem
                 }
             }
 
-            // Ensure the Plant Weeds action always has an InstantAction event instance available and is user-raised.
+            // Ensure key actions are properly configured server-side.
+            // - Plant Weeds: always has an event instance and is raised on user.
+            // - Choose Structure: ensure it's raised on user so the shared handler gets the event.
+            // - Secrete Structure: ensure it is a world target action raised on user as well.
             if (ent.Comp.Actions.TryGetValue("ActionXenoPlantWeeds", out var weedsAction))
             {
                 if (TryComp<InstantActionComponent>(weedsAction, out var instant))
@@ -60,7 +64,58 @@ public sealed class XenoSystem : EntitySystem
                 }
             }
 
-            Log.Info($"[Xeno] (server) Actions registered={ent.Comp.Actions.Count}");
+            if (ent.Comp.Actions.TryGetValue("ActionXenoChooseStructure", out var chooseAction))
+            {
+                if (TryComp<InstantActionComponent>(chooseAction, out var instant))
+                {
+                    instant.Event ??= new Content.Shared.CM14.Xenos.Construction.Events.XenoChooseStructureActionEvent();
+                    instant.RaiseOnUser = true;
+                    instant.RaiseOnAction = false;
+                    instant.CheckCanInteract = false;
+                    instant.CheckConsciousness = true;
+                    Dirty(chooseAction, instant);
+                }
+            }
+
+            if (ent.Comp.Actions.TryGetValue("ActionXenoSecreteStructure", out var secreteAction))
+            {
+                if (TryComp<WorldTargetActionComponent>(secreteAction, out var wta))
+                {
+                    wta.Event ??= new Content.Shared.CM14.Xenos.Construction.Events.XenoSecreteStructureEvent();
+                    wta.RaiseOnUser = true;
+                    wta.RaiseOnAction = false;
+                    wta.CheckCanInteract = false;
+                    wta.CheckConsciousness = true;
+                    // Critical: disable access/LOS gating and align target range with the xeno's build range.
+                    // Otherwise ValidateWorldTarget can fail before our own tile validation runs, leading to handled=false.
+                    wta.CheckCanAccess = false;
+                    wta.Range = ent.Comp.BuildRange;
+                    Dirty(secreteAction, wta);
+                }
+            }
+
+            // Ensure a sane default build choice so secrete never has a null selection.
+            if (ent.Comp.BuildChoice == null)
+            {
+                EntProtoId defaultChoice = "WallXenoResin";
+                if (ent.Comp.CanBuild.Count > 0)
+                {
+                    if (!ent.Comp.CanBuild.Contains(defaultChoice))
+                        defaultChoice = ent.Comp.CanBuild[0];
+
+                    ent.Comp.BuildChoice = defaultChoice;
+                    Dirty(ent);
+
+                    // Notify actions that a selection exists (helps icons/tooltips sync up).
+                    foreach (var (_, actionUid) in ent.Comp.Actions)
+                    {
+                        var chosenEv = new Content.Shared.CM14.Xenos.Construction.Events.XenoConstructionChosenEvent(defaultChoice);
+                        RaiseLocalEvent(actionUid, ref chosenEv);
+                    }
+                }
+            }
+
+            Log.Info($"[Xeno] (server) Actions registered={ent.Comp.Actions.Count} for {ToPrettyString(ent)}");
         }
 
         // Evolution action: prefer an existing evolve action from ActionIds to avoid duplicates.

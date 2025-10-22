@@ -35,7 +35,7 @@
     #SpeedLoader7.282x39mmFMJ: 28 # 7.282x39mm Gestio/AKM
     #SpeedLoader7.282x54mmRFMJ: 28 # 7.282x54mmR SVS
     SpeedLoader45_magnumFMJ: 28 # .45 magnum revolvers
-    Magazine7.62x39mmLowCapacityFMJ: 28
+    Magazine762x39mmLowCapacityFMJ: 28
     ClothingBeltQuiverFullBodkin: 6
     ClothingBeltQuiverFullBroadhead: 6
 # Ammo
@@ -89,15 +89,15 @@
     Magazine45_ACPPistolFMJ: 4294967295 # .45 ACP Pistol
     Magazine9x19mmSubMachineGunFMJ: 4294967295 # 9x19mm C20r
     Magazine45_ACPSubMachineGunFMJ: 4294967295 # .45 ACP Drozd
-    Magazine4.6x30mmSubMachineGunTopMountedFMJ: 4294967295 # 4.6x30mm WT550
-    Magazine5.56x45mmFMJ: 4294967295 # 5.56x45mm Lecter
-    Magazine7.62x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
-    Magazine7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
-    Magazine7.62x51mmLowCapacityFMJ: 4294967295 # 7.62x51mm Vulcan
-    Magazine7.62x51mmFMJ: 4294967295 # 7.62x51mm Vulcan
-    Magazine7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
-    SpeedLoader7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
-    SpeedLoader7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
+    Magazine46x30mmSubMachineGunTopMountedFMJ: 4294967295 # 4.6x30mm WT550
+    Magazine556x45mmFMJ: 4294967295 # 5.56x45mm Lecter
+    Magazine762x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine762x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine762x51mmLowCapacityFMJ: 4294967295 # 7.62x51mm Vulcan
+    Magazine762x51mmFMJ: 4294967295 # 7.62x51mm Vulcan
+    Magazine762x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
+    SpeedLoader762x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    SpeedLoader762x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
     SpeedLoader45_magnumFMJ: 4294967295 # .45 magnum revolvers
 # Ammo
     AmmoBox5.56x45mmFMJ: 4294967295 # 5.56x45mm
@@ -151,13 +151,13 @@
     Magazine45_ACPPistolFMJ: 4294967295 # .45 ACP Pistol
     Magazine9x19mmSubMachineGunFMJ: 4294967295 # 9x19mm C20r
     Magazine45_ACPSubMachineGunFMJ: 4294967295 # .45 ACP Drozd
-    Magazine4.6x30mmSubMachineGunTopMountedFMJ: 4294967295 # 4.6x30mm WT550
-    Magazine5.56x45mmFMJ: 4294967295 # 5.56x45mm Lecter
-    Magazine7.62x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
-    Magazine7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
-    Magazine7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
-    SpeedLoader7.62x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
-    SpeedLoader7.62x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
+    Magazine46x30mmSubMachineGunTopMountedFMJ: 4294967295 # 4.6x30mm WT550
+    Magazine556x45mmFMJ: 4294967295 # 5.56x45mm Lecter
+    Magazine762x39mmLowCapacityFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine762x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    Magazine762x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
+    SpeedLoader762x39mmFMJ: 4294967295 # 7.62x39mm Gestio/AKM
+    SpeedLoader762x54mmRFMJ: 4294967295 # 7.62x54mmR SVS
     SpeedLoader45_magnumFMJ: 4294967295 # .45 magnum revolvers
 # Ammo
     AmmoBox5.56x45mmBigFMJ: 4294967295 # 5.56x45mm

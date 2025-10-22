@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 using Content.Shared.CM14.Xenos;
-using Content.Shared._CM14.Xenos.Melee;
+using Content.Shared.CM14.Xenos.Melee;
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;

@@ -8,8 +8,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge12.7x99mm
-    proto: Cartridge12.7x99mm
+        - Cartridge127x99mm
+    proto: Cartridge127x99mm
     capacity: 30
   - type: Item
     size: Small
@@ -40,4 +40,4 @@
   components:
   - type: BallisticAmmoProvider
     capacity: 30
-    proto: Cartridge12.7x99mmExplosive
+    proto: Cartridge127x99mmExplosive
