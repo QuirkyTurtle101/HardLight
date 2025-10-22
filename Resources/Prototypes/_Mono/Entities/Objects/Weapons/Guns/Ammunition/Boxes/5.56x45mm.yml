@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
-  id: BaseAmmoBox556x45mmmm
+  id: BaseAmmoBox5.56x45mm
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
@@ -25,9 +25,9 @@
 
 # Boxes
 - type: entity
-  parent: BaseAmmoBox556x45mmmm
-  id: AmmoBox556x45mmmmBigFMJ
-  name: ammunition box (556x45mmmm FMJ)
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmBigFMJ
+  name: ammunition box (5.56x45mm FMJ)
   suffix: Big
   components:
   - type: BallisticAmmoProvider
@@ -46,9 +46,9 @@
   - type: Appearance
 
 - type: entity
-  parent: BaseAmmoBox556x45mmmm
-  id: AmmoBox556x45mmmmFMJ
-  name: ammunition box (556x45mmmm FMJ)
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmFMJ
+  name: ammunition box (5.56x45mm FMJ)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmFMJ
@@ -60,9 +60,9 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  parent: BaseAmmoBox556x45mmmm
-  id: AmmoBox556x45mmmmPractice
-  name: ammunition box (556x45mmmm practice)
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmPractice
+  name: ammunition box (5.56x45mm practice)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmPractice
@@ -75,9 +75,9 @@
     - state: practice
 
 - type: entity
-  id: AmmoBox556x45mmmmIncendiary
-  parent: BaseAmmoBox556x45mmmm
-  name: ammunition box (556x45mmmm incendiary)
+  id: AmmoBox5.56x45mmIncendiary
+  parent: BaseAmmoBox5.56x45mm
+  name: ammunition box (5.56x45mm incendiary)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmIncendiary
@@ -90,9 +90,9 @@
     - state: incendiary
 
 - type: entity
-  id: AmmoBox556x45mmmmUranium
-  parent: BaseAmmoBox556x45mmmm
-  name: ammunition box (556x45mmmm uranium)
+  id: AmmoBox5.56x45mmUranium
+  parent: BaseAmmoBox5.56x45mm
+  name: ammunition box (5.56x45mm uranium)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmUranium
@@ -105,9 +105,9 @@
     - state: uranium
 
 - type: entity
-  parent: AmmoBox556x45mmmmBigFMJ
-  id: AmmoBox556x45mmmmBigRubber
-  name: ammunition box (556x45mmmm rubber)
+  parent: AmmoBox5.56x45mmBigFMJ
+  id: AmmoBox5.56x45mmBigRubber
+  name: ammunition box (5.56x45mm rubber)
   components:
   - type: BallisticAmmoProvider
     capacity: 200
@@ -122,9 +122,9 @@
     - state: practice-b
 
 - type: entity
-  parent: BaseAmmoBox556x45mmmm
-  id: AmmoBox556x45mmmmRubber
-  name: ammunition box (556x45mmmm rubber)
+  parent: BaseAmmoBox5.56x45mm
+  id: AmmoBox5.56x45mmRubber
+  name: ammunition box (5.56x45mm rubber)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmRubber

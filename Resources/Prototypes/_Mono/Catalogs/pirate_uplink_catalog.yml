@@ -509,10 +509,10 @@
       # - PirateUplink
 
 # - type: listing
-  # id: UplinkPirate762x39mmAmmoBoxBig
+  # id: UplinkPirate7.62x39mmAmmoBoxBig
   # name: uplink-pirate-light-rifle-magazine-box-big-name
   # description: uplink-pirate-light-rifle-magazine-box-big-desc
-  # productEntity: AmmoBox762x39mmBigFMJ
+  # productEntity: AmmoBox7.62x39mmBigFMJ
   # cost:
     # Doubloon: 2
   # categories:
@@ -572,7 +572,7 @@
   # id: UplinkPirateBoxSubsonic
   # name: uplink-subsonic-box-name
   # description: uplink-subsonic-box-desc
-  # productEntity: AmmoBox762x39mmSubsonic
+  # productEntity: AmmoBox7.62x39mmSubsonic
   # cost:
     # Doubloon: 2
   # categories:

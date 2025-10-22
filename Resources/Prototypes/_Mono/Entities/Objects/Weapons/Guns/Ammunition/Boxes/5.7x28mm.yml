@@ -91,7 +91,7 @@
     - state: incendiary
 
 - type: entity
-  id: AmmoBox57x28mmUranium
+  id: AmmoBox5.7x28mmUranium
   parent: BaseAmmoBox5.7x28mm
   name: ammunition box (5.7x28mm uranium)
   components:

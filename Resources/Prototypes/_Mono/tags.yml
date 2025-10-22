@@ -1,7 +1,7 @@
 - type: Tag
   id: CassetteTape
 
-#762x51mm tags
+#7.62x51mm tags
 
 - type: Tag
   id: Cartridge762x51mmFMJ
@@ -26,7 +26,7 @@
 - type: Tag
   id: Magazine762x54mmRBox
 
-#556x45mmmm tags
+#5.56x45mm tags
 
 - type: Tag
   id: Cartridge556x45mmFMJ
@@ -37,7 +37,7 @@
 - type: Tag
   id: Magazine556x45mmBox
 
-#762x39mm tags
+#7.62x39mm tags
 
 - type: Tag
   id: Cartridge762x39mmFMJ
@@ -51,7 +51,7 @@
 - type: Tag
   id: Magazine762x39mmBox
 
-#46x30mm tags
+#4.6x30mm tags
 
 - type: Tag
   id: Cartridge46x30mmFMJ

@@ -34,7 +34,7 @@
 - type: entity
   id: Bullet556x45mmIncendiary
   parent: BaseBulletIncendiary
-  name: bullet (556x45mmmm incendiary)
+  name: bullet (5.56x45mm incendiary)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -46,7 +46,7 @@
 - type: entity
   id: Bullet556x45mmUranium
   parent: BaseBulletUranium
-  name: bullet (556x45mmmm uranium)
+  name: bullet (5.56x45mm uranium)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile

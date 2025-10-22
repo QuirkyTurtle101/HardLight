@@ -19,10 +19,10 @@
   - Tsfmc9x19mmSmgMagEmpLoadout
   - Tsfmc45_ACPSmgMagLoadout
   - Tsfmc45_ACPSmgMagEmpLoadout
-  - Tsfmc556x45mmMagLoadout
+  - Tsfmc5.56x45mmMagLoadout
   - Tsfmc9x19mmPistolMagLoadout
   - Tsfmc45_ACPPistolMagLoadout
-  - Tsfmc762x51mmMagLoadout
+  - Tsfmc7.62x51mmMagLoadout
   fallbacks:
   - Tsfmc45_ACPSmgMagLoadout
 

@@ -73,7 +73,7 @@
   name: AK-502 (7.62x39mm)
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleAK502
-  description: A standard-issue USSP combat rifle. Uses 762x39mm ammo.
+  description: A standard-issue USSP combat rifle. Uses 7.62x39mm ammo.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/ak502.rsi
@@ -132,7 +132,7 @@
   name: FCM-C Vulcan (7.62x51mm)
   parent: WeaponRifleVulcan
   id: WeaponRifleVulcanCFCM
-  description: The "Vulcan" Civilian Medium combat rifle (Fusil de Combat Moyen Civil) in 762x51mm, this civilian version only has semi-automatic mode and reduced firerate.
+  description: The "Vulcan" Civilian Medium combat rifle (Fusil de Combat Moyen Civil) in 7.62x51mm, this civilian version only has semi-automatic mode and reduced firerate.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/WeaponRifleVulcanCFCM.rsi

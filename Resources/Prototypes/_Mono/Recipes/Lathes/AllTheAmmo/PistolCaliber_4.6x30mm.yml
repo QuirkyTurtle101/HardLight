@@ -76,25 +76,25 @@
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberAmmoBoxRecipe
-  id: AmmoBox46x30mmFMJ
-  result: AmmoBox46x30mmFMJ
+  id: AmmoBox4.6x30mmFMJ
+  result: AmmoBox4.6x30mmFMJ
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberAmmoBoxRecipe
-  id: AmmoBox46x30mmRubber
-  result: AmmoBox46x30mmRubber
+  id: AmmoBox4.6x30mmRubber
+  result: AmmoBox4.6x30mmRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryPistolCaliberAmmoBoxRecipe
-  id: AmmoBox46x30mmIncendiary
-  result: AmmoBox46x30mmIncendiary
+  id: AmmoBox4.6x30mmIncendiary
+  result: AmmoBox4.6x30mmIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticePistolCaliberAmmoBoxRecipe
-  id: AmmoBox46x30mmPractice
-  result: AmmoBox46x30mmPractice
+  id: AmmoBox4.6x30mmPractice
+  result: AmmoBox4.6x30mmPractice
 
 - type: latheRecipe
   parent: BaseAmmoUraniumPistolCaliberAmmoBoxRecipe
-  id: AmmoBox46x30mmUranium
-  result: AmmoBox46x30mmUranium
+  id: AmmoBox4.6x30mmUranium
+  result: AmmoBox4.6x30mmUranium
