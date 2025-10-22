@@ -70,7 +70,7 @@
   #  pvsIncrease: 0.5
 
 - type: entity
-  name: AK-502 (762x39mm)
+  name: AK-502 (7.62x39mm)
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleAK502
   description: A standard-issue USSP combat rifle. Uses 762x39mm ammo.
@@ -129,7 +129,7 @@
 
 #Mercenary vulcan
 - type: entity
-  name: FCM-C Vulcan (762x51mm)
+  name: FCM-C Vulcan (7.62x51mm)
   parent: WeaponRifleVulcan
   id: WeaponRifleVulcanCFCM
   description: The "Vulcan" Civilian Medium combat rifle (Fusil de Combat Moyen Civil) in 762x51mm, this civilian version only has semi-automatic mode and reduced firerate.
