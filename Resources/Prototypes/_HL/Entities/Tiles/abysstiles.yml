@@ -1,7 +1,9 @@
 - type: tile
   id: FloorAbyssCrystal
   name: tiles-abyss-crystal-floor
-  sprite: { sprite: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi, state: crystallineabyss }
+  sprite:
+    sprite: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi
+    state: crystallineabyss
   variants: 4
   placementVariants:
   - 1.0
