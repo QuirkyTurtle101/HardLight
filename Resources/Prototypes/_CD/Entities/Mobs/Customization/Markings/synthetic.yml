@@ -12,33 +12,33 @@
 #   - sprite: _CD/Mobs/Customization/Synthliz/antennas.rsi
 #     state: synthetic_screen
 
-- type: marking
-  id: SyntheticAntennaLeft
-  bodyPart: Head
-  markingCategory: HeadSide
-  speciesRestriction: [Human]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
-  sprites:
-  - sprite: _CD/Mobs/Customization/Synthliz/antennas.rsi
-    state: synthetic_antenna_left
+# - type: marking
+#   id: SyntheticAntennaLeft
+#   bodyPart: Head
+#   markingCategory: HeadSide
+#   speciesRestriction: [Human]
+#   coloring:
+#     default:
+#       type:
+#         !type:SimpleColoring
+#           color: "#FFFFFF"
+#   sprites:
+#   - sprite: _CD/Mobs/Customization/Synthliz/antennas.rsi
+#     state: synthetic_antenna_left
 
-- type: marking
-  id: SyntheticAntennaRight
-  bodyPart: Head
-  markingCategory: HeadSide
-  speciesRestriction: [Human]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
-  sprites:
-  - sprite: _CD/Mobs/Customization/Synthliz/antennas.rsi
-    state: synthetic_antenna_right
+# - type: marking
+#   id: SyntheticAntennaRight
+#   bodyPart: Head
+#   markingCategory: HeadSide
+#   speciesRestriction: [Human]
+#   coloring:
+#     default:
+#       type:
+#         !type:SimpleColoring
+#           color: "#FFFFFF"
+#   sprites:
+#   - sprite: _CD/Mobs/Customization/Synthliz/antennas.rsi
+#     state: synthetic_antenna_right
 
 # Synthliz markings
 
