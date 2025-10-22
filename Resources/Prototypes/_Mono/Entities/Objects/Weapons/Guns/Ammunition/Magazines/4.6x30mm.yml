@@ -113,7 +113,7 @@
 
 - type: entity
   id: Magazine46x30mmPistolEmpty
-  name: pistol magazine (46x30mm any)
+  name: pistol magazine (4.6x30mm any)
   suffix: empty
   parent: Magazine46x30mmPistolFMJ
   components:
@@ -171,7 +171,7 @@
 
 - type: entity
   id: Magazine46x30mmPistolHighCapacityEmpty
-  name: machine pistol magazine (46x30mm any)
+  name: machine pistol magazine (4.6x30mm any)
   suffix: empty
   parent: BaseMagazine46x30mmPistolHighCapacityFMJ
   components:
@@ -233,7 +233,7 @@
 
 - type: entity
   id: Magazine46x30mmSubMachineGunEmpty
-  name: SMG magazine (46x30mm any)
+  name: SMG magazine (4.6x30mm any)
   suffix: empty
   parent: BaseMagazine46x30mmSubMachineGunFMJ
   components:
@@ -352,7 +352,7 @@
 
 - type: entity
   id: Magazine46x30mmSubMachineGunTopMountedFMJ
-  name: WT550 magazine (46x30mm top-mounted)
+  name: WT550 magazine (4.6x30mm top-mounted)
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   components:
   - type: Tag
@@ -384,7 +384,7 @@
 
 - type: entity
   id: Magazine46x30mmSubMachineGunTopMountedEmpty
-  name: WT550 magazine (46x30mm top-mounted any)
+  name: WT550 magazine (4.6x30mm top-mounted any)
   parent: Magazine46x30mmSubMachineGunTopMountedFMJ
   components:
   - type: BallisticAmmoProvider

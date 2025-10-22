@@ -118,7 +118,7 @@
   - type: StorageFill
     contents:
       - id: WeaponRifleM90GrenadeLauncher
-      - id: Magazine5.56x45mmFMJ
+      - id: Magazine556x45mmFMJ
         amount: 2
       - id: 40mmGrenadeThermobaric
         amount: 2
@@ -141,9 +141,9 @@
         amount: 4
       - id: Magazine762x39mmBox
         amount: 2
-      - id: Magazine12.7x99mm # Goobstation - Burner Heavy Assault Rifle
+      - id: Magazine127x99mm # Goobstation - Burner Heavy Assault Rifle
         amount: 1
-      - id: Magazine12.7x99mmExplosive # Goobstation - Burner Heavy Assault Rifle
+      - id: Magazine127x99mmExplosive # Goobstation - Burner Heavy Assault Rifle
 
 
 - type: entity

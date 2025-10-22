@@ -2,33 +2,33 @@
 
 - type: latheRecipe
   parent: BaseAmmoFMJIntermediateMagazineRecipe
-  id: Magazine556x45mmmmFMJ
-  result: Magazine556x45mmmmFMJ
+  id: Magazine556x45mmFMJ
+  result: Magazine556x45mmFMJ
 
 - type: latheRecipe
   parent: BaseAmmoRubberIntermediateMagazineRecipe
-  id: Magazine556x45mmmmRubber
-  result: Magazine556x45mmmmRubber
+  id: Magazine556x45mmRubber
+  result: Magazine556x45mmRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryIntermediateMagazineRecipe
-  id: Magazine556x45mmmmIncendiary
-  result: Magazine556x45mmmmIncendiary
+  id: Magazine556x45mmIncendiary
+  result: Magazine556x45mmIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticeIntermediateMagazineRecipe
-  id: Magazine556x45mmmmPractice
-  result: Magazine556x45mmmmPractice
+  id: Magazine556x45mmPractice
+  result: Magazine556x45mmPractice
 
 - type: latheRecipe
   parent: BaseAmmoEmptyIntermediateMagazineRecipe
-  id: Magazine556x45mmmmEmpty
-  result: Magazine556x45mmmmEmpty
+  id: Magazine556x45mmEmpty
+  result: Magazine556x45mmEmpty
 
 - type: latheRecipe
   parent: BaseAmmoUraniumIntermediateMagazineRecipe
-  id: Magazine556x45mmmmUranium
-  result: Magazine556x45mmmmUranium
+  id: Magazine556x45mmUranium
+  result: Magazine556x45mmUranium
 
 #Speedloaders
 
@@ -39,28 +39,28 @@
 
 - type: latheRecipe
   parent: BaseAmmoRubberIntermediateSpeedloaderRecipe
-  id: SpeedLoader556x45mmmmRubber
-  result: SpeedLoader556x45mmmmRubber
+  id: SpeedLoader556x45mmRubber
+  result: SpeedLoader556x45mmRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryIntermediateSpeedloaderRecipe
-  id: SpeedLoader556x45mmmmIncendiary
-  result: SpeedLoader556x45mmmmIncendiary
+  id: SpeedLoader556x45mmIncendiary
+  result: SpeedLoader556x45mmIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticeIntermediateSpeedloaderRecipe
-  id: SpeedLoader556x45mmmmPractice
-  result: SpeedLoader556x45mmmmPractice
+  id: SpeedLoader556x45mmPractice
+  result: SpeedLoader556x45mmPractice
 
 - type: latheRecipe
   parent: BaseAmmoEmptyIntermediateSpeedloaderRecipe
-  id: SpeedLoader556x45mmmmEmpty
-  result: SpeedLoader556x45mmmmEmpty
+  id: SpeedLoader556x45mmEmpty
+  result: SpeedLoader556x45mmEmpty
 
 - type: latheRecipe
   parent: BaseAmmoUraniumIntermediateSpeedloaderRecipe
-  id: SpeedLoader556x45mmmmUranium
-  result: SpeedLoader556x45mmmmUranium
+  id: SpeedLoader556x45mmUranium
+  result: SpeedLoader556x45mmUranium
 
 #Boxes
 
