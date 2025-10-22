@@ -105,7 +105,7 @@
     tags:
       - Cartridge
       - Cartridge556x45mm
-      - Cartridge5.56x45mmImprovised
+      - Cartridge556x45mmImprovised
   - type: Construction
     graph: Improvised556x45mmBulletGraph
     node: shell
