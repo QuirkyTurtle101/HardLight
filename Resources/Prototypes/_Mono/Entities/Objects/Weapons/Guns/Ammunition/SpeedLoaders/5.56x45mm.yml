@@ -1,6 +1,6 @@
 - type: entity
-  id: BaseSpeedLoader5.56x45mm
-  name: "speed loader (5.56x45mm FMJ)"
+  id: BaseSpeedLoader556x45mmmm
+  name: "speed loader (556x45mmmm FMJ)"
   parent: BaseItem
   abstract: true
   components:
@@ -11,7 +11,7 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-        - Cartridge5.56x45mmFMJ
+        - Cartridge556x45mmmmFMJ
     capacity: 8
   - type: Sprite
   - type: ContainerContainer
@@ -21,16 +21,16 @@
 
 - type: entity
   id: SpeedLoader556x45mmFMJ
-  name: "speed loader (5.56x45mm FMJ)"
-  parent: BaseSpeedLoader5.56x45mm
+  name: "speed loader (556x45mmmm FMJ)"
+  parent: BaseSpeedLoader556x45mmmm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmFMJ
+    proto: Cartridge556x45mmmmFMJ
   - type: Icon
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     state: icon
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -43,17 +43,17 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoader5.56x45mmEmpty
-  name: "speed loader (5.56x45mm any)"
+  id: SpeedLoader556x45mmmmEmpty
+  name: "speed loader (556x45mmmm any)"
   parent: SpeedLoader556x45mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
   - type: Icon
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     state: base
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -61,14 +61,14 @@
         map: [ "enum.GunVisualLayers.Mag" ]
 
 - type: entity
-  id: SpeedLoader5.56x45mmIncendiary
-  name: "speed loader (5.56x45mm incendiary)"
-  parent: BaseSpeedLoader5.56x45mm
+  id: SpeedLoader556x45mmmmIncendiary
+  name: "speed loader (556x45mmmm incendiary)"
+  parent: BaseSpeedLoader556x45mmmm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmIncendiary
+    proto: Cartridge556x45mmmmIncendiary
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -81,17 +81,17 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoader5.56x45mmPractice
-  name: "speed loader (5.56x45mm practice)"
-  parent: BaseSpeedLoader5.56x45mm
+  id: SpeedLoader556x45mmmmPractice
+  name: "speed loader (556x45mmmm practice)"
+  parent: BaseSpeedLoader556x45mmmm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmPractice
+    proto: Cartridge556x45mmmmPractice
   - type: Icon
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     state: practice-icon
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -104,17 +104,17 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoader5.56x45mmUranium
-  name: "speed loader (5.56x45mm uranium)"
-  parent: BaseSpeedLoader5.56x45mm
+  id: SpeedLoader556x45mmmmUranium
+  name: "speed loader (556x45mmmm uranium)"
+  parent: BaseSpeedLoader556x45mmmm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmUranium
+    proto: Cartridge556x45mmmmUranium
   - type: Icon
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     state: uranium-icon
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]
@@ -127,17 +127,17 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoader5.56x45mmRubber
-  name: "speed loader (5.56x45mm rubber)"
-  parent: BaseSpeedLoader5.56x45mm
+  id: SpeedLoader556x45mmmmRubber
+  name: "speed loader (556x45mmmm rubber)"
+  parent: BaseSpeedLoader556x45mmmm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmRubber
+    proto: Cartridge556x45mmmmRubber
   - type: Icon
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     state: rubber-icon
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/5.56x45mm/5.56x45mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/SpeedLoaders/556x45mmmm/556x45mmmm.rsi
     layers:
       - state: base
         map: [ "enum.GunVisualLayers.Base" ]

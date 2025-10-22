@@ -64,9 +64,9 @@
   parent:
 
   - WeaponRifleLecter
-  name: PMC Lecter (5.56x45mm)
+  name: PMC Lecter (556x45mmmm)
   id: WeaponRifleLecterPMC
-  description: A Lecter that has been properly registered for private security and mercenary use. A high end military grade assault rifle. Is a common primary carried by Trans-Solar Federation Marines due to it's high accuracy and cheap manufacturing costs. Uses 5.56x45mm ammo.
+  description: A Lecter that has been properly registered for private security and mercenary use. A high end military grade assault rifle. Is a common primary carried by Trans-Solar Federation Marines due to it's high accuracy and cheap manufacturing costs. Uses 556x45mmmm ammo.
   components:
   - type: StaticPrice
     price: 1500
