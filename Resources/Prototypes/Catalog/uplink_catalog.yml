@@ -533,7 +533,7 @@
   id: UplinkMosinAmmo
   name: uplink-mosin-ammo-name
   description: uplink-mosin-ammo-desc
-  productEntity: AmmoBox7.62x39mmFMJ
+  productEntity: AmmoBox762x39mmFMJ
   cost:
     Telecrystal: 1
   categories:

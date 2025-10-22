@@ -27,9 +27,9 @@
   parent:
 
   - WeaponSubMachineGunWt550
-  name: PMC WT-550 (4.6x30mm)
+  name: PMC WT-550 (46x30mm)
   id: WeaponSubMachineGunWt550PMC
-  description: A WT-550 that has been properly registered for private security and mercenary use. A compact personal defense sub-machine gun. Lightweight build allows for ease of use without wielding a grip. Uses 4.6x30mm ammo.'
+  description: A WT-550 that has been properly registered for private security and mercenary use. A compact personal defense sub-machine gun. Lightweight build allows for ease of use without wielding a grip. Uses 46x30mm ammo.'
   components:
   - type: StaticPrice
     price: 2200
