@@ -87,7 +87,7 @@
 
 # Hardlight - Improvised
 - type: entity
-  id: Cartridge5.56x45mmImprovised
+  id: Cartridge556x45mmImprovised
   name: improvised cartridge (5.56x45mm)
   description: A handmade rifle bullet, uses phosphorus as a propellent instead of gunpowder which makes it much less effective.
   parent: [BaseCartridge5.56x45mm, BaseC1Contraband]
