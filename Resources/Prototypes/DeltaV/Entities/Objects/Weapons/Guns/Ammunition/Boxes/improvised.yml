@@ -13,7 +13,7 @@
         - CartridgeMagnum
         - Cartridge45MagnumImprovised
         - CartridgeLightRifle
-        - Cartridge5.56x45mmImprovised
+        - Cartridge556x45mmImprovised
         - ShellShotgun
         - ShellShotgunImprovised
     proto: null
@@ -65,7 +65,7 @@
   name: improvised ammunition box (5.56x45mm improvised)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge5.56x45mmImprovised
+    proto: Cartridge556x45mmImprovised
   - type: Sprite
     layers:
     - state: base
