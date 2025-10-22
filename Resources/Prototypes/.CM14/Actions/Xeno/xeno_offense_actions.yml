@@ -30,7 +30,7 @@
   - type: WorldTargetAction
     itemIconStyle: NoItem
     icon:
-      sprite: _CM14/Actions/xeno_actions.rsi
+      sprite: .CM14/Actions/xeno_actions.rsi
       state: tail_attack
     event: !type:XenoTailStabEvent
     range: 15
