@@ -7,8 +7,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x54mmRFMJ
-    proto: Cartridge7.62x54mmRFMJ
+        - Cartridge762x54mmRFMJ
+    proto: Cartridge762x54mmRFMJ
     capacity: 60
   - type: Item
     size: Small
@@ -32,7 +32,7 @@
   components:
   - type: BallisticAmmoProvider
     capacity: 200
-    proto: Cartridge7.62x54mmRFMJ
+    proto: Cartridge762x54mmRFMJ
   - type: Sprite
     layers:
     - state: base-b # Frontier: base<base-b
@@ -50,7 +50,7 @@
   name: ammunition box (7.62x54mmR FMJ)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRFMJ
+    proto: Cartridge762x54mmRFMJ
   - type: Sprite
     layers:
     - state: base
@@ -64,7 +64,7 @@
   name: ammunition box (7.62x54mmR practice)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRPractice
+    proto: Cartridge762x54mmRPractice
   - type: Sprite
     layers:
     - state: base
@@ -79,7 +79,7 @@
   name: ammunition box (7.62x54mmR incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRIncendiary
+    proto: Cartridge762x54mmRIncendiary
   - type: Sprite
     layers:
     - state: base
@@ -94,7 +94,7 @@
   name: ammunition box (7.62x54mmR uranium)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRUranium
+    proto: Cartridge762x54mmRUranium
   - type: Sprite
     layers:
     - state: base
@@ -109,7 +109,7 @@
   name: ammunition box (7.62x54mmR rubber)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRRubber
+    proto: Cartridge762x54mmRRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x54mmR.rsi
     layers:
@@ -126,7 +126,7 @@
   suffix: Big
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x54mmRRubber
+    proto: Cartridge762x54mmRRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x54mmR.rsi
     layers:

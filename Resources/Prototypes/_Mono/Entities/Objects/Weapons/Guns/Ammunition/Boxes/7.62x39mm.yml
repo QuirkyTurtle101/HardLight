@@ -7,8 +7,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x39mmFMJ
-    proto: Cartridge7.62x39mmFMJ
+        - Cartridge762x39mmFMJ
+    proto: Cartridge762x39mmFMJ
     capacity: 80
   - type: Item
     size: Small
@@ -32,7 +32,7 @@
   components:
   - type: BallisticAmmoProvider
     capacity: 200
-    proto: Cartridge7.62x39mmFMJ
+    proto: Cartridge762x39mmFMJ
   - type: Sprite
     layers:
     - state: base-b # Frontier: base<base-b
@@ -50,7 +50,7 @@
   name: ammunition box (7.62x39mm FMJ)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmFMJ
+    proto: Cartridge762x39mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -64,7 +64,7 @@
   name: ammunition box (7.62x39mm practice)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmPractice
+    proto: Cartridge762x39mmPractice
   - type: Sprite
     layers:
     - state: base
@@ -79,7 +79,7 @@
   name: ammunition box (7.62x39mm incendiary)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmIncendiary
+    proto: Cartridge762x39mmIncendiary
   - type: Sprite
     layers:
     - state: base
@@ -94,7 +94,7 @@
   name: ammunition box (7.62x39mm uranium)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmUranium
+    proto: Cartridge762x39mmUranium
   - type: Sprite
     layers:
     - state: base
@@ -109,7 +109,7 @@
   name: ammunition box (7.62x39mm rubber)
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmRubber
+    proto: Cartridge762x39mmRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x39mm.rsi
     layers:
@@ -126,7 +126,7 @@
   suffix: Big
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x39mmRubber
+    proto: Cartridge762x39mmRubber
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/7.62x39mm.rsi
     layers:
@@ -143,11 +143,11 @@
   components:
   - type: BallisticAmmoProvider
     capacity: 70
-    proto: Cartridge7.62x39mmSubsonic
+    proto: Cartridge762x39mmSubsonic
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x39mmSubsonic
+        - Cartridge762x39mmSubsonic
   - type: Sprite
     layers:
     - state: base

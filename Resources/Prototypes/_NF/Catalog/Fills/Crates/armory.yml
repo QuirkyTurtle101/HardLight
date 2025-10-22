@@ -9,7 +9,7 @@
     contents:
       - id: NFWeaponRifleAssaultGestio
         amount: 2
-      - id: Magazine7.62x39mmLowCapacityFMJ
+      - id: Magazine762x39mmLowCapacityFMJ
         amount: 6
 
 # Contraband (unregistered) weaponry crates for expeditions
@@ -26,7 +26,7 @@
     contents:
       - id: NFWeaponSubMachineGunWt550Expedition
         amount: 2
-      - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+      - id: Magazine46x30mmSubMachineGunTopMountedFMJ
         amount: 4
 
 - type: entity
@@ -102,7 +102,7 @@
     contents:
       - id: NFWeaponRifleAssaultGestioExpedition
         amount: 2
-      - id: Magazine7.62x39mmLowCapacityFMJ
+      - id: Magazine762x39mmLowCapacityFMJ
         amount: 6
 
 - type: entity

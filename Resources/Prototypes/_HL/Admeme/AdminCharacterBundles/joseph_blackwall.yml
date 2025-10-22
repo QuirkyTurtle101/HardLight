@@ -159,7 +159,7 @@
   - type: StorageFill
     contents:
       - id: Hypospray
-      - id: Magazine7.62x51mmFMJ
+      - id: Magazine762x51mmFMJ
         amount: 2
       - id: Handcuffs
       - id: AmmoBox7.62x51mmBigFMJ

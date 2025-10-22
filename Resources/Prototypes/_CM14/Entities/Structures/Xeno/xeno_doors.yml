@@ -12,7 +12,7 @@
           "/Audio/Weapons/smash.ogg" # TODO CM14
   - type: InteractionOutline
   - type: Sprite
-    sprite: _CM14/Structures/Xenos/xeno_resin_door.rsi
+    sprite: .CM14/Structures/Xenos/xeno_resin_door.rsi
     layers:
     - state: resin
       map: ["enum.DoorVisualLayers.Base"]
@@ -42,9 +42,9 @@
     openingSpriteState: resinopening
     closingSpriteState: resinclosing
     openSound:
-      path: /Audio/_CM14/Xeno/alien_resin_move1.ogg
+      path: /Audio/.CM14/Xeno/alien_resin_move1.ogg
     closeSound:
-      path: /Audio/_CM14/Xeno/alien_resin_move2.ogg
+      path: /Audio/.CM14/Xeno/alien_resin_move2.ogg
   - type: Appearance
   - type: Airtight
     fixVacuum: true
@@ -53,7 +53,7 @@
     resistance: 3
   - type: Occluder
   - type: Damageable
-    damageContainer: Resin
+    damageContainer: StructuralXeno
     damageModifierSet: Resin
   - type: Destructible
     thresholds:
