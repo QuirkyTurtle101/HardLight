@@ -16,7 +16,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/556x45mmmm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 4
@@ -113,7 +113,7 @@
     capacity: 200
     proto: Cartridge556x45mmRubber
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/556x45mmmm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
     layers:
     - state: base-b
       map: ["enum.GunVisualLayers.Base"]
@@ -129,7 +129,7 @@
   - type: BallisticAmmoProvider
     proto: Cartridge556x45mmRubber
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/556x45mmmm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/5.56x45mm.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
