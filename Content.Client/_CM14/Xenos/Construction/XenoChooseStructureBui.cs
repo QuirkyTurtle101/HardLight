@@ -69,7 +69,13 @@ public sealed class XenoChooseStructureBui : BoundUserInterface
 
     protected override void Dispose(bool disposing)
     {
+        // Ensure base lifecycle runs so the UI system tracks open state properly
+        base.Open();
+        base.Dispose(disposing);
         if (disposing)
+        {
             _window?.Dispose();
+            _window = null;
+        }
     }
 }
