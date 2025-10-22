@@ -651,7 +651,7 @@
       amount: 1
     - id: 40mmGrenadeFragmentation
       amount: 2
-      
+
 - type: entity
   parent: WeaponCaseHeavy
   id: WeaponCaseHeavyFlamethrowerFG
@@ -680,7 +680,7 @@
     contents:
     - id: NFWeaponLightMachineGunL6Expedition
       amount: 1
-    - id: Magazine7.62x39mmBox
+    - id: Magazine762x39mmBox
       amount: 2
 
 #region Melee

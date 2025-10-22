@@ -42,13 +42,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mmBox
+        startingItem: Magazine762x39mmBox
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x39mmBox
+            - Magazine762x39mmBox
       gun_chamber:
         name: Chamber
         startingItem: Cartridge7.62x39mmFMJ

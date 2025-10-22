@@ -235,7 +235,7 @@
           tags:
             - Magazine7.62x39mmLowCapacityFMJ
             - Magazine7.62x39mmFMJ
-            - Magazine7.62x39mmBox
+            - Magazine762x39mmBox
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
