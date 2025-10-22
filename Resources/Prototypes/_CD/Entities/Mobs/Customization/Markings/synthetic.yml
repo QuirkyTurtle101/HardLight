@@ -1,16 +1,16 @@
-- type: marking
-  id: SyntheticScreen
-  bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [Human]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
-  sprites:
-  - sprite: _CD/Mobs/Customization/synthetic.rsi
-    state: synthetic_screen
+# - type: marking
+#   id: SyntheticScreen
+#   bodyPart: Eyes
+#   markingCategory: Head
+#   speciesRestriction: [Human]
+#   coloring:
+#     default:
+#       type:
+#         !type:SimpleColoring
+#           color: "#FFFFFF"
+#   sprites:
+#   - sprite: _CD/Mobs/Customization/Synthliz/antennas.rsi
+#     state: synthetic_screen
 
 - type: marking
   id: SyntheticAntennaLeft
@@ -23,7 +23,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-  - sprite: _CD/Mobs/Customization/synthetic.rsi
+  - sprite: _CD/Mobs/Customization/Synthliz/antennas.rsi
     state: synthetic_antenna_left
 
 - type: marking
@@ -37,7 +37,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-  - sprite: _CD/Mobs/Customization/synthetic.rsi
+  - sprite: _CD/Mobs/Customization/Synthliz/antennas.rsi
     state: synthetic_antenna_right
 
 # Synthliz markings
