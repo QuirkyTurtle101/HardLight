@@ -312,6 +312,12 @@ public abstract class SharedActionsSystem : EntitySystem
         var name = Name(actionEnt, metaData);
         var protoId = metaData.EntityPrototype?.ID ?? "<no-proto>";
         var isWeeds = protoId == "ActionXenoPlantWeeds";
+        var isXenoChoose = protoId == "ActionXenoChooseStructure";
+        var isXenoSecrete = protoId == "ActionXenoSecreteStructure";
+        if (isXenoChoose || isXenoSecrete)
+        {
+            Log.Info($"[XenoAction][srv?] OnActionRequest start user={ToPrettyString(user)} actionEnt={ToPrettyString(actionEnt)} proto={protoId}");
+        }
         if (isWeeds)
         {
             Log.Info($"[XenoWeeds][srv?] OnActionRequest start user={ToPrettyString(user)} actionEnt={ToPrettyString(actionEnt)} proto={protoId}");
@@ -320,6 +326,8 @@ public abstract class SharedActionsSystem : EntitySystem
         // Does the user actually have the requested action?
         if (!component.Actions.Contains(actionEnt))
         {
+            if (isXenoChoose || isXenoSecrete)
+                Log.Info($"[XenoAction][srv?] User lacks action entity {ToPrettyString(actionEnt)} for {protoId}");
             if (isWeeds)
                 Log.Info($"[XenoWeeds][srv?] User lacks action entity {ToPrettyString(actionEnt)}");
             _adminLogger.Add(LogType.Action,
@@ -329,6 +337,8 @@ public abstract class SharedActionsSystem : EntitySystem
 
         if (!TryGetActionData(actionEnt, out var action))
         {
+            if (isXenoChoose || isXenoSecrete)
+                Log.Info($"[XenoAction][srv?] TryGetActionData failed for {ToPrettyString(actionEnt)} {protoId}");
             if (isWeeds)
                 Log.Info($"[XenoWeeds][srv?] TryGetActionData failed for {ToPrettyString(actionEnt)}");
             return;
@@ -337,6 +347,8 @@ public abstract class SharedActionsSystem : EntitySystem
         DebugTools.Assert(action.AttachedEntity == user);
         if (!action.Enabled)
         {
+            if (isXenoChoose || isXenoSecrete)
+                Log.Info($"[XenoAction][srv?] Action disabled {ToPrettyString(actionEnt)} {protoId}");
             if (isWeeds)
                 Log.Info($"[XenoWeeds][srv?] Action disabled {ToPrettyString(actionEnt)}");
             return;
@@ -345,6 +357,8 @@ public abstract class SharedActionsSystem : EntitySystem
         var curTime = GameTiming.CurTime;
         if (IsCooldownActive(action, curTime))
         {
+            if (isXenoChoose || isXenoSecrete)
+                Log.Info($"[XenoAction][srv?] Action cooldown active {ToPrettyString(actionEnt)} {protoId}");
             if (isWeeds)
                 Log.Info($"[XenoWeeds][srv?] Action cooldown active {ToPrettyString(actionEnt)}");
             return;
@@ -363,6 +377,20 @@ public abstract class SharedActionsSystem : EntitySystem
             return;
 
         // Validate request by checking action blockers and the like:
+        // Proactively ensure certain actions always have an event instance so they can be raised/handled.
+        if (isXenoChoose && action is InstantActionComponent chooseInstant && chooseInstant.Event == null)
+        {
+            chooseInstant.Event = new Content.Shared.CM14.Xenos.Construction.Events.XenoChooseStructureActionEvent();
+            Dirty(actionEnt, chooseInstant);
+            Log.Info("[XenoAction][srv?] Repaired missing Event on ActionXenoChooseStructure at request time.");
+        }
+        if (isXenoSecrete && action is WorldTargetActionComponent secreteWorld && secreteWorld.Event == null)
+        {
+            secreteWorld.Event = new Content.Shared.CM14.Xenos.Construction.Events.XenoSecreteStructureEvent();
+            Dirty(actionEnt, secreteWorld);
+            Log.Info("[XenoAction][srv?] Repaired missing Event on ActionXenoSecreteStructure at request time.");
+        }
+
         switch (action)
         {
             case EntityTargetActionComponent entityAction:
@@ -492,6 +520,19 @@ public abstract class SharedActionsSystem : EntitySystem
 
         // All checks passed. Perform the action!
         PerformAction(user, component, actionEnt, action, performEvent, curTime);
+
+        if (isXenoChoose || isXenoSecrete)
+        {
+            Log.Info($"[XenoAction][srv?] PerformAction invoked for {protoId} handled={(performEvent?.Handled ?? false)}");
+        }
+
+        // Safety net: If secrete didn't get handled (e.g., wrong raise flags routed it to the action entity),
+        // re-raise the event on the performer so the Xeno system can consume it.
+        if (isXenoSecrete && performEvent is Content.Shared.CM14.Xenos.Construction.Events.XenoSecreteStructureEvent seEv && !seEv.Handled)
+        {
+            Log.Info("[XenoBuild][srv?] Fallback: re-raising XenoSecreteStructureEvent on performer due to unhandled result.");
+            RaiseLocalEvent(user, (object) seEv, broadcast: true);
+        }
 
         // Server-side fallback: if this is the xeno weeds action and no handler marked it handled,
         // spawn weeds at the performer’s snapped coordinates and start the use delay.
@@ -661,6 +702,13 @@ public abstract class SharedActionsSystem : EntitySystem
 
             if (action.RaiseOnAction)
                 target = actionId;
+
+            // Debug: trace xeno secrete routing to ensure the event is raised on the performer (has XenoComponent)
+            if (actionEvent is Content.Shared.CM14.Xenos.Construction.Events.XenoSecreteStructureEvent)
+            {
+                var hasXeno = HasComp<Content.Shared.CM14.Xenos.XenoComponent>(target);
+                Log.Info($"[XenoAction][dbg] Raising XenoSecreteStructureEvent on target={ToPrettyString(target)} hasXeno={hasXeno} raiseOnUser={action.RaiseOnUser} raiseOnAction={action.RaiseOnAction}");
+            }
 
             RaiseLocalEvent(target, (object) actionEvent, broadcast: true);
             handled = actionEvent.Handled;

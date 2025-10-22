@@ -51,8 +51,10 @@
     interfaces:
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+      enum.XenoChooseStructureUI.Key:
+        type: XenoChooseStructureBui
   - type: Hands
-  - type: Cuffable
+  #- type: Cuffable
   - type: ComplexInteraction
   - type: Access
   - type: Sprite
@@ -309,6 +311,8 @@
     - ActionXenoPlantWeeds
     - ActionXenoAcid
     - ActionXenoLayEgg
+    - ActionXenoChooseStructure
+    - ActionXenoSecreteStructure
     restHealing:
       types:
         Blunt: -0.5
@@ -317,6 +321,10 @@
         Heat: -0.05
         Shock: -0.05
     restHealingCritMultiplier: 2.0
+    canBuild:
+    - WallXenoResin
+    - WallXenoMembrane
+    - DoorXenoResin
   - type: Fixtures
     fixtures:
       fix1:
@@ -328,6 +336,7 @@
         - MobMask
         layer:
         - MobLayer
+
   - type: Tag
     tags:
     - CannotSuicide

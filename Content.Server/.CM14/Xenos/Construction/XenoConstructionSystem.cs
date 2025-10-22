@@ -12,7 +12,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
-using XenoWeedableComponent = Content.Shared._CM14.Xenos.Construction.Nest.XenoWeedableComponent;
+using XenoWeedableComponent = Content.Shared.CM14.Xenos.Construction.Nest.XenoWeedableComponent;
 using XenoWeedsComponent = Content.Shared.CM14.Xenos.Construction.XenoWeedsComponent;
 
 namespace Content.Server.CM14.Xenos.Construction;
@@ -128,36 +128,73 @@ public sealed class XenoConstructionServerSystem : SharedXenoConstructionSystem
 
         // Resolve the action entity and check it's the Plant Weeds action
         var actionEnt = GetEntity(ev.Action);
-        if (!TryComp(actionEnt, out MetaDataComponent? meta) || meta.EntityPrototype?.ID != "ActionXenoPlantWeeds")
+        if (!TryComp(actionEnt, out MetaDataComponent? meta))
             return;
 
-        // Ensure performer is a xeno and get its weeds proto
-        if (!TryComp(performer, out XenoComponent? xeno))
-            return;
-
-        var coordinates = _transform.GetMoverCoordinates(performer).SnapToGrid(EntityManager, _map);
-        Log.Info("[XenoWeeds] (server) RequestPerformActionEvent fallback for " + ToPrettyString(performer) + " at " + coordinates);
-
-        var hasGrid = coordinates.GetGridUid(EntityManager) is { } gridUid && TryComp(gridUid, out MapGridComponent? grid);
-        if (hasGrid)
+        // Plant Weeds fallback
+        if (meta.EntityPrototype?.ID == "ActionXenoPlantWeeds")
         {
-            var tile = _mapSystem.CoordinatesToTile(gridUid!.Value, grid!, coordinates);
-            _anchored.Clear();
-            _mapSystem.GetAnchoredEntities((gridUid!.Value, grid!), tile, _anchored);
-            foreach (var anchored in _anchored)
+            // Ensure performer is a xeno and get its weeds proto
+            if (!TryComp(performer, out XenoComponent? xeno))
+                return;
+
+            var coordinates = _transform.GetMoverCoordinates(performer).SnapToGrid(EntityManager, _map);
+            Log.Info("[XenoWeeds] (server) RequestPerformActionEvent fallback for " + ToPrettyString(performer) + " at " + coordinates);
+
+            var hasGrid = coordinates.GetGridUid(EntityManager) is { } gridUid && TryComp(gridUid, out MapGridComponent? grid);
+            if (hasGrid)
             {
-                if (HasComp<XenoWeedsComponent>(anchored))
+                var tile = _mapSystem.CoordinatesToTile(gridUid!.Value, grid!, coordinates);
+                _anchored.Clear();
+                _mapSystem.GetAnchoredEntities((gridUid!.Value, grid!), tile, _anchored);
+                foreach (var anchored in _anchored)
                 {
-                    Log.Info("[XenoWeeds] (server) Fallback skip; weeds already present at " + coordinates);
-                    _actions.StartUseDelay(actionEnt);
-                    return;
+                    if (HasComp<XenoWeedsComponent>(anchored))
+                    {
+                        Log.Info("[XenoWeeds] (server) Fallback skip; weeds already present at " + coordinates);
+                        _actions.StartUseDelay(actionEnt);
+                        return;
+                    }
                 }
             }
+
+            Spawn(xeno.Weedprototype, coordinates);
+            _actions.StartUseDelay(actionEnt);
+            Log.Info("[XenoWeeds] (server) Fallback spawned weeds at " + coordinates + " using proto " + xeno.Weedprototype + ".");
+            return;
         }
 
-        Spawn(xeno.Weedprototype, coordinates);
-        _actions.StartUseDelay(actionEnt);
-        Log.Info("[XenoWeeds] (server) Fallback spawned weeds at " + coordinates + " using proto " + xeno.Weedprototype + ".");
+        // Choose Structure fallback: raise event on performer if action flags were wrong
+        if (meta.EntityPrototype?.ID == "ActionXenoChooseStructure")
+        {
+            if (!TryComp(performer, out XenoComponent? _))
+                return;
+
+            var chooseEv = new Content.Shared.CM14.Xenos.Construction.Events.XenoChooseStructureActionEvent();
+            Log.Info($"[XenoChooseStructure] (server) Fallback raising choose event on {ToPrettyString(performer)}");
+            RaiseLocalEvent(performer, ref chooseEv);
+            return;
+        }
+
+        // Secrete Structure fallback: raise event on performer with target coordinates
+        if (meta.EntityPrototype?.ID == "ActionXenoSecreteStructure")
+        {
+            if (!TryComp(performer, out XenoComponent? _))
+                return;
+
+            if (ev.EntityCoordinatesTarget is not { } netCoords)
+                return;
+
+            var coords = Coordinates.FromMap(EntityManager, netCoords);
+            var secretEv = new Content.Shared.CM14.Xenos.Construction.Events.XenoSecreteStructureEvent
+            {
+                Target = coords
+            };
+            Log.Info($"[XenoBuild] (server) Fallback raising secrete event on {ToPrettyString(performer)} at {coords}");
+            RaiseLocalEvent(performer, ref secretEv);
+            return;
+        }
+
     }
 
     // Note: If HiveCoreComponent exists in this codebase, wire its MapInit here.
