@@ -2,75 +2,75 @@
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberPistolMagazineRecipe
-  id: Magazine4.6x30mmPistolFMJ
-  result: Magazine4.6x30mmPistolFMJ
+  id: Magazine46x30mmPistolFMJ
+  result: Magazine46x30mmPistolFMJ
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberPistolMagazineRecipe
-  id: Magazine4.6x30mmPistolRubber
-  result: Magazine4.6x30mmPistolRubber
+  id: Magazine46x30mmPistolRubber
+  result: Magazine46x30mmPistolRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryPistolCaliberPistolMagazineRecipe
-  id: Magazine4.6x30mmPistolIncendiary
-  result: Magazine4.6x30mmPistolIncendiary
+  id: Magazine46x30mmPistolIncendiary
+  result: Magazine46x30mmPistolIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticePistolCaliberPistolMagazineRecipe
-  id: Magazine4.6x30mmPistolPractice
-  result: Magazine4.6x30mmPistolPractice
+  id: Magazine46x30mmPistolPractice
+  result: Magazine46x30mmPistolPractice
 
 - type: latheRecipe
   parent: BaseAmmoEmptyPistolCaliberPistolMagazineRecipe
-  id: Magazine4.6x30mmPistolEmpty
-  result: Magazine4.6x30mmPistolEmpty
+  id: Magazine46x30mmPistolEmpty
+  result: Magazine46x30mmPistolEmpty
 
 - type: latheRecipe
   parent: BaseAmmoUraniumPistolCaliberPistolMagazineRecipe
-  id: Magazine4.6x30mmPistolUranium
-  result: Magazine4.6x30mmPistolUranium
+  id: Magazine46x30mmPistolUranium
+  result: Magazine46x30mmPistolUranium
 
 #SMG Magazines
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberSubMachineGunMagazineRecipe
-  id: Magazine4.6x30mmSubMachineGunFMJ
-  result: Magazine4.6x30mmSubMachineGunFMJ
+  id: Magazine46x30mmSubMachineGunFMJ
+  result: Magazine46x30mmSubMachineGunFMJ
 
 - type: latheRecipe
   parent: BaseAmmoRubberPistolCaliberSubMachineGunMagazineRecipe
-  id: Magazine4.6x30mmSubMachineGunRubber
-  result: Magazine4.6x30mmSubMachineGunRubber
+  id: Magazine46x30mmSubMachineGunRubber
+  result: Magazine46x30mmSubMachineGunRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryPistolCaliberSubMachineGunMagazineRecipe
-  id: Magazine4.6x30mmSubMachineGunIncendiary
-  result: Magazine4.6x30mmSubMachineGunIncendiary
+  id: Magazine46x30mmSubMachineGunIncendiary
+  result: Magazine46x30mmSubMachineGunIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticePistolCaliberSubMachineGunMagazineRecipe
-  id: Magazine4.6x30mmSubMachineGunPractice
-  result: Magazine4.6x30mmSubMachineGunPractice
+  id: Magazine46x30mmSubMachineGunPractice
+  result: Magazine46x30mmSubMachineGunPractice
 
 - type: latheRecipe
   parent: BaseAmmoEmptyPistolCaliberSubMachineGunMagazineRecipe
-  id: Magazine4.6x30mmSubMachineGunEmpty
-  result: Magazine4.6x30mmSubMachineGunEmpty
+  id: Magazine46x30mmSubMachineGunEmpty
+  result: Magazine46x30mmSubMachineGunEmpty
 
 - type: latheRecipe
   parent: BaseAmmoUraniumPistolCaliberSubMachineGunMagazineRecipe
-  id: Magazine4.6x30mmSubMachineGunUranium
-  result: Magazine4.6x30mmSubMachineGunUranium
+  id: Magazine46x30mmSubMachineGunUranium
+  result: Magazine46x30mmSubMachineGunUranium
 
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberSubMachineGunMagazineRecipe
-  id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
-  result: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+  id: Magazine46x30mmSubMachineGunTopMountedFMJ
+  result: Magazine46x30mmSubMachineGunTopMountedFMJ
 
 - type: latheRecipe
   parent: BaseAmmoEmptyPistolCaliberSubMachineGunMagazineRecipe
-  id: Magazine4.6x30mmSubMachineGunTopMountedEmpty
-  result: Magazine4.6x30mmSubMachineGunTopMountedEmpty
+  id: Magazine46x30mmSubMachineGunTopMountedEmpty
+  result: Magazine46x30mmSubMachineGunTopMountedEmpty
 
 #Boxes
 

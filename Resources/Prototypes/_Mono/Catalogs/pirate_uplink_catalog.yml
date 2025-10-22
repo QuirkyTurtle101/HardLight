@@ -539,10 +539,10 @@
       # - PirateUplink
 
 # - type: listing
-  # id: UplinkPirateBoxMagazine7.62x39mmFMJ
+  # id: UplinkPirateBoxMagazine762x39mmFMJ
   # name: uplink-pirate-box-magazine-light-rifle-name
   # description: uplink-pirate-box-magazine-light-rifle-desc
-  # productEntity: BoxMagazine7.62x39mmFMJ
+  # productEntity: BoxMagazine762x39mmFMJ
   # cost:
     # Doubloon: 1
   # categories:
@@ -557,7 +557,7 @@
   # id: UplinkPirateMagazineSubsonic
   # name: uplink-subsonic-mag-name
   # description: uplink-subsonic-mag-desc
-  # productEntity: Magazine7.62x39mmSubsonic
+  # productEntity: Magazine762x39mmSubsonic
   # cost:
     # Doubloon: 1
   # categories:

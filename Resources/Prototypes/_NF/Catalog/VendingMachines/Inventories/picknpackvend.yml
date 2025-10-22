@@ -34,7 +34,7 @@
   # Magazines
     Magazine9x19mmPistolFMJ: 4294967295
     MagazineNovaliteC1: 4294967295
-    Magazine7.62x39mmLowCapacityFMJ: 4294967295
+    Magazine762x39mmLowCapacityFMJ: 4294967295
   # Hardlight end
   # Ammo boxes
     AmmoBox9x19mmBigFMJ: 4294967295
