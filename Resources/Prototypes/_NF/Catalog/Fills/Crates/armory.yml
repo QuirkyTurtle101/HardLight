@@ -122,7 +122,7 @@
         amount: 6
 
 # Ammo crates
-## 5.56x45mm
+## 556x45mm
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
@@ -172,7 +172,7 @@
   id: CrateAmmoBoxUranium20
 #  categories: [ HideSpawnMenu ]
 
-## 7.62x39mm
+## 762x39mm
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
@@ -258,7 +258,7 @@
   id: CrateAmmoBoxEmp35
 #  categories: [ HideSpawnMenu ]
 
-## 6.35x40mm Caseless
+## 635x40mm Caseless
 - type: entity
   parent:
   - CrateAmmoSecureMercenary

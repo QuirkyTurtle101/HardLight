@@ -45,6 +45,7 @@
     raiseOnUser: true
     raiseOnAction: false
     checkCanInteract: false
+    checkCanAccess: false
     checkConsciousness: true
     useDelay: 15
     event: !type:XenoSecreteStructureEvent

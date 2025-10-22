@@ -162,7 +162,7 @@
       - id: Magazine762x51mmFMJ
         amount: 2
       - id: Handcuffs
-      - id: AmmoBox7.62x51mmBigFMJ
+      - id: AmmoBox762x51mmBigFMJ
 
 # backpack
 - type: entity

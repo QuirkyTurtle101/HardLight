@@ -15,7 +15,7 @@
     NFMagazineClipRifle20Empty: 6
   # Ammo boxes
     NFAmmunitionBoxPistol35: 6
-    AmmoBox5.56x45mmBigFMJ: 6  # Hardlight change
+    AmmoBox556x45mmBigFMJ: 6  # Hardlight change
     NFAmmunitionBoxRifle30: 6
     AmmoBox12_gaugeBuckshot: 6 # Hardlight change
     NFAmmunitionBoxShellShotgunBeanbag: 6
@@ -38,7 +38,7 @@
   # Hardlight end
   # Ammo boxes
     AmmoBox9x19mmBigFMJ: 4294967295
-    AmmoBox5.56x45mmBigFMJ: 4294967295
-    AmmoBox7.62x39mmBigFMJ: 4294967295
+    AmmoBox556x45mmBigFMJ: 4294967295
+    AmmoBox762x39mmBigFMJ: 4294967295
     AmmoBox12_gaugeBuckshot: 4294967295
   emaggedInventory:

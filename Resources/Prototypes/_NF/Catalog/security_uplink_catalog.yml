@@ -538,7 +538,7 @@
           - SecurityUplink
 
 - type: listing
-  id: UplinkSecurity5.56x45mmMagazine
+  id: UplinkSecurity556x45mmMagazine
   name:  uplink-security-5-56x45mmMagazine-name
   description: uplink-security-5-56x45mmMagazine-desc
   productEntity: BoxMagazine556x45mmFMJ
@@ -559,7 +559,7 @@
 #       - Sheriff
 
 - type: listing
-  id: UplinkSecurity7.62x51mmMagazine
+  id: UplinkSecurity762x51mmMagazine
   name:  uplink-security-7-62x51mmMagazine-name
   description: uplink-security-7-62x51mmMagazine-desc
   productEntity: BoxMagazine762x51mmFMJ
@@ -575,7 +575,7 @@
           - SecurityUplink
 
 - type: listing
-  id: UplinkSecurity7.62x51mmMagazineRubber
+  id: UplinkSecurity762x51mmMagazineRubber
   name: uplink-security-7-62x51mmMagazine-rubber-name
   description: uplink-security-7-62x51mmMagazine-rubber-desc
   productEntity: BoxMagazine762x51mmRubber
@@ -591,7 +591,7 @@
           - SecurityUplink
 
 - type: listing
-  id: UplinkSecurity7.62x39mmMagazine
+  id: UplinkSecurity762x39mmMagazine
   name:  uplink-security-7-62x39mmMagazine-name
   description: uplink-security-7-62x39mmMagazine-desc
   productEntity: BoxMagazine762x39mmFMJ
@@ -648,7 +648,7 @@
           - SecurityUplink
 
 - type: listing
-  id: UplinkSecurity5.56x45mmMagazineRubber
+  id: UplinkSecurity556x45mmMagazineRubber
   name: uplink-security-5-56x45mmMagazine-rubber-name
   description: uplink-security-5-56x45mmMagazine-rubber-desc
   productEntity: BoxMagazine556x45mmRubber
@@ -669,7 +669,7 @@
  #       - Sheriff
 
 - type: listing
-  id: UplinkSecurity7.62x39mmMagazineRubber
+  id: UplinkSecurity762x39mmMagazineRubber
   name: uplink-security-7-62x39mmMagazine-rubber-name
   description: uplink-security-7-62x39mmMagazine-rubber-desc
   productEntity: BoxMagazine762x39mmRubber

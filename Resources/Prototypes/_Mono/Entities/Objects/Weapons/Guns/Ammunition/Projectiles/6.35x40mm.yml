@@ -1,6 +1,6 @@
 - type: entity
   id: Bullet635x40mmCaseless
-  name: bullet (6.35x40mm Caseless)
+  name: bullet (635x40mm Caseless)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   id: Bullet635x40mmCaselessPractice
-  name: bullet (6.35x40mm Caseless practice)
+  name: bullet (635x40mm Caseless practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   id: Bullet635x40mmCaselessRubber
-  name: bullet (6.35x40mm Caseless rubber)
+  name: bullet (635x40mm Caseless rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
   components:

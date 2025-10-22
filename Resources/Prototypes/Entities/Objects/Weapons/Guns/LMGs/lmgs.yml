@@ -66,10 +66,10 @@
     delay: 1
 
 - type: entity
-  name: L6 SAW (7.62x39mm)
+  name: L6 SAW (762x39mm)
   id: WeaponLightMachineGunL6
   parent: [BaseWeaponLightMachineGun, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
-  description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses 7.62x39mm ammo. An illegal firearm often used by Syndicate agents.
+  description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses 762x39mm ammo. An illegal firearm often used by Syndicate agents.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
@@ -85,10 +85,10 @@
   - type: Appearance
 
 - type: entity
-  name: L6C ROW (7.62x39mm)
+  name: L6C ROW (762x39mm)
   id: WeaponLightMachineGunL6C
   parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
-  description: A L6 SAW for use by cyborgs. Creates 7.62x39mm ammo on the fly from an internal ammo fabricator, which slowly self-charges. An illegal firearm often used by Syndicate agents.
+  description: A L6 SAW for use by cyborgs. Creates 762x39mm ammo on the fly from an internal ammo fabricator, which slowly self-charges. An illegal firearm often used by Syndicate agents.
   components:
     - type: Gun
       minAngle: 4

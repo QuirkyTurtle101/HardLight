@@ -32,6 +32,7 @@ using Robust.Shared.GameObjects.Components.Localization;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Serialization.Markdown;
 using Robust.Shared.Utility;
@@ -69,7 +70,9 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     }
 
     // Local visuals keys for humanoid appearance in this fork
-    public enum HumanoidVisuals
+    // Must be network-serializable because these keys are replicated via AppearanceComponent state
+    [Serializable, NetSerializable]
+    public enum HumanoidVisuals : byte
     {
         Scale
     }

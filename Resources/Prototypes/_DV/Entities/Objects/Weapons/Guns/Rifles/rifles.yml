@@ -1,8 +1,8 @@
 - type: entity
-  name: Vulcan (7.62x51mm)
+  name: Vulcan (762x51mm)
   parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
   id: WeaponRifleVulcan
-  description: One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
+  description: One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 762x51mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
@@ -62,10 +62,10 @@
   #  price: 1300
 
 - type: entity
-  name: ceremonial rifle (7.62x51mm)
+  name: ceremonial rifle (762x51mm)
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseGunWieldable, BaseC1Contraband
   id: WeaponSniperCeremonial
-  description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white. Uses 7.62x51mm ammo.
+  description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white. Uses 762x51mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
@@ -90,10 +90,10 @@
     pvsIncrease: 0.15 # Frontier
 
 - type: entity
-  name: CAWS-25 Jackdaw (6.35x40mm)
+  name: CAWS-25 Jackdaw (635x40mm)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband] # Frontier: add BaseC3Contraband
   id: WeaponRifleJackdaw
-  description: The beginning of the end is heralded by the song of a Jackdaw. Uses 6.35x40mm Caseless ammo.
+  description: The beginning of the end is heralded by the song of a Jackdaw. Uses 635x40mm Caseless ammo.
   components:
   - type: Item
     size: Large

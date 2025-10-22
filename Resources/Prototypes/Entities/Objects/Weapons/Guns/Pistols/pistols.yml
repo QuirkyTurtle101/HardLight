@@ -174,10 +174,10 @@
   - type: AmmoCounter
 
 - type: entity
-  name: cobra (6.35x40mm)
+  name: cobra (635x40mm)
   parent: [ BaseWeaponPistol, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponPistolCobra
-  description: A rugged, robust operator handgun with inbuilt silencer. Uses 6.35x40mm Caseless ammo. An illegal firearm often used by Syndicate agents.
+  description: A rugged, robust operator handgun with inbuilt silencer. Uses 635x40mm Caseless ammo. An illegal firearm often used by Syndicate agents.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/cobra.rsi

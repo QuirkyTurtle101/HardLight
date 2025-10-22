@@ -1,6 +1,6 @@
 - type: entity
   id: Bullet46x30mm
-  name: bullet (4.6x30mm FMJ)
+  name: bullet (46x30mm FMJ)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   id: Bullet46x30mmPractice
-  name: bullet (4.6x30mm practice)
+  name: bullet (46x30mm practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   id: Bullet46x30mmRubber
-  name: bullet (4.6x30mm rubber)
+  name: bullet (46x30mm rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
   components:
@@ -34,7 +34,7 @@
 - type: entity
   id: Bullet46x30mmIncendiary
   parent: BaseBulletIncendiary
-  name: bullet (4.6x30mm incendiary)
+  name: bullet (46x30mm incendiary)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -46,7 +46,7 @@
 - type: entity
   id: Bullet46x30mmUranium
   parent: BaseBulletUranium
-  name: bullet (4.6x30mm uranium)
+  name: bullet (46x30mm uranium)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -58,7 +58,7 @@
 # Upstream
 - type: entity
   id: Bullet46x30mmEmp
-  name: bullet (4.6x30mm emp)
+  name: bullet (46x30mm emp)
   parent: BaseBulletEmp
   categories: [ HideSpawnMenu ]
   components:

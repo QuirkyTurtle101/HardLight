@@ -64,7 +64,7 @@
       amount: 1
     - id: Magazine635x40mmCaselessPistol
       amount: 1
-    - id: AmmoBox6.35x40mmCaseless
+    - id: AmmoBox635x40mmCaseless
       amount: 1
 
 - type: entity
@@ -291,7 +291,7 @@
       amount: 1
     - id: Magazine762x54mmRFMJ
       amount: 2
-    - id: AmmoBox7.62x51mmBigFMJ
+    - id: AmmoBox762x51mmBigFMJ
       amount: 2
 
 - type: entity
@@ -306,7 +306,7 @@
       amount: 1
     - id: Magazine762x51mmFMJ
       amount: 2
-    - id: AmmoBox7.62x51mmBigFMJ
+    - id: AmmoBox762x51mmBigFMJ
       amount: 2
 #region SMGs
 - type: entity
@@ -321,7 +321,7 @@
       amount: 1
     - id: Magazine46x30mmSubMachineGunTopMountedFMJ
       amount: 2
-    - id: AmmoBox4.6x30mmFMJ
+    - id: AmmoBox46x30mmFMJ
       amount: 1
     - id: NFMagazineSubMachineGunTopMounted35
       amount: 3
@@ -338,7 +338,7 @@
       amount: 1
     - id: Magazine57x28mmSubMachineGunFMJ
       amount: 2
-    - id: AmmoBox5.7x28mmFMJ
+    - id: AmmoBox57x28mmFMJ
       amount: 2
 
 - type: entity
@@ -583,7 +583,7 @@
     contents:
     - id: NFWeaponEnergyRifleTemperatureExpedition
       amount: 1
-    - id: AmmoBox7.62x39mmFMJ
+    - id: AmmoBox762x39mmFMJ
       amount: 2
 
 - type: entity
@@ -596,7 +596,7 @@
     contents:
     - id: NFWeaponRifleSniperHristovExpedition
       amount: 1
-    - id: AmmoBox14.5x114mm
+    - id: AmmoBox145x114mm
       amount: 2
 
 - type: entity
@@ -622,7 +622,7 @@
     contents:
     - id: Musket
       amount: 1
-    - id: AmmoBox14.5x114mm
+    - id: AmmoBox145x114mm
       amount: 2
 
 #region Launchers
@@ -651,7 +651,7 @@
       amount: 1
     - id: 40mmGrenadeFragmentation
       amount: 2
-      
+
 - type: entity
   parent: WeaponCaseHeavy
   id: WeaponCaseHeavyFlamethrowerFG
@@ -810,7 +810,7 @@
       amount: 4
 
 # Ammo
-## 5.56x45mm
+## 556x45mm
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -860,7 +860,7 @@
   id: WeaponCaseShortAmmoBoxUranium20
 #  categories: [ HideSpawnMenu ]
 
-## 7.62x39mm
+## 762x39mm
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -946,7 +946,7 @@
   id: WeaponCaseShortAmmoBoxEmp35
 #  categories: [ HideSpawnMenu ]
 
-## 6.35x40mm Caseless
+## 635x40mm Caseless
 - type: entity
   parent:
   - WeaponCaseShortAmmo
