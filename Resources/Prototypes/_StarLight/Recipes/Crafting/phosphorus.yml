@@ -1,0 +1,12 @@
+﻿- type: construction
+  name: crushed phosphorus
+  id: CrushedPhosphorus
+  graph: CrushedPhosphorus
+  startNode: start
+  targetNode: crushed
+  category: construction-category-misc
+  objectType: Item
+  description: crafting-menu-text-phosphorus
+  icon:
+    sprite: _Starlight/Objects/Materials/phosphorus.rsi
+    state: icon
