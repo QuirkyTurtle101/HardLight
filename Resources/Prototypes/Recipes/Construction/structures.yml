@@ -212,10 +212,6 @@
   startNode: start
   targetNode: cardwall
   category: construction-category-structures
-  description: Cheapskate.
-  icon:
-    sprite: Structures/Walls/card.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
@@ -224,7 +220,6 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: grille
   id: Grille
   graph: Grille
   startNode: start

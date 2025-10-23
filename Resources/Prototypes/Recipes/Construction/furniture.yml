@@ -168,7 +168,6 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden bench
   id: ChairWoodBench
   graph: Seat
   startNode: start
@@ -254,7 +253,6 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: reinforced glass table
   id: TableReinforcedGlass
   graph: Table
   startNode: start

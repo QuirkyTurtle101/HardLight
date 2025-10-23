@@ -12,6 +12,6 @@
 
 - type: stack
   id: MercCoin
-  name: merccoin
+  name: stack-merccoin
   icon: _NF/Objects/Specific/Mercenary/merc_coin.rsi
   spawn: MercCoin1

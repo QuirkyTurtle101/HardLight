@@ -105,7 +105,7 @@
 
 - type: stack
   id: CreditCounterfeit
-  name: spesso
+  name: stack-spesso
   icon: { sprite: _NF/Objects/Economy/counterfeit_cash.rsi, state: cash }
   spawn: SpaceCashCounterfeit
 

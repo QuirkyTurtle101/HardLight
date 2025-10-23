@@ -55,14 +55,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -82,14 +82,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -109,14 +109,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -136,14 +136,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -163,14 +163,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -190,14 +190,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -217,14 +217,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -244,14 +244,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -271,14 +271,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -298,14 +298,14 @@
         store: part-container
 
       - component: Flash
-        name: construction-graph-tag-flash
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: construction-graph-tag-second-flash
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
@@ -334,9 +334,6 @@
 
   - node: engineer
     entity: BorgChassisEngineer
-
-  - node: derelictcyborg
-    entity: BorgChassisDerelict
 
   - node: janitor
     entity: BorgChassisJanitor

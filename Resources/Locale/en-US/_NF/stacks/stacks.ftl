@@ -108,3 +108,18 @@ stack-light-mosaic-wood-floor = light mosaic wood floor
 stack-fancy-wood-floor = fancy wood floor
 stack-versailles-wood-floor = versailles wood floor
 stack-cheese-floor = cheese floor
+
+stack-merccoin = merccoin {$amount ->
+    [1] merc coin
+    *[other] merc coins
+}
+stack-prize-ticket = prize-ticket {$amount ->
+    [1] prize ticket
+    *[other] prize tickets
+}
+stack-spesso = spesso {$amount ->
+    [1] spesso
+    *[other] spessos
+}
+
+stack-light-grass-floor = light grass floor

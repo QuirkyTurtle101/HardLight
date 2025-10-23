@@ -79,14 +79,6 @@
   objectType: Item
 
 - type: construction
-  id: SpearSharkMinnow
-  graph: SpearSharkMinnow
-  startNode: start
-  targetNode: spear
-  category: construction-category-weapons
-  objectType: Item
-
-- type: construction
   id: Bola
   graph: Bola
   startNode: start
@@ -103,12 +95,11 @@
   objectType: Item
 
 - type: construction
-  name: makeshift shield
   id: CardShield
   graph: CardShield
   startNode: start
   targetNode: cardShield
-  icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: cardshield-icon }
+  category: construction-category-weapons
   objectType: Item
 
 - type: construction
@@ -124,14 +115,6 @@
   graph: ImprovisedArrow
   startNode: start
   targetNode: ImprovisedArrow
-  category: construction-category-weapons
-  objectType: Item
-
-- type: construction
-  id: ImprovisedArrowCarp
-  graph: ImprovisedArrowCarp
-  startNode: start
-  targetNode: ImprovisedArrowCarp
   category: construction-category-weapons
   objectType: Item
 
@@ -152,7 +135,6 @@
   objectType: Item
 
 - type: construction
-  name: improvised bow
   id: CardArrow
   graph: CardArrow
   startNode: start
@@ -177,12 +159,9 @@
   objectType: Item
 
 - type: construction
-  name: cardboard sword
   id: CardSword
   graph: CardSword
   startNode: start
   targetNode: cardSword
   category: construction-category-weapons
-  description: A cardboard tube shaped into a rough sword.  Give it a swing, you know you want to.
-  icon: { sprite: Objects/Fun/card_sword.rsi, state: icon }
   objectType: Item

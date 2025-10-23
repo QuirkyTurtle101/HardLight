@@ -82,7 +82,7 @@
         amount: 1
         doAfter: 0.5
       - tag: Syringe
-        name: construction-graph-tag-syringe
+        name: construction-graph-component-syringe
         icon:
           sprite: Objects/Specific/Chemistry/syringe.rsi
           state: syringe_base0
@@ -122,7 +122,7 @@
         amount: 1
         doAfter: 0.5
       - tag: ShellShotgun12_gauge
-        name: construction-graph-tag-shell-shotgun
+        name: construction-graph-component-shell-shotgun
         icon:
           sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
           state: base

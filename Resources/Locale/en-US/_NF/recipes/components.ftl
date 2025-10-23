@@ -23,3 +23,5 @@ construction-graph-component-bible = a bible
 construction-graph-component-computer-wallmount-board = any wallmount computer circuit board
 construction-graph-component-computer-tabletop-board = any tabletop computer circuit board
 construction-graph-component-nf-pirate-toolbox = a pirate repair toolbox
+construction-graph-component-syringe = a syringe
+construction-graph-component-shotgun-shell = a shotgun shell
