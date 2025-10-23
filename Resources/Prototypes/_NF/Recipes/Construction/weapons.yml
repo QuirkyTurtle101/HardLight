@@ -31,7 +31,7 @@
   objectType: Item
 
 - type: construction
-  name: syringe-bolt
+  name: syringe bolt
   id: CraftCrossbowBoltSyringe
   graph: CraftCrossbowBoltSyringe
   startNode: start
