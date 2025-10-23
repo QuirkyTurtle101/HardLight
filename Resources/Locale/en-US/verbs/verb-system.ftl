@@ -28,6 +28,9 @@ verb-categories-lever = Lever
 verb-categories-select-type = Select Type
 verb-categories-fax = Set Destination
 verb-categories-power-level = Power Level
+# Starlight: ItemSwitch system
+verb-categories-switch = Switch
+# End Starlight
 # EE interaction system
 verb-categories-interaction = Interact
 
