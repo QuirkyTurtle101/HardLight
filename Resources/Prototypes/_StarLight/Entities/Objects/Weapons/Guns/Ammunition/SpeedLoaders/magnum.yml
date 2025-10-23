@@ -51,7 +51,7 @@
       tags:
         - Cartridge45Magnum
         - Cartridge45MagnumImprovised
-        - Cartridge5.56x45mmImprovised
+        - Cartridge556x45mmImprovised
     capacity: 8
   - type: MagazineVisuals
     magState: base
