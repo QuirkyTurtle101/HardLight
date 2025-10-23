@@ -47,37 +47,4 @@ public sealed class OfferItemSystem : SharedOfferItemSystem
         }
     }
 
-    /// <summary>
-    /// Accepting the offer and receive item
-    /// </summary>
-    public void Receive(EntityUid uid, OfferItemComponent? component = null)
-    {
-        if (!Resolve(uid, ref component) ||
-            !TryComp<OfferItemComponent>(component.Target, out var offerItem) ||
-            offerItem.Hand == null ||
-            component.Target == null ||
-            !TryComp<HandsComponent>(uid, out var hands))
-            return;
-
-        if (offerItem.Item != null)
-        {
-            if (!_hands.TryPickup(uid, offerItem.Item.Value, handsComp: hands))
-            {
-                _popup.PopupEntity(Loc.GetString("offer-item-full-hand"), uid, uid);
-                return;
-            }
-
-            _popup.PopupEntity(Loc.GetString("offer-item-give",
-                ("item", Identity.Entity(offerItem.Item.Value, EntityManager)),
-                ("target", Identity.Entity(uid, EntityManager))), component.Target.Value, component.Target.Value);
-            _popup.PopupEntity(Loc.GetString("offer-item-give-other",
-                    ("user", Identity.Entity(component.Target.Value, EntityManager)),
-                    ("item", Identity.Entity(offerItem.Item.Value, EntityManager)),
-                    ("target", Identity.Entity(uid, EntityManager)))
-                , component.Target.Value, Filter.PvsExcept(component.Target.Value, entityManager: EntityManager), true);
-        }
-
-        offerItem.Item = null;
-        UnReceive(uid, component, offerItem);
-    }
 }
