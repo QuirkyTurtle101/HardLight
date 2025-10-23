@@ -29,7 +29,13 @@
 #556x45mm tags
 
 - type: Tag
+  id: Cartridge556x45mm
+
+- type: Tag
   id: Cartridge556x45mmFMJ
+
+- type: Tag
+  id: Cartridge556x45mmImprovised
 
 - type: Tag
   id: Magazine556x45mmFMJ
@@ -91,10 +97,39 @@
 - type: Tag
   id: Magazine45_ACPFMJBox
 
+#45 Magnum tags
+
+- type: Tag
+  id: Cartridge45Magnum
+
+- type: Tag
+  id: Cartridge45MagnumImprovised
+
+- type: Tag
+  id: SpeedLoader45Magnum
+
+- type: Tag
+  id: SpeedLoader45MagnumImprovised
+
 #9x19mm tags
 
 - type: Tag
+  id: Cartridge9x19mm
+
+- type: Tag
   id: Cartridge9x19mmFMJ
+
+- type: Tag
+  id: Cartridge9x19mmImprovised
+
+- type: Tag
+  id: Magazine9x19mm
+
+- type: Tag
+  id: Magazine9x19mmImprovised
+
+- type: Tag
+  id: Magazine9x19mmSMGImprovised
 
 - type: Tag
   id: Magazine9x19mmPistolFMJ
