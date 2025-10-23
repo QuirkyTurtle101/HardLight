@@ -40,7 +40,8 @@
   - type: Carriable # Frontier: Carrying system from nyanotrasen.
   - type: Speech # Frontier
     allowedEmotes: ['Belch'] # Frontier
-  - type: PotentialPsionic #Nyano - Summary: makes potentially psionic. 
+  - type: PotentialPsionic #Nyano - Summary: makes potentially psionic.
+  - type: ModifyUndies  # FLOOF Add
 
 - type: entity
   parent: BaseSpeciesDummy

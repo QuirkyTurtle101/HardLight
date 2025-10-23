@@ -224,6 +224,7 @@
     - AnomalyHost
   - type: Targeting # Shitmed Change
   - type: SurgeryTarget # Shitmed Change
+  - type: ModifyUndies  # FLOOF Add
 
 - type: entity
   save: false
