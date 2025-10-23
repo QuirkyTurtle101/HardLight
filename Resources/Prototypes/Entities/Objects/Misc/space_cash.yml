@@ -185,6 +185,6 @@
   components:
   - type: Icon
     sprite: /Textures/_NF/Objects/Economy/cash.rsi
-    state: cash_1000000
+    state: cash_250000
   - type: Stack
     count: 1000000
