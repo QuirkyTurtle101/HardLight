@@ -187,7 +187,7 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
         UnReceive(uid, component, offerItem);
     }
     
-    private void OnAcceptOfferAlert(Entity<OfferItemComponent> ent, ref RemoveCuffsAlertEvent args))
+    private void OnAcceptOfferAlert(Entity<OfferItemComponent> ent, ref AcceptOfferAlertEvent args))
     {
         if (args.Handled)
             return;
