@@ -244,9 +244,6 @@ namespace Content.Server.Database
                 loadouts[role.RoleName] = loadout;
             }
 
-            // Get the company with fallback to default "None"
-            var company = profile.Company ?? "None";
-
             // Validate height and width to prevent sprite scale errors
             // Database migration set default values to 0f for existing profiles
             var height = profile.Height <= 0.005f ? 1.0f : profile.Height;
