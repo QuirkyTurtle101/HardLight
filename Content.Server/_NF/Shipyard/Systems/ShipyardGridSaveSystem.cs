@@ -502,7 +502,7 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
                 continue;
             if (!processed.Add(ent))
                 continue;
-            if (IsInvalidEntity(ent))
+            if (!IsInvalidEntity(ent))
                 continue;
 
             // Preserve wall-mounted fixtures explicitly but still traverse their child containers.
