@@ -15,8 +15,7 @@
     proto: null
     whitelist:
       tags:
-        - Cartridge45Magnum
-        - Cartridge45MagnumImprovised
+        - Cartridge45Magnum # HardLight: generic tag accepts all .45 Magnum variants (FMJ, incendiary, uranium, rubber, improvised, etc.)
     capacity: 4
   - type: ContainerContainer
     containers:
@@ -49,9 +48,8 @@
     proto: null
     whitelist:
       tags:
-        - Cartridge45Magnum
-        - Cartridge45MagnumImprovised
-        - Cartridge556x45mmImprovised
+        - Cartridge45Magnum # HardLight: generic tag accepts all .45 Magnum variants
+        - Cartridge556x45mm # HardLight: generic tag accepts all 5.56x45mm variants
     capacity: 8
   - type: MagazineVisuals
     magState: base

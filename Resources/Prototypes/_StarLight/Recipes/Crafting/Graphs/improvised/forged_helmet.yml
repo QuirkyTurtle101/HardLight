@@ -17,8 +17,5 @@
       - material: Cloth
         amount: 4
         doAfter: 6
-        icon:
-          sprite: _Starlight/Clothing/Head/Helmets/forged.rsi
-          state: icon
   - node: helmet
     entity: UnfinishedClothingHeadHelmetForged

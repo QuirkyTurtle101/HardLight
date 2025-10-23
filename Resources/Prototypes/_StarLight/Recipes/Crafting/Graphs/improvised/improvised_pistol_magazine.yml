@@ -9,8 +9,5 @@
             - material: Steel
               amount: 5
               doAfter: 2
-              icon:
-                sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/improvised_pistol_magazine.rsi
-                state: base
     - node: shell
       entity: Magazine9x19mmImprovised

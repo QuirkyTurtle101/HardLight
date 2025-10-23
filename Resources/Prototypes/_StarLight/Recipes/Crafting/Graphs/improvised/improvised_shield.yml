@@ -13,8 +13,5 @@
         doAfter: 15
       - material: Cloth
         amount: 3
-        icon:
-          sprite: _Starlight/Objects/Shields/improvised_shield.rsi
-          state: icon
   - node: shield
     entity: UnfinishedImprovisedShield

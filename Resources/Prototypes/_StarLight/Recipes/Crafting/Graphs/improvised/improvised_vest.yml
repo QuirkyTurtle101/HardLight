@@ -14,8 +14,5 @@
         doAfter: 5
       - material: Cable
         amount: 7
-        icon:
-          sprite: _Starlight/Clothing/OuterClothing/Armor/improvised.rsi
-          state: icon
   - node: vest
     entity: UnfinishedClothingOuterArmorImprovised

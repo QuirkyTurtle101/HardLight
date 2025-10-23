@@ -18,8 +18,5 @@
         amount: 4
       - material: Cloth
         amount: 5
-        icon:
-          sprite: _Starlight/Objects/Shields/paladin_shield.rsi
-          state: icon
   - node: shield
     entity: UnfinishedPaladinShield

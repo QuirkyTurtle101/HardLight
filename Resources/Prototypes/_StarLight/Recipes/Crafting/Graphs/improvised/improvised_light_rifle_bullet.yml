@@ -12,8 +12,5 @@
             - material: CrushedPhosphorus
               amount: 3
               doAfter: 0.5
-              icon:
-                sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Casings/improvised_casing.rsi
-                state: base
     - node: shell
       entity: Cartridge556x45mmImprovised

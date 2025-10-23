@@ -9,8 +9,5 @@
       - material: Plasteel
         amount: 4
         doAfter: 10
-        icon:
-          sprite: _Starlight/Objects/Misc/plasteel_hilt.rsi
-          state: icon
   - node: hilt
     entity: HiltPlasteel

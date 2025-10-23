@@ -9,8 +9,5 @@
             - material: Steel
               amount: 6
               doAfter: 5
-              icon:
-                sprite: _Starlight/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/improvised_magnum_speed_loader.rsi
-                state: base
     - node: shell
       entity: SpeedLoader45MagnumImprovised

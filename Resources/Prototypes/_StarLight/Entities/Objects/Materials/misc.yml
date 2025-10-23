@@ -10,8 +10,13 @@
     nodesMax: 25
   - type: Sprite
     sprite: _Starlight/Objects/Materials/materials.rsi
-    state: abyss_core
     scale: 0.5, 0.5
+    layers:  # HardLight: Override layers to use fixed sprite instead of random artifact sprites
+    - state: abyss_core
+      map: [ "enum.ArtifactsVisualLayers.Base" ]
+  - type: RandomArtifactSprite
+    minSprite: 0  # HardLight: Disable random sprite by setting invalid range
+    maxSprite: 0
   - type: Item
     sprite: _Starlight/Objects/Materials/materials.rsi
     size: Normal

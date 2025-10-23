@@ -20,8 +20,5 @@
         amount: 6
       - material: Cloth
         amount: 8
-        icon:
-          sprite: _Starlight/Objects/Shields/forged_tower_shield.rsi
-          state: icon
   - node: shield
     entity: UnfinishedForgedShieldTower

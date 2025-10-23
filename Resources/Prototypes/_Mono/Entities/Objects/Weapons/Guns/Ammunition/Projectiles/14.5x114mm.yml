@@ -16,7 +16,7 @@
     damage: 60
 
 - type: entity
-  id: Bullet14.5x114mmImprovised
+  id: Bullet145x114mmImprovised
   name: bullet (14.5x114mm improvised)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]

@@ -11,8 +11,5 @@
         doAfter: 5
       - material: Cable
         amount: 3
-        icon:
-          sprite: _Starlight/Clothing/Head/Helmets/makeshift.rsi
-          state: icon
   - node: helmet
     entity: ClothingHeadHelmetMakeshift

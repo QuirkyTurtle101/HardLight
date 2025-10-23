@@ -1,9 +1,4 @@
-- type: stack
-  id: SheetPrinter
-  name: stack-paper
-  icon: { sprite: Objects/Misc/bureaucracy.rsi, state: paper }
-  spawn: SheetPrinter1
-  maxCount: 30
+# HardLight: removed SheetPrinter stack (SheetPrinter1 entity doesn't exist)
 
 - type: stack
   id: CrushedPhosphorus

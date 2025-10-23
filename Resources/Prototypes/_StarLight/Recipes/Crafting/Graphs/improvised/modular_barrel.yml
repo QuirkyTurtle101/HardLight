@@ -9,8 +9,5 @@
       - material: Steel
         amount: 1
         doAfter: 3
-        icon:
-          sprite: _Starlight/Objects/Misc/modular_barrel.rsi
-          state: icon
   - node: shotgun
     entity: ModularBarrel

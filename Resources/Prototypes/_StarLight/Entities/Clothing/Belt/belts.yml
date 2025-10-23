@@ -311,8 +311,4 @@
   description:  A set of tactical webbing worn by the iconic soviet elite marines.
   components:
   - type: StorageFill
-    contents:
-      - id: MagazineLightRifleFMJ
-      - id: MagazineLightRifleFMJ
-      - id: MagazineLightRifleFMJ
-      - id: MagazineLightRifleFMJ
+    contents: [] # HardLight: removed MagazineLightRifleFMJ references (entity doesn't exist)

@@ -13,7 +13,8 @@
     shape:
     - 0,0,4,0
   - type: Gun
-    spread: 15
+    minAngle: 0  # HardLight: converted from spread: 15 to min/max angle system
+    maxAngle: 15
     fireRate: 3
   - type: Sprite
     sprite: _Starlight/Objects/Weapons/Guns/Shotguns/forged_shotgun.rsi
