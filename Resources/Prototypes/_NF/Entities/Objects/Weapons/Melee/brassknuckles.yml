@@ -27,7 +27,6 @@
     coefficient: 1.5
   - type: Tag
     tags:
-    - BrassKnucklesNF
     - WhitelistChameleon
   - type: PhysicalComposition
     materialComposition:

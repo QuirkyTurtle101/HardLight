@@ -22,7 +22,7 @@
               amount: 5
               doAfter: 5
             - tag: Radio
-              name: handicomms # Frontier handicomms<radio
+              name: construction-graph-tag-radio # Frontier handicomms<radio
               icon:
                 sprite: _NF/Objects/Devices/communication.rsi # Frontier
                 state: base # Frontier
