@@ -113,10 +113,6 @@ stack-merccoin = merccoin {$amount ->
     [1] merc coin
     *[other] merc coins
 }
-stack-prize-ticket = prize-ticket {$amount ->
-    [1] prize ticket
-    *[other] prize tickets
-}
 stack-spesso = spesso {$amount ->
     [1] spesso
     *[other] spessos
