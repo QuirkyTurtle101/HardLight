@@ -1,6 +1,7 @@
 using System.IO;
 using System.Linq;
 using System.Numerics;
+using Content.Shared._NF.Cloning;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared._Shitmed.Humanoid.Events; // Shitmed Change
@@ -13,6 +14,7 @@ using Robust.Shared.GameObjects.Components.Localization;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Serialization.Markdown;
 using Robust.Shared.Utility;
@@ -40,6 +42,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
     [ValidatePrototypeId<SpeciesPrototype>]
     public const string DefaultSpecies = "Human";
+
+    // Visual keys are defined top-level in HumanoidVisuals enum.
 
     public override void Initialize()
     {
@@ -170,9 +174,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         // Apply scaling (height and width)
         if (sourceHumanoid.Height != 1.0f || sourceHumanoid.Width != 1.0f)
         {
-            var scaleVisuals = EnsureComp<ScaleVisualsComponent>(target);
             var appearance = EnsureComp<AppearanceComponent>(target);
-            _appearance.SetData(target, ScaleVisuals.Scale, new Vector2(sourceHumanoid.Width, sourceHumanoid.Height), appearance);
+            _appearance.SetData(target, HumanoidVisuals.Scale, new Vector2(sourceHumanoid.Width, sourceHumanoid.Height), appearance);
         }
 
         Dirty(target, targetHumanoid);
@@ -438,9 +441,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         // Apply scaling (height and width)
         if (profile.Appearance.Height != 1.0f || profile.Appearance.Width != 1.0f)
         {
-            var scaleVisuals = EnsureComp<ScaleVisualsComponent>(uid);
             var appearance = EnsureComp<AppearanceComponent>(uid);
-            _appearance.SetData(uid, ScaleVisuals.Scale, new Vector2(profile.Appearance.Width, profile.Appearance.Height), appearance);
+            _appearance.SetData(uid, HumanoidVisuals.Scale, new Vector2(profile.Appearance.Width, profile.Appearance.Height), appearance);
         }
 
         RaiseLocalEvent(uid, new ProfileLoadFinishedEvent()); // Shitmed Change

@@ -13,12 +13,14 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly MarkingManager _markingManager = default!;
+    [Dependency] private readonly AppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<HumanoidAppearanceComponent, AfterAutoHandleStateEvent>(OnHandleState);
+        SubscribeLocalEvent<HumanoidAppearanceComponent, AppearanceChangeEvent>(OnAppearanceChange);
     }
 
     private void OnHandleState(EntityUid uid, HumanoidAppearanceComponent component, ref AfterAutoHandleStateEvent args)
@@ -32,6 +34,24 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         ApplyMarkingSet(component, sprite);
 
         sprite[sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes)].Color = component.EyeColor;
+
+        // Apply networked height/width to sprite scale on the client.
+        // Clamp to a sane minimum to avoid issues with zero/near-zero scales from legacy data.
+        var width = component.Width <= 0.005f ? 1.0f : component.Width;
+        var height = component.Height <= 0.005f ? 1.0f : component.Height;
+        sprite.Scale = new Vector2(width, height);
+    }
+
+    private void OnAppearanceChange(EntityUid uid, HumanoidAppearanceComponent comp, ref AppearanceChangeEvent args)
+    {
+        if (args.Sprite == null)
+            return;
+
+        // If the server pushed a visuals value for scale, apply it directly.
+        if (_appearance.TryGetData<Vector2>(uid, HumanoidVisuals.Scale, out var scale, args.Component))
+        {
+            args.Sprite.Scale = scale;
+        }
     }
 
     private static bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer)

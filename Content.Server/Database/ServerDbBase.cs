@@ -10,6 +10,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
+using Content.Shared.Consent;
 using Content.Shared.Ghost.Roles;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -243,8 +244,7 @@ namespace Content.Server.Database
                 loadouts[role.RoleName] = loadout;
             }
 
-            // Get the company with fallback to default "None"
-            var company = profile.Company ?? "None";
+            // Company field removed; ignore if present in older data.
 
             // Validate height and width to prevent sprite scale errors
             // Database migration set default values to 0f for existing profiles
@@ -276,8 +276,7 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts,
-                company);
+                loadouts);
         }
 
         private static Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot, Profile? profile = null)
@@ -310,7 +309,7 @@ namespace Content.Server.Database
             profile.Markings = markings;
             profile.Slot = slot;
             profile.PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable;
-            profile.Company = humanoid.Company;
+            // Company property no longer exists on profile/humanoid; skipped.
 
             profile.Jobs.Clear();
             profile.Jobs.AddRange(
@@ -1167,6 +1166,23 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             var entry = await db.DbContext.Blacklist.SingleAsync(w => w.UserId == player);
             db.DbContext.Blacklist.Remove(entry);
             await db.DbContext.SaveChangesAsync();
+        }
+
+        #endregion
+
+        #region Consent Settings
+
+        // Default no-op persistence for consent settings; can be overridden by concrete DB implementations.
+        public virtual Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings)
+        {
+            // Intentionally no-op in base.
+            return Task.CompletedTask;
+        }
+
+        public virtual Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId)
+        {
+            // Return an empty consent settings by default.
+            return Task.FromResult(new PlayerConsentSettings());
         }
 
         #endregion
