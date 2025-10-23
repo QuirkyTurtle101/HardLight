@@ -260,7 +260,7 @@
 
 - type: construction
   name: improvised rifle bullet
-  id: Cartridge5.56x45mmImprovised
+  id: Cartridge556x45mmImprovised
   graph: Improvised556x45mmBulletGraph
   startNode: start
   targetNode: shell
