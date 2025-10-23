@@ -12,6 +12,7 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
     {
         SubscribeLocalEvent<OfferItemComponent, AfterInteractUsingEvent>(SetInReceiveMode);
         SubscribeLocalEvent<OfferItemComponent, MoveEvent>(OnMove);
+        SubscribeLocalEvent<OfferItemComponent, AcceptOfferAlertEvent>(OnAcceptOfferAlert);
 
         InitializeInteractions();
     }
