@@ -103,5 +103,53 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction EditorCopyObject = "EditorCopyObject";
         public static readonly BoundKeyFunction EditorFlipObject = "EditorFlipObject";
         public static readonly BoundKeyFunction InspectEntity = "InspectEntity";
+
+        public static readonly BoundKeyFunction HotbarShift0 = "HotbarShift0";
+        public static readonly BoundKeyFunction HotbarShift1 = "HotbarShift1";
+        public static readonly BoundKeyFunction HotbarShift2 = "HotbarShift2";
+        public static readonly BoundKeyFunction HotbarShift3 = "HotbarShift3";
+        public static readonly BoundKeyFunction HotbarShift4 = "HotbarShift4";
+        public static readonly BoundKeyFunction HotbarShift5 = "HotbarShift5";
+        public static readonly BoundKeyFunction HotbarShift6 = "HotbarShift6";
+        public static readonly BoundKeyFunction HotbarShift7 = "HotbarShift7";
+        public static readonly BoundKeyFunction HotbarShift8 = "HotbarShift8";
+        public static readonly BoundKeyFunction HotbarShift9 = "HotbarShift9";
+
+        public static readonly BoundKeyFunction MappingUnselect = "MappingUnselect";
+        public static readonly BoundKeyFunction SaveMap = "SaveMap";
+        public static readonly BoundKeyFunction MappingEnablePick = "MappingEnablePick";
+        public static readonly BoundKeyFunction MappingEnableDelete = "MappingEnableDelete";
+        public static readonly BoundKeyFunction MappingPick = "MappingPick";
+        public static readonly BoundKeyFunction MappingRemoveDecal = "MappingRemoveDecal";
+        public static readonly BoundKeyFunction MappingCancelEraseDecal = "MappingCancelEraseDecal";
+        public static readonly BoundKeyFunction MappingOpenContextMenu = "MappingOpenContextMenu";
+
+        public static readonly BoundKeyFunction ToggleStanding = "ToggleStanding"; // EE
+        public static readonly BoundKeyFunction ToggleCrawlingUnder = "ToggleCrawlingUnder"; // EE
+        public static readonly BoundKeyFunction LookUp = "LookUp"; // EE
+
+        // Shitmed Change Start
+        public static readonly BoundKeyFunction TargetHead = "TargetHead";
+        public static readonly BoundKeyFunction TargetTorso = "TargetTorso";
+        public static readonly BoundKeyFunction TargetLeftArm = "TargetLeftArm";
+        public static readonly BoundKeyFunction TargetLeftHand = "TargetLeftHand";
+        public static readonly BoundKeyFunction TargetRightArm = "TargetRightArm";
+        public static readonly BoundKeyFunction TargetRightHand = "TargetRightHand";
+        public static readonly BoundKeyFunction TargetLeftLeg = "TargetLeftLeg";
+        public static readonly BoundKeyFunction TargetLeftFoot = "TargetLeftFoot";
+        public static readonly BoundKeyFunction TargetRightLeg = "TargetRightLeg";
+        public static readonly BoundKeyFunction TargetRightFoot = "TargetRightFoot";
+        // Shitmed Change End
+        public static readonly BoundKeyFunction RotateObjectClockwise = "RotateObjectClockwise";
+        public static readonly BoundKeyFunction RotateObjectCounterclockwise = "RotateObjectCounterclockwise";
+        public static readonly BoundKeyFunction FlipObject = "FlipObject";
+        public static readonly BoundKeyFunction ToggleRoundEndSummaryWindow = "ToggleRoundEndSummaryWindow";
+        public static readonly BoundKeyFunction OpenConsentWindow = "OpenConsentWindow"; // Floofstation
+
+        public static readonly BoundKeyFunction SwapHandsPrevious = "SwapHandsPrevious"; // Frontier
+        public static readonly BoundKeyFunction SaveItemLocation = "SaveItemLocation";
+        public static readonly BoundKeyFunction OpenWallet = "OpenWallet"; // Frontier
+
+        public static readonly BoundKeyFunction SmartEquipWallet = "SmartEquipWallet"; // Frontier
     }
 }
