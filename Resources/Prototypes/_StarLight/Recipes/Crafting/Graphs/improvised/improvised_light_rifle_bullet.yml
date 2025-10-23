@@ -16,4 +16,4 @@
                 sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Casings/improvised_casing.rsi
                 state: base
     - node: shell
-      entity: Cartridge5.56x45mmImprovised
+      entity: Cartridge556x45mmImprovised
