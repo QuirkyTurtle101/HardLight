@@ -38,3 +38,4 @@ Server.ConsentSystem:
 - Allow a limited set of markup tags in the consent text.
 - Add an event that's raised when an entity changes one of its consent toggles.
 - Allow markup in consent toggle name/description.
+- Add ConsentCondition for entity/reagent effects.
