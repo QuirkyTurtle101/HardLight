@@ -323,6 +323,7 @@
       tags:
       - BorgModuleGeneric
       - BorgModuleService
+      - BorgModuleJanitor
       - BorgModuleSyndicate
       - BorgModuleSyndicateAssault
     hasMindState: quadspriteservl
