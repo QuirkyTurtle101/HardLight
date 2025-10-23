@@ -29,3 +29,5 @@ public sealed partial class OfferItemComponent : Component
     [DataField]
     public float MaxOfferDistance = 2f;
 }
+
+public sealed partial class AcceptOfferAlertEvent : BaseAlertEvent;
