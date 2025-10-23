@@ -1,5 +1,5 @@
 - type: entity
-  id: FloorLavaEntity #
+  id: FloorLavaEntity
   name: lava
   description: Don't jump in. It's not worth it, no matter how funny it is.
   placement:
