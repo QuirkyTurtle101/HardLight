@@ -245,7 +245,7 @@ namespace Content.Server.Database
             }
 
             // Get the company with fallback to default "None"
-            var company = profile.Company ?? "None";
+            // var company = profile.Company ?? "None";
 
             // Validate height and width to prevent sprite scale errors
             // Database migration set default values to 0f for existing profiles
