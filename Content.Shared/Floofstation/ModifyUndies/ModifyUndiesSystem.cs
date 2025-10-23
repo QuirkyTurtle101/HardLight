@@ -159,7 +159,7 @@ public sealed class ModifyUndiesSystem : EntitySystem
         var target = args.Target.Value;
         var isMine = user == target;
 
-        _humanoid.SetLayerVisibility(ent.Owner, partSlot, !isVisible);
+        _humanoid.SetLayerVisibility(target, partSlot, !isVisible);
 
         if (isMine)
         {
