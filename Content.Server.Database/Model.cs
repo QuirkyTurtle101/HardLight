@@ -21,8 +21,8 @@ namespace Content.Server.Database
 
         public DbSet<Preference> Preference { get; set; } = null!;
         public DbSet<Profile> Profile { get; set; } = null!;
-        public DbSet<ConsentSettings> ConsentSettings { get; set; } = null!;
-        public DbSet<ConsentFreetextReadReceipt> ConsentFreetextReadReceipt { get; set; } = null!;
+        public DbSet<ConsentSettings> ConsentSettings { get; set; } = null!; // Consent system
+        public DbSet<ConsentFreetextReadReceipt> ConsentFreetextReadReceipt { get; set; } = null!; // Consent system
         public DbSet<AssignedUserId> AssignedUserId { get; set; } = null!;
         public DbSet<Player> Player { get; set; } = default!;
         public DbSet<Admin> Admin { get; set; } = null!;
@@ -59,6 +59,7 @@ namespace Content.Server.Database
                 .HasIndex(p => new {p.Slot, PrefsId = p.PreferenceId})
                 .IsUnique();
 
+            // Consent system start
             modelBuilder.Entity<ConsentSettings>()
                 .HasIndex(c => new { c.UserId, c.ProfileId })
                 .IsUnique();
@@ -88,6 +89,7 @@ namespace Content.Server.Database
                 .WithMany(c => c.ReadReceipts)
                 .HasForeignKey(c => c.ReadConsentSettingsId)
                 .IsRequired();
+            // Consent system end
 
             modelBuilder.Entity<Antag>()
                 .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})
@@ -459,9 +461,12 @@ namespace Content.Server.Database
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
 
-        public ConsentSettings? ConsentSettings { get; set; }
+        public ConsentSettings? ConsentSettings { get; set; } // Consent system
     }
-    public class ConsentSettings // Floofstation
+
+    #region Consent Settings
+
+    public class ConsentSettings
     {
         [Key]
         public int Id { get; set; }
@@ -485,7 +490,7 @@ namespace Content.Server.Database
         public Profile? Profile { get; set; }
     }
 
-    public class ConsentToggle // Floofstation
+    public class ConsentToggle
     {
         [Key]
         public int Id { get; set; }
@@ -515,6 +520,8 @@ namespace Content.Server.Database
         // Relations
         public ConsentSettings ReadConsentSettings { get; set; } = null!;
     }
+
+    #endregion
 
     public class Job
     {

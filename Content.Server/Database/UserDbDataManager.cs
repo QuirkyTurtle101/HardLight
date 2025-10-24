@@ -19,7 +19,7 @@ namespace Content.Server.Database;
 public sealed class UserDbDataManager : IPostInjectInit
 {
     [Dependency] private readonly ILogManager _logManager = default!;
-    [Dependency] private readonly IServerConsentManager _consent = default!;
+    [Dependency] private readonly IServerConsentManager _consent = default!; // Consent system
 
     private readonly Dictionary<NetUserId, UserData> _users = new();
     private readonly List<OnLoadPlayer> _onLoadPlayer = [];
@@ -71,7 +71,7 @@ public sealed class UserDbDataManager : IPostInjectInit
                 tasks.Add(action(session, cancel));
             }
 
-            tasks.Add(_consent.LoadData(session, cancel)); // Floofstation
+            tasks.Add(_consent.LoadData(session, cancel)); // Consent system
 
             await Task.WhenAll(tasks);
 

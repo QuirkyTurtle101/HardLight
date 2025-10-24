@@ -5,7 +5,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
-using Content.Shared._Common.Consent;
+using Content.Shared._Common.Consent; // Consent system
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
 using Content.Shared.Construction.Prototypes;
@@ -1107,6 +1107,8 @@ namespace Content.Server.Database
             }
         }
 
+        #region Consent Settings
+
         public Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings)
         {
             DbWriteOpsMetric.Inc();
@@ -1130,6 +1132,8 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.UpdatePlayerConsentReadReceipt(readerUserId, readConsentSettingsId));
         }
+
+        #endregion
 
         // Wrapper functions to run DB commands from the thread pool.
         // This will avoid SynchronizationContext capturing and avoid running CPU work on the main thread.
