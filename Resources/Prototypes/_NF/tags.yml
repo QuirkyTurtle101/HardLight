@@ -147,9 +147,6 @@
   id: SmallThrusterMachineCircuitboard
 
 - type: Tag
-  id: BrassKnucklesNF
-
-- type: Tag
   id: MaterialHideRosyMothroach
 
 - type: Tag
