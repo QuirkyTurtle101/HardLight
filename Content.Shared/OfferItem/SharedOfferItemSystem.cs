@@ -1,12 +1,15 @@
 using Content.Shared.Interaction;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Hands.Components;
+using Robust.Shared.Player;
+using Content.Shared.Hands.EntitySystems;
 
 namespace Content.Shared.OfferItem;
 
 public abstract partial class SharedOfferItemSystem : EntitySystem
 {
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
 
     public override void Initialize()
     {
@@ -153,6 +156,7 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
     {
         return entity != null && Resolve(entity.Value, ref component, false) && component.IsInOfferMode;
     }
+
     /// <summary>
     /// Accepting the offer and receive item
     /// </summary>
@@ -186,12 +190,12 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
         offerItem.Item = null;
         UnReceive(uid, component, offerItem);
     }
-    
-    private void OnAcceptOfferAlert(Entity<OfferItemComponent> ent, ref AcceptOfferAlertEvent args))
+
+    private void OnAcceptOfferAlert(Entity<OfferItemComponent> ent, ref AcceptOfferAlertEvent args)
     {
         if (args.Handled)
             return;
-        Receive(ent.Owner, ent.Comp); 
+        Receive(ent.Owner, ent.Comp);
         args.Handled = true;
     }
 }
