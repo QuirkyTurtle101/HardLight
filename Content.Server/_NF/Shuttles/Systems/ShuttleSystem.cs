@@ -40,9 +40,7 @@ public sealed partial class ShuttleSystem
             return false;
         }
 
-        // In current physics, damping is applied via TileFriction using ShuttleComponent.DampingModifier.
-        // Map the modes to a single modifier value.
-        var modifier = mode switch
+        var linearDampeningStrength = mode switch
         {
             InertiaDampeningMode.Off => SpaceFrictionStrength,
             InertiaDampeningMode.Dampen => DampenDampingStrength,
@@ -89,12 +87,12 @@ public sealed partial class ShuttleSystem
             EntityManager.HasComponent<StationDampeningComponent>(_station.GetOwningStation(xform.GridUid)))
             return InertiaDampeningMode.Station;
 
-        if (!EntityManager.TryGetComponent(xform.GridUid, out ShuttleComponent? shuttleComponent))
+        if (!EntityManager.TryGetComponent(xform.GridUid, out PhysicsComponent? physicsComponent))
             return InertiaDampeningMode.Dampen;
 
         if (physicsComponent.LinearDamping >= AnchorDampingStrength)
             return InertiaDampeningMode.Anchor;
-        else if (current <= SpaceFrictionStrength)
+        else if (physicsComponent.LinearDamping <= SpaceFrictionStrength)
             return InertiaDampeningMode.Off;
         else
             return InertiaDampeningMode.Dampen;

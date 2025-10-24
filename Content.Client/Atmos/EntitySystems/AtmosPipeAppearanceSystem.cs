@@ -44,7 +44,9 @@ public sealed partial class AtmosPipeAppearanceSystem : SharedAtmosPipeAppearanc
 
     private void HideAllPipeConnection(Entity<SpriteComponent> entity, AtmosPipeLayersComponent? atmosPipeLayers, int numberOfPipeLayers)
     {
-        foreach (PipeConnectionLayer layerKey in Enum.GetValues(typeof(PipeConnectionLayer)))
+        var sprite = entity.Comp;
+
+        foreach (var layerKey in Enum.GetValues<PipeConnectionLayer>())
         {
             for (byte i = 0; i < numberOfPipeLayers; i++)
             {
@@ -53,7 +55,7 @@ public sealed partial class AtmosPipeAppearanceSystem : SharedAtmosPipeAppearanc
                 if (!_sprite.LayerMapTryGet(entity.AsNullable(), layerName, out var key, false))
                     continue;
 
-                var layer = _sprite[key];
+                var layer = sprite[key];
                 layer.Visible = false;
             }
         }
