@@ -132,7 +132,7 @@ public sealed class SmartFridgeSystem : EntitySystem
     }
 
     // Frontier: hacky function to insert an object
-    public bool TryInsertObject(Entity<SmartFridgeComponent> ent, EntityUid item, EntityUid? user)
+    public bool TryAddItem(Entity<SmartFridgeComponent> ent, EntityUid item, EntityUid? user)
     {
         if (!_container.TryGetContainer(ent, ent.Comp.Container, out var container))
             return false;
