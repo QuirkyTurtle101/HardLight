@@ -194,7 +194,7 @@
   id: Traitor
   components:
   - type: GameRule
-    minPlayers: 0
+    minPlayers: 5
     delay:
       min: 240
       max: 420
@@ -319,7 +319,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-    minPlayers: 0
+    minPlayers: 20
     delay:
       min: 600
       max: 900
