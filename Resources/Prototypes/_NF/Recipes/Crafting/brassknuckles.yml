@@ -1,6 +1,6 @@
 - type: construction
   name: crass knuckles
-  id: CrassKnuckles
+  id: WeaponBrassKnucklesWhoopie
   graph: GraphWeaponBrassKnucklesWhoopie
   startNode: start
   targetNode: WeaponBrassKnucklesWhoopie
