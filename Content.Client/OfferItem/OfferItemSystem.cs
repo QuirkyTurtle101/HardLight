@@ -19,6 +19,7 @@ public sealed class OfferItemSystem : SharedOfferItemSystem
     {
         Subs.CVar(_cfg, CCVars.OfferModeIndicatorsPointShow, OnShowOfferIndicatorsChanged, true);
     }
+
     public override void Shutdown()
     {
         _overlayManager.RemoveOverlay<OfferItemIndicatorsOverlay>();
