@@ -25,6 +25,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Shared.Psionics.Glimmer; //Nyano - Summary:.
+using Content.Server._NF.Power.Components;
 
 namespace Content.Server.Xenoarchaeology.Equipment.Systems;
 

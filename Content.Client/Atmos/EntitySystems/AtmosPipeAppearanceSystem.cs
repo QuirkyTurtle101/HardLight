@@ -53,7 +53,7 @@ public sealed partial class AtmosPipeAppearanceSystem : SharedAtmosPipeAppearanc
                 if (!_sprite.LayerMapTryGet(entity.AsNullable(), layerName, out var key, false))
                     continue;
 
-                var layer = sprite[key];
+                var layer = _sprite[key];
                 layer.Visible = false;
             }
         }
