@@ -15,6 +15,10 @@
       "name": "sql-helmet",
       "directions": 4
     },
+	{
+      "name": "snpr-helmet",
+      "directions": 4
+    },
     {
       "name": "std-helmet-medic",
       "directions": 4
