@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2024-2025 Space Wizards Federation
+SPDX-License-Identifier: MIT
+-->
+
 <controls:FancyWindow
     xmlns="https://spacestation14.io"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
@@ -30,10 +35,9 @@
         </PanelContainer>
         <Control MinSize="0 10" />
         <Label Text="{Loc consent-window-toggles-label}" />
-
         <ScrollContainer HorizontalExpand="True" VerticalExpand="True" HScrollEnabled="False" VScrollEnabled="True" MinHeight="50">
-            <BoxContainer Name="ConsentList" Access="Public" HorizontalExpand="True" SeparationOverride="2" Orientation="Vertical">
-                <!-- The rest here is generated programmatically -->
+            <BoxContainer Name="ConsentSettings" Orientation="Vertical" HorizontalExpand="True" SeparationOverride="2">
+                <!-- Consent toggle controls are generated in code -->
             </BoxContainer>
         </ScrollContainer>
     </BoxContainer>
