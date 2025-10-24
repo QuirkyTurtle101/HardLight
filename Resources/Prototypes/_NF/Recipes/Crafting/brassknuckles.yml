@@ -6,7 +6,4 @@
   targetNode: WeaponBrassKnucklesWhoopie
   category: construction-category-weapons
   description: crafting-menu-text-CRASS
-  icon:
-    sprite: _NF/Objects/Weapons/Melee/crassknuckles.rsi
-    state: icon
   objectType: Item
