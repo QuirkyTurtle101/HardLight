@@ -313,14 +313,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
-    state: vent_off
   conditions:
     - !type:NoUnstackableInTile
 
@@ -332,14 +324,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
-    state: vent_passive
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
-    state: vent_passive
   conditions:
     - !type:NoUnstackableInTile
 
@@ -351,14 +335,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: _NF/Structures/Piping/Atmospherics/scrubber.rsi # Frontier
-    state: scrub_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: _NF/Structures/Piping/Atmospherics/scrubber.rsi # Frontier
-    state: scrub_off
   conditions:
     - !type:NoUnstackableInTile
 
@@ -448,14 +424,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: _NF/Structures/Piping/Atmospherics/vent.rsi # Frontier
-    state: vent_off
 
 - type: construction
   id: HeatExchanger

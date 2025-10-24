@@ -5,6 +5,10 @@
   parent: SimpleSpaceMobBase
   description: They mostly come at night. Mostly.
   components:
+  - type: Emoting
+  - type: Vocal
+    sounds:
+      Unsexed: XenoVocal
   - type: Insulated
   - type: CombatMode
     canDisarm: true

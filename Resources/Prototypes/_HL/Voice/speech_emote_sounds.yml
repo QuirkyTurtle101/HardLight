@@ -36,3 +36,16 @@
       collection: VulpkaninYaps
     Gekker: # Floof
       collection: VulpkaninGekkers
+
+# Xeno vocalization set (generic). Uses available hiss sounds and a harsh scream stand-in.
+- type: emoteSounds
+  id: XenoVocal
+  params:
+    variation: 0.1
+  sounds:
+    Hisses:
+      # Use miscellaneous low hiss set for xeno hissing
+      path: /Audio/Voice/Misc/lowHiss1.ogg
+    Scream:
+      # Stand-in scream; adjust later if dedicated xeno scream assets are added
+      collection: MaleScreams

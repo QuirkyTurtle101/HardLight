@@ -24,4 +24,4 @@ construction-graph-component-computer-wallmount-board = any wallmount computer c
 construction-graph-component-computer-tabletop-board = any tabletop computer circuit board
 construction-graph-component-nf-pirate-toolbox = a pirate repair toolbox
 construction-graph-component-syringe = a syringe
-construction-graph-component-shotgun-shell = a shotgun shell
+construction-graph-component-shell-shotgun = a shotgun shell

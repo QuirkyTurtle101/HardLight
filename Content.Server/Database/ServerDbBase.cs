@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Consent; // Floofstation
 using Content.Shared.Database;
+using Content.Shared.Consent;
 using Content.Shared.Ghost.Roles;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -244,6 +244,13 @@ namespace Content.Server.Database
                 loadouts[role.RoleName] = loadout;
             }
 
+            // Company field removed; ignore if present in older data.
+
+            // Validate height and width to prevent sprite scale errors
+            // Database migration set default values to 0f for existing profiles
+            var height = profile.Height <= 0.005f ? 1.0f : profile.Height;
+            var width = profile.Width <= 0.005f ? 1.0f : profile.Width;
+
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
@@ -261,16 +268,15 @@ namespace Content.Server.Database
                     Color.FromHex(profile.EyeColor),
                     Color.FromHex(profile.SkinColor),
                     markings,
-                    profile.Height,
-                    profile.Width
+                    height,
+                    width
                 ),
                 spawnPriority,
                 jobs,
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts
-            );
+                loadouts);
         }
 
         private static Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot, Profile? profile = null)
@@ -303,6 +309,7 @@ namespace Content.Server.Database
             profile.Markings = markings;
             profile.Slot = slot;
             profile.PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable;
+            // Company property no longer exists on profile/humanoid; skipped.
 
             profile.Jobs.Clear();
             profile.Jobs.AddRange(
@@ -1165,96 +1172,17 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #region Consent Settings
 
-        private static async Task DeletePlayerConsentSettings(ServerDbContext db, NetUserId userId)
+        // Default no-op persistence for consent settings; can be overridden by concrete DB implementations.
+        public virtual Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings)
         {
-            var consentSettings = await db.ConsentSettings
-                .Where(c => c.UserId == userId.UserId)
-                .SingleOrDefaultAsync();
-
-            if (consentSettings is null)
-            {
-                return;
-            }
-
-            db.ConsentSettings.Remove(consentSettings);
+            // Intentionally no-op in base.
+            return Task.CompletedTask;
         }
 
-        public async Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings? consentSettings)
+        public virtual Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId)
         {
-            await using var db = await GetDb();
-
-            if (consentSettings is null)
-            {
-                await DeletePlayerConsentSettings(db.DbContext, userId);
-                await db.DbContext.SaveChangesAsync();
-                return;
-            }
-
-            // Get current consent settings so we know if freetext needs updating and which toggles to add or remove
-            var currentConsentSettings = await db.DbContext.ConsentSettings
-                .Include(c => c.ConsentToggles)
-                .AsSplitQuery()
-                .SingleOrDefaultAsync(c => c.UserId == userId);
-
-            if (currentConsentSettings is null)
-            {
-                currentConsentSettings = new ConsentSettings() { UserId = userId, ConsentToggles = new() };
-
-                db.DbContext.ConsentSettings.Add(currentConsentSettings);
-            }
-
-            currentConsentSettings.ConsentFreetext = consentSettings.Freetext;
-            Dictionary<ProtoId<ConsentTogglePrototype>, string> currentConsentToggles = currentConsentSettings.ConsentToggles.ToDictionary(
-                keySelector: t => new ProtoId<ConsentTogglePrototype>(t.ToggleProtoId),
-                elementSelector: t => t.ToggleProtoState
-            );
-
-            // Remove and update toggles
-            foreach (var toggle in currentConsentToggles)
-            {
-                if (consentSettings.Toggles.TryGetValue(toggle.Key, out var toggleState))
-                {
-                    currentConsentSettings.ConsentToggles.Where(t => t.ToggleProtoId == toggle.Key).First().ToggleProtoState = toggleState;
-                }
-                else
-                {
-                    currentConsentSettings.ConsentToggles.RemoveAll(t => t.ToggleProtoId == toggle.Key);
-                }
-            }
-            // Add new toggles
-            foreach (var toggle in consentSettings.Toggles)
-            {
-                if (currentConsentToggles.ContainsKey(toggle.Key))
-                    continue;
-
-                currentConsentSettings.ConsentToggles.Add(new()
-                {
-                    ToggleProtoId = toggle.Key,
-                    ToggleProtoState = toggle.Value,
-                });
-            }
-
-            await db.DbContext.SaveChangesAsync();
-        }
-
-        public async Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId)
-        {
-            await using var db = await GetDb();
-
-            var consentSettings = await db.DbContext.ConsentSettings
-                //.Include(c => c.ConsentFreetext)
-                .Include(c => c.ConsentToggles)//.ThenInclude(t => t.ToggleProtoId)
-                //.Include(c => c.ConsentToggles).ThenInclude(t => t.ToggleProtoState)
-                //.AsSingleQuery()
-                .SingleOrDefaultAsync(c => c.UserId == userId);
-
-            if (consentSettings is null)
-                return new();
-
-            return new(consentSettings.ConsentFreetext, consentSettings.ConsentToggles.ToDictionary(
-                keySelector: t => new ProtoId<ConsentTogglePrototype>(t.ToggleProtoId),
-                elementSelector: t => t.ToggleProtoState
-            ));
+            // Return an empty consent settings by default.
+            return Task.FromResult(new PlayerConsentSettings());
         }
 
         #endregion
