@@ -308,6 +308,10 @@
     CoolCoyoteClothesWhitesun: 9000
     CoolCoyoteClothesYellowwshort: 9000
     CoolCoyoteClothesGearHarness: 9000
+    ClothingUniformWhiteSleevelessTop: 3
+    ClothingUniformWhiteSleevelessCropTop: 3
+    ClothingUniformBlackSleevelessTop: 3
+    ClothingUniformBlackSleevelessCropTop: 3
   contrabandInventory:
     ClothingHeadHatRichard: 1
     ToyFigurineBoxer: 1
