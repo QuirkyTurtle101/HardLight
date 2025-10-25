@@ -270,11 +270,10 @@
   name: worn M90 rifle
 
 ## Snipers
-# HL
 - type: entity
   parent:
   - BaseExpeditionWeaponTier3Syndicate
-  - WeaponSniperHristov
+  - WeaponSniperHristov # HL
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleSniperHristovExpedition
   name: worn Hristov
