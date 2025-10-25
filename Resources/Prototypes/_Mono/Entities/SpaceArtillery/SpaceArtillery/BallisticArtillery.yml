@@ -183,7 +183,7 @@
     fireRate: 0.05
     projectileSpeed: 110 # i was gonna make this faster, but the engine really hates fast moving projectiles and collisions
     soundGunshot:
-      path: /Audio/_Mono/Weapons/Guns/Gunshots/uaf_tona_iv_608.ogg
+      path: /Audio/_Mono/Weapons/Guns/Gunshots/uaf_57mm.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
