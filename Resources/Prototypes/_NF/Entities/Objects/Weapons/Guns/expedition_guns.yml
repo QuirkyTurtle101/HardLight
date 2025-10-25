@@ -273,7 +273,7 @@
 - type: entity
   parent:
   - BaseExpeditionWeaponTier3Syndicate
-  - NFWeaponRifleSniperHristov
+  - WeaponSniperHristov # HL
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleSniperHristovExpedition
   name: worn Hristov

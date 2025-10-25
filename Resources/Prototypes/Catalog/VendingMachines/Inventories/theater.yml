@@ -123,6 +123,12 @@
     LatexSuitRed: 3
     LatexSuitWhite: 3
     LatexSuitYellow: 3
+    # HL start
+    ClothingUniformWhiteSleevelessTop: 3
+    ClothingUniformWhiteSleevelessCropTop: 3
+    ClothingUniformBlackSleevelessTop: 3
+    ClothingUniformBlackSleevelessCropTop: 3
+    # HL Start
     CoolCoyoteClothesAcolyte: 9000
     CoolCoyoteClothesAfrMerc: 9000
     CoolCoyoteClothesArtisan: 9000
