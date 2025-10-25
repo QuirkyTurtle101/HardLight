@@ -10,11 +10,11 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockEngineering
+  id: AirlockEidoEngineering
   suffix: Engineering
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/engineering.rsi
+    sprite: _HL/Structures/Doors/Airlocks/Standard/eidoengineering.rsi
   - type: PaintableAirlock
     department: Engineering
   - type: Wires
