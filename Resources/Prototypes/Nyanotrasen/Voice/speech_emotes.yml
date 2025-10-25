@@ -88,7 +88,7 @@
   id: FelinidGrowl
   category: Vocal
   name: Growl
-  icon: { sprite: _RMC14/Actions/species_emotes.rsi, state: growl }
+  icon: { sprite: _RMC14/Actions/xeno_emotes.rsi, state: growl }
   available: false
   whitelist:
     components:
