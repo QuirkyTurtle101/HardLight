@@ -27,7 +27,7 @@
   id: FelinidMeow
   category: Vocal
   name: Meow
-  icon: { _RMC14/Actions/species_emotes.rsi, state: meow }
+  icon: { sprite: _RMC14/Actions/species_emotes.rsi, state: meow }
   available: false
   whitelist:
     components:
@@ -69,7 +69,7 @@
   id: FelinidMew
   category: Vocal
   name: Mew
-  icon: { _RMC14/Actions/species_emotes.rsi, state: mew }
+  icon: { sprite: _RMC14/Actions/species_emotes.rsi, state: mew }
   available: false
   whitelist:
     components:
@@ -88,7 +88,7 @@
   id: FelinidGrowl
   category: Vocal
   name: Growl
-  icon: { _RMC14/Actions/species_emotes.rsi, state: growl }
+  icon: { sprite: _RMC14/Actions/species_emotes.rsi, state: growl }
   available: false
   whitelist:
     components:
@@ -107,7 +107,7 @@
   id: FelinidPurr
   category: Vocal
   name: Purr
-  icon: { _RMC14/Actions/species_emotes.rsi, state: purr }
+  icon: { sprite: _RMC14/Actions/species_emotes.rsi, state: purr }
   available: false
   whitelist:
     components:
