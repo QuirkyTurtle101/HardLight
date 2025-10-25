@@ -323,8 +323,8 @@
       amount: 2
     - id: AmmoBox46x30mmFMJ
       amount: 1
-    - id: NFMagazineSubMachineGunTopMounted35
-      amount: 3
+    # -  id: NFMagazineSubMachineGunTopMounted35 Not needed, improper caliber HL
+     # amount: 3 HL
 
 - type: entity
   parent: WeaponCaseLong
@@ -355,8 +355,8 @@
       amount: 2
     - id: AmmoBox45_ACPFMJ
       amount: 1
-    - id: NFMagazineSubMachineGun35
-      amount: 3
+   # -  id: NFMagazineSubMachineGun35 Not needed, improper caliber  HL
+      # amount: 3 HL
 
 - type: entity
   parent: WeaponCaseLong
@@ -383,9 +383,9 @@
     contents:
     - id: NFWeaponSubMachineGunTypewriterExpedition
       amount: 1
-    - id: Magazine45_ACPSubMachineGunFMJ
+    - id: Magazine9x19mmSubMachineGunFMJ # HL
       amount: 2
-    - id: AmmoBox45_ACPFMJ
+    - id: AmmoBox9x19mmFMJ # HL
       amount: 2
 
 #region Rifles
