@@ -270,6 +270,7 @@
   name: worn M90 rifle
 
 ## Snipers
+# HL
 - type: entity
   parent:
   - BaseExpeditionWeaponTier3Syndicate
