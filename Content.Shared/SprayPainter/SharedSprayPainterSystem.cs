@@ -42,7 +42,7 @@ public abstract class SharedSprayPainterSystem : EntitySystem
         SubscribeLocalEvent<SprayPainterComponent, SprayPainterDoAfterEvent>(OnPainterDoAfter);
         SubscribeLocalEvent<SprayPainterComponent, GetVerbsEvent<AlternativeVerb>>(OnPainterGetAltVerbs);
         SubscribeLocalEvent<PaintableComponent, InteractUsingEvent>(OnPaintableInteract);
-        SubscribeLocalEvent<PaintedComponent, ExaminedEvent>(OnPainedExamined);
+        SubscribeLocalEvent<SprayPaintedComponent, ExaminedEvent>(OnPainedExamined);
 
         Subs.BuiEvents<SprayPainterComponent>(SprayPainterUiKey.Key,
             subs =>
@@ -102,7 +102,7 @@ public abstract class SharedSprayPainterSystem : EntitySystem
         Audio.PlayPredicted(ent.Comp.SpraySound, ent, args.Args.User);
         Charges.TryUseCharges(new Entity<LimitedChargesComponent?>(ent, EnsureComp<LimitedChargesComponent>(ent)), args.Cost);
 
-        var paintedComponent = EnsureComp<PaintedComponent>(target);
+        var paintedComponent = EnsureComp<SprayPaintedComponent>(target);
         paintedComponent.DryTime = _timing.CurTime + ent.Comp.FreshPaintDuration;
         Dirty(target, paintedComponent);
 
@@ -228,7 +228,7 @@ public abstract class SharedSprayPainterSystem : EntitySystem
     /// <summary>
     /// Prints out if an object has been painted recently.
     /// </summary>
-    private void OnPainedExamined(Entity<PaintedComponent> ent, ref ExaminedEvent args)
+    private void OnPainedExamined(Entity<SprayPaintedComponent> ent, ref ExaminedEvent args)
     {
         // If the paint's dried, it isn't detectable.
         if (_timing.CurTime > ent.Comp.DryTime)
