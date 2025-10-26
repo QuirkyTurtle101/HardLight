@@ -165,6 +165,7 @@
     # canVore: true
     # canBeVored: false
   - type: NightVision
+    state: on
   - type: PotentialPsionic #Nyano - Summary: makes potentially psionic.
     chance: -2
 
