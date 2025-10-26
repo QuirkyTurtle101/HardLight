@@ -998,7 +998,7 @@
   name:  uplink-security-cash1000-name
   description: uplink-security-cash1000-desc
   productEntity: SpaceCash1000
-  icon: { sprite: Objects/Economy/cash.rsi, state: cash_1000000 }
+  icon: { sprite: Objects/Economy/cash.rsi, state: cash_1000 }
   cost:
     FrontierUplinkCoin: 1
   categories:
