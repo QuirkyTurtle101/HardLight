@@ -39,7 +39,7 @@ public sealed partial class DocumentParsingManager
 
         // Ensure all relevant control parsers are included
         // Comment parser MUST come first, before _tagParser
-        _controlParser = OneOf(TrySkipComment.Select(_ => (Control)new BoxContainer()), _tagParser, TryHeaderControl, TryListControl, TextControlParser)
+        _controlParser = OneOf(TrySkipComment.Select(Control (_) => new BoxContainer()), _tagParser, TryHeaderControl, TryListControl, TextControlParser)
             .Before(SkipWhitespaces);
 
         foreach (var typ in _reflectionManager.GetAllChildren<IDocumentTag>())

@@ -32,7 +32,7 @@ public sealed partial class DocumentParsingManager
 
     private static readonly Parser<char, Unit> SkipNewline = Whitespace.SkipUntil(Char('\n'));
 
-    // XML comment parser - skips <!-- ... --> comments
+    // XML comment parser, skips <!-- ... --> comments
     private static readonly Parser<char, Unit> TrySkipComment =
         Try(String("<!--"))
             .Then(AnyCharExcept('\0').SkipUntil(Try(String("-->"))))
@@ -60,6 +60,7 @@ public sealed partial class DocumentParsingManager
     private static readonly Parser<char, Unit> TryStartParagraph =
         Try(SkipNewline.Then(SkipNewline)).Then(SkipWhitespaces);
 
+    // Added Try to make sure we don't grab <!-- comments
     private static readonly Parser<char, Unit> TryLookTextEnd =
         Lookahead(OneOf(TryStartTag, TryStartList, TryStartParagraph, Try(Whitespace.SkipUntil(End)), Try(String("<!--").Then(Return(Unit.Value)))));
 
