@@ -186,28 +186,25 @@
   id: LockerEvacRepairFilled
   suffix: Filled
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillLockerEvacRepair
+  - type: StorageFill
+    contents:
+      - id: BoxInflatable
+      - id: HolofanProjector
+      - id: MetalFoamGrenade
+        amount: 3
+      - id: AirGrenade
+        amount: 3
 
 - type: entity
   parent: LockerWallEvacRepair
   id: LockerWallEvacRepairFilled
   suffix: Filled
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillLockerEvacRepair
-
-- type: entityTable
-  id: FillLockerEvacRepair
-  table: !type:AllSelector
-    children:
-    - id: BoxInflatable
-    - id: HolofanProjector
-    - id: MetalFoamGrenade
-      amount: 3
-    - id: AirGrenade
-      amount: 3
+  - type: StorageFill
+    contents:
+      - id: BoxInflatable
+      - id: HolofanProjector
+      - id: MetalFoamGrenade
+        amount: 3
+      - id: AirGrenade
+        amount: 3
