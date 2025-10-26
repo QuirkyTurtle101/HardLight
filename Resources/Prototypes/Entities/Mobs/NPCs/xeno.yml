@@ -165,11 +165,6 @@
     # canVore: true
     # canBeVored: false
   - type: NightVision
-    isActive: true
-    toggleAction: null
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: PotentialPsionic #Nyano - Summary: makes potentially psionic.
     chance: -2
 
