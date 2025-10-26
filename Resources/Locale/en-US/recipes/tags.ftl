@@ -32,7 +32,9 @@ construction-graph-tag-sun-glasses = sun glasses
 construction-graph-tag-security-helmet = security helmet
 
 # materials
-construction-graph-tag-manipulator = modular machine part
+construction-graph-tag-manipulator = a manipulator
+construction-graph-tag-capacitor = a capacitor
+construction-graph-tag-matter-bin = a matter bin
 construction-graph-tag-voice-trigger = a voice trigger
 construction-graph-tag-signal-trigger = a signal trigger
 construction-graph-tag-proximity-sensor = proximity sensor
@@ -107,6 +109,11 @@ construction-graph-tag-conveyor-belt-assembly = conveyor belt assembly
 # tools
 construction-graph-tag-multitool = a multitool
 construction-graph-tag-health-analyzer = health analyzer
+construction-graph-tag-welding-mask = a welding mask
+construction-graph-tag-welding-tool = a welding tool
+construction-graph-tag-plant-clippers = plant clippers
+construction-graph-tag-hand-labeler = a hand labeler
+construction-graph-tag-carp-plushie = a carp plushie
 
 # utils
 construction-graph-tag-air-alarm-electronics = air alarm electronics

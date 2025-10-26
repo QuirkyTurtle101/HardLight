@@ -34,13 +34,13 @@
       collection: Belch # Frontier
     Hiss:
       collection: FelinidHisses
-    Meow:
+    FelinidMeow:
       collection: FelinidMeows
-    Mew:
+    FelinidMew:
       collection: FelinidMews
-    Growl:
+    FelinidGrowl:
       collection: FelinidGrowls
-    Purr:
+    FelinidPurr:
       collection: FelinidPurrs
     Gasp:
       collection: MaleGasp
@@ -82,13 +82,13 @@
       collection: Belch # Frontier
     Hiss:
       collection: FelinidHisses
-    Meow:
+    FelinidMeow:
       collection: FelinidMeows
-    Mew:
+    FelinidMew:
       collection: FelinidMews
-    Growl:
+    FelinidGrowl:
       collection: FelinidGrowls
-    Purr:
+    FelinidPurr:
       collection: FelinidPurrs
     Gasp:
       collection: FemaleGasp
