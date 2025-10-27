@@ -329,7 +329,7 @@
 
 # Glass Airlocks
 - type: entity
-  parent: AirlockGlass
+  parent: AirlockMiningGlass
   id: AirlockEidoServiceGlassLocked
   suffix: Service, Locked
   components:
@@ -383,71 +383,6 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsBarKitchen ]
-
-
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassLocked
-  suffix: External, Glass, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsExternal ]
-
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassCargoLocked
-  suffix: External, Glass, Cargo, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCargo ]
-  - type: Wires
-    layoutId: AirlockCargo
-
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassSyndicateLocked
-  suffix: External, Glass, Syndicate, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicateAgent ]
-  - type: Wires
-    layoutId: AirlockSecurity
-
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassNukeopLocked
-  suffix: External, Glass, Nukeop, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsNukeop ]
-  - type: Wires
-    layoutId: AirlockSecurity
-
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassEngineeringLocked
-  suffix: External, Glass, Engineering, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsEngineering ]
-  - type: Wires
-    layoutId: AirlockEngineering
-
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassAtmosphericsLocked
-  suffix: External, Glass, Atmospherics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsAtmospherics ]
-  - type: Wires
-    layoutId: AirlockEngineering
 
 - type: entity
   parent: AirlockEidoServiceGlassLocked
@@ -709,24 +644,6 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsExternal ]
-
-- type: entity
-  parent: AirlockSyndicateGlass
-  id: AirlockSyndicateGlassLocked
-  suffix: Syndicate, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicateAgent ]
-
-- type: entity
-  parent: AirlockSyndicateGlass
-  id: AirlockSyndicateNukeopGlassLocked
-  suffix: Nukeop, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsNukeop ]
 
 # Maintenance Hatches
 - type: entity
@@ -1053,24 +970,6 @@
       board: [ DoorElectronicsArmory ]
   - type: Wires
     layoutId: AirlockArmory
-
-- type: entity
-  parent: AirlockSyndicate
-  id: AirlockSyndicateLocked
-  suffix: Syndicate, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicateAgent ]
-
-- type: entity
-  parent: AirlockSyndicate
-  id: AirlockSyndicateNukeopLocked
-  suffix: Nukeop, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsNukeop ]
 
 # Shuttle Airlock
 - type: entity
