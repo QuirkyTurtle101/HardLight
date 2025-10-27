@@ -24,6 +24,7 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared._HL.Buckle;
 
 namespace Content.Shared.Buckle;
 
@@ -173,6 +174,10 @@ public abstract partial class SharedBuckleSystem
 
     private void OnBuckleUpdateCanMove(EntityUid uid, BuckleComponent component, UpdateCanMoveEvent args)
     {
+        // HL, allow vehicle movement
+        if (HasComp<HLAllowStrapMovementComponent>(component.BuckledTo))
+            return;
+
         if (component.Buckled)
             args.Cancel();
     }
