@@ -1,4 +1,9 @@
-//includes go here
+using Content.Shared._HL.Vacbed;
+using Content.Shared.Medical.Cryogenics;
+using Content.Shared.Verbs;
+using Robust.Client.GameObjects;
+using System.Numerics;
+using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
 
 namespace Content.Client._HL.Vacbed;
 
@@ -12,8 +17,7 @@ public sealed class VacbedSystem : SharedVacbedSystem
 
         SubscribeLocalEvent<VacbedComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<VacbedComponent, GetVerbsEvent<AlternativeVerb>>(AddAlternativeVerbs);
-        SubscribeLocalEvent<VacbedComponent, VacbedDragFinished>(OnDragFinished);
-        SubscribeLocalEvent<VacbedComponent, DragDropTargetEvent>(HandleDragDropOn);
+        SubscribeLocalEvent<VacbedComponent, AppearanceChangeEvent>(OnAppearanceChange);
     }
 
     private void OnAppearanceChange(EntityUid uid, VacbedComponent component, ref AppearanceChangeEvent args)
@@ -38,4 +42,10 @@ public sealed class VacbedSystem : SharedVacbedSystem
             args.Sprite.LayerSetVisible(VacbedVisualLayers.Door, false);
         }
     }
+}
+
+public enum VacbedVisualLayers : byte
+{
+    Base,
+    Door,
 }

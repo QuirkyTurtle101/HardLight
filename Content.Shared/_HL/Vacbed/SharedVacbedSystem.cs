@@ -14,7 +14,7 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._HL.Vacbed;
 
-public sealed partial class SharedVacbedSystem
+public abstract partial class SharedVacbedSystem : EntitySystem
 {
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly StandingStateSystem _standingStateSystem = default!;
@@ -40,7 +40,7 @@ public sealed partial class SharedVacbedSystem
 
     protected void UpdateAppearance(EntityUid uid, VacbedComponent? vacbed = null, AppearanceComponent? appearance = null)
     {
-        if (!Resolve(uid, ref cryoPod))
+        if (!Resolve(uid, ref vacbed))
             return;
 
         if (!Resolve(uid, ref appearance))
@@ -75,7 +75,7 @@ public sealed partial class SharedVacbedSystem
         return true;
     }
 
-    public void TryEjectBody(EntityUid uid, EntityUid userId, vacbedComponent? vacbedComponent)
+    public void TryEjectBody(EntityUid uid, EntityUid userId, VacbedComponent? vacbedComponent)
     {
         if (!Resolve(uid, ref vacbedComponent))
         {
@@ -83,7 +83,7 @@ public sealed partial class SharedVacbedSystem
         }
         if (vacbedComponent.Locked)
         {
-            _popupSystem.PopupEntity("locked placeholder", uid, UserId); //todo loc string
+            _popupSystem.PopupEntity("locked placeholder", uid, userId); //todo loc string
             return;
         }
 
@@ -124,5 +124,10 @@ public sealed partial class SharedVacbedSystem
                 Act = () => TryEjectBody(uid, args.User, vacbedComponent)
             });
         }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed partial class VacbedDragFinished : SimpleDoAfterEvent
+    {
     }
 }

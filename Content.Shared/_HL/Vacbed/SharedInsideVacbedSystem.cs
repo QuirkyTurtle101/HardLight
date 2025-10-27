@@ -1,8 +1,9 @@
 using Content.Shared.Standing;
+using Robust.Shared.Containers;
 
 namespace Content.Shared._HL.Vacbed;
 
-public sealed partial class SharedVacbedSystem
+public abstract partial class SharedVacbedSystem
 {
     public virtual void InitializeInsideCryopod()
     {
