@@ -24,8 +24,3 @@
   parent: [ClosetFscEva, StorageFillEVASuitFsc]
   id: ClosetFscEvaFilled
   suffix: Filled
-
-- type: entity
-  parent: [ClosetFstEva, StorageFillEVASuitFsc]
-  id: ClosetFscEvaFilled
-  suffix: Filled
