@@ -265,6 +265,7 @@
     runningState: icon
     staticPacks:
     - NFEngineeringTechfabDeprecatedStatic
+    - NFInflatablesStatic
     dynamicPacks:
     - NFEngineeringTechfabDeprecated
   - type: OreSiloClient
@@ -299,6 +300,7 @@
     runningState: icon
     staticPacks:
     - NFSalvageTechfabDeprecatedStatic
+    - NFInflatablesStatic
     dynamicPacks:
     - NFSalvageTechfabDeprecated
   - type: EmagLatheRecipes
