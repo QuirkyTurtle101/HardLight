@@ -1,0 +1,19 @@
+- type: entity
+  name: vacbed
+  id: Vacbed
+  parent: BaseStructure
+  description: placeholder description
+  components:
+  - type: Sprite
+    (filling this out later)
+  - type: Physics
+    bodyType: static
+  - type: Transform
+    noRot: true
+  - type: Anchorable
+  - type: ContainerContainer
+    containers:
+      insidebody:
+        !type:ContainerSlot
+        showEnts: true
+  - type: Vacbed
