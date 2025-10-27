@@ -33,7 +33,7 @@
     - id: GameRuleMeteorSwarmMedium
     - id: GameRuleMeteorSwarmLarge
     - id: GameRuleUristSwarm
-    - id: ImmovableRodSpawn
+    #- id: ImmovableRodSpawn
 
 - type: weightedRandomEntity
   id: MeteorSpawnAsteroidWallTable
