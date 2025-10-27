@@ -1,7 +1,7 @@
 # Airlocks
 - type: entity
-  parent: Airlock
-  id: AirlockServiceLocked
+  parent: AirlockEidoService
+  id: AirlockEidoServiceLocked
   suffix: Service, Locked
   components:
   - type: ContainerFill
@@ -11,8 +11,8 @@
     layoutId: AirlockService
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockLawyerLocked
+  parent: AirlockEidoService
+  id: AirlockEidoLawyerLocked
   suffix: Lawyer, Locked
   components:
   - type: ContainerFill
@@ -20,8 +20,8 @@
       board: [ DoorElectronicsLawyer ]
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockTheatreLocked
+  parent: AirlockEidoService
+  id: AirlockEidoTheatreLocked
   suffix: Theatre, Locked
   components:
   - type: ContainerFill
@@ -29,8 +29,8 @@
       board: [ DoorElectronicsTheatre ]
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockServiceTheatreLocked
+  parent: AirlockEidoService
+  id: AirlockEidoServiceTheatreLocked
   suffix: Service, Theatre, Locked
   components:
   - type: ContainerFill
@@ -38,8 +38,8 @@
       board: [ DoorElectronicsServiceTheatre ]
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockChapelLocked
+  parent: AirlockEidoService
+  id: AirlockEidoChapelLocked
   suffix: Chapel, Locked
   components:
   - type: ContainerFill
@@ -47,8 +47,8 @@
       board: [ DoorElectronicsChapel ]
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockJanitorLocked
+  parent: AirlockEidoService
+  id: AirlockEidoJanitorLocked
   suffix: Janitor, Locked
   components:
   - type: ContainerFill
@@ -56,8 +56,8 @@
       board: [ DoorElectronicsJanitor ]
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockKitchenLocked
+  parent: AirlockEidoService
+  id: AirlockEidoKitchenLocked
   suffix: Kitchen, Locked
   components:
   - type: ContainerFill
@@ -65,8 +65,8 @@
       board: [ DoorElectronicsKitchen ]
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockBarLocked
+  parent: AirlockEidoService
+  id: AirlockEidoBarLocked
   suffix: Bar, Locked
   components:
   - type: ContainerFill
@@ -74,8 +74,8 @@
       board: [ DoorElectronicsBar ]
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockBarKitchenLocked
+  parent: AirlockEidoService
+  id: AirlockEidoBarKitchenLocked
   suffix: Bar&Kitchen, Locked
   components:
   - type: ContainerFill
@@ -83,8 +83,8 @@
       board: [ DoorElectronicsBarKitchen ]
 
 - type: entity
-  parent: AirlockHydroponics
-  id: AirlockHydroponicsLocked
+  parent: AirlockEidoHydroponics
+  id: AirlockEidoHydroponicsLocked
   suffix: Hydroponics, Locked
   components:
   - type: ContainerFill
@@ -92,121 +92,8 @@
       board: [ DoorElectronicsHydroponics ]
 
 - type: entity
-  parent: AirlockExternal
-  id: AirlockExternalLocked
-  suffix: External, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsExternal ]
-
-- type: entity
-  parent: AirlockExternal
-  id: AirlockExternalCargoLocked
-  suffix: External, Cargo, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCargo ]
-  - type: Wires
-    layoutId: AirlockCargo
-
-- type: entity
-  parent: AirlockExternal
-  id: AirlockExternalEngineeringLocked
-  suffix: External, Engineering, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsEngineering ]
-  - type: Wires
-    layoutId: AirlockEngineering
-
-- type: entity
-  parent: AirlockExternal
-  id: AirlockExternalCommandLocked
-  suffix: External, Command, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCommand ]
-  - type: Wires
-    layoutId: AirlockCommand
-
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassCommandLocked
-  suffix: External, Glass, Command, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCommand ]
-  - type: Wires
-    layoutId: AirlockCommand
-
-- type: entity
-  parent: AirlockExternal
-  id: AirlockExternalAtmosphericsLocked
-  suffix: External, Atmospherics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsAtmospherics ]
-  - type: Wires
-    layoutId: AirlockEngineering
-
-- type: entity
-  parent: AirlockExternal
-  id: AirlockExternalSyndicateLocked
-  suffix: External, Syndicate, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicateAgent ]
-  - type: Wires
-    layoutId: AirlockSecurity
-
-- type: entity
-  parent: AirlockExternal
-  id: AirlockExternalNukeopLocked
-  suffix: External, Nukeop, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsNukeop ]
-  - type: Wires
-    layoutId: AirlockSecurity
-
-- type: entity
-  parent: AirlockFreezer
-  id: AirlockFreezerLocked
-  suffix: Kitchen, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsKitchen ]
-
-- type: entity
-  parent: AirlockFreezer
-  id: AirlockFreezerKitchenHydroLocked
-  suffix: Kitchen/Hydroponics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsKitchenHydroponics ]
-
-- type: entity
-  parent: AirlockFreezer
-  id: AirlockFreezerHydroponicsLocked
-  suffix: Hydroponics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsHydroponics ]
-
-- type: entity
-  parent: AirlockEngineering
-  id: AirlockEngineeringLocked
+  parent: AirlockEidoEngineering
+  id: AirlockEidoEngineeringLocked
   suffix: Engineering, Locked
   components:
   - type: ContainerFill
@@ -214,8 +101,8 @@
       board: [ DoorElectronicsEngineering ]
 
 - type: entity
-  parent: AirlockAtmospherics
-  id: AirlockAtmosphericsLocked
+  parent: AirlockEidoAtmospherics
+  id: AirlockEidoAtmosphericsLocked
   suffix: Atmospherics, Locked
   components:
   - type: ContainerFill
@@ -223,8 +110,8 @@
       board: [ DoorElectronicsAtmospherics ]
 
 - type: entity
-  parent: AirlockCargo
-  id: AirlockCargoLocked
+  parent: AirlockEidoCargo
+  id: AirlockEidoCargoLocked
   suffix: Cargo, Locked
   components:
   - type: ContainerFill
@@ -232,8 +119,8 @@
       board: [ DoorElectronicsCargo ]
 
 - type: entity
-  parent: AirlockSalvage
-  id: AirlockSalvageLocked
+  parent: AirlockEidoSalvage
+  id: AirlockEidoSalvageLocked
   suffix: Salvage, Locked
   components:
   - type: ContainerFill
@@ -241,17 +128,8 @@
       board: [ DoorElectronicsSalvage ]
 
 - type: entity
-  parent: AirlockMining
-  id: AirlockMiningLocked
-  suffix: Mining(Salvage), Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSalvage ]
-
-- type: entity
-  parent: AirlockMedical
-  id: AirlockMedicalLocked
+  parent: AirlockEidoMedical
+  id: AirlockEidoMedicalLocked
   suffix: Medical, Locked
   components:
   - type: ContainerFill
@@ -259,8 +137,8 @@
       board: [ DoorElectronicsMedical ]
 
 - type: entity
-  parent: AirlockVirology
-  id: AirlockVirologyLocked
+  parent: AirlockEidoVirology
+  id: AirlockEidoVirologyLocked
   suffix: Virology, Locked
   components:
   - type: ContainerFill
@@ -268,8 +146,8 @@
       board: [ DoorElectronicsMedical ]
 
 - type: entity
-  parent: AirlockChemistry
-  id: AirlockChemistryLocked
+  parent: AirlockEidoChemistry
+  id: AirlockEidoChemistryLocked
   suffix: Chemistry, Locked
   components:
   - type: ContainerFill
@@ -277,8 +155,8 @@
       board: [ DoorElectronicsChemistry ]
 
 - type: entity
-  parent: AirlockMedical
-  id: AirlockMedicalMorgueLocked
+  parent: AirlockEidoMedical
+  id: AirlockEidoMedicalMorgueLocked
   suffix: Morgue, Locked
   components:
   - type: ContainerFill
@@ -286,8 +164,8 @@
       board: [ DoorElectronicsMorgue ]
 
 - type: entity
-  parent: AirlockScience
-  id: AirlockScienceLocked
+  parent: AirlockEidoScience
+  id: AirlockEidoScienceLocked
   suffix: Science, Locked
   components:
   - type: ContainerFill
@@ -295,8 +173,8 @@
       board: [ DoorElectronicsResearch ]
 
 - type: entity
-  parent: AirlockScience
-  id: AirlockMedicalScienceLocked
+  parent: AirlockEidoScience
+  id: AirlockEidoMedicalScienceLocked
   suffix: Medical/Science, Locked
   components:
   - type: ContainerFill
@@ -304,17 +182,8 @@
       board: [ DoorElectronicsMedicalResearch ]
 
 - type: entity
-  parent: AirlockCentralCommand
-  id: AirlockCentralCommandLocked
-  suffix: Colonial Command, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCentralCommand ]
-
-- type: entity
-  parent: AirlockCommand
-  id: AirlockCommandLocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoCommandLocked
   suffix: Command, Locked
   components:
   - type: ContainerFill
@@ -322,17 +191,17 @@
       board: [ DoorElectronicsCommand ]
 
 - type: entity
-  parent: AirlockCommand
-  id: AirlockCaptainLocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoCaptainLocked
   suffix: Captain, Locked
   components:
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCaptain ]
 
-- type: entity # Move this to _HL later
-  parent: AirlockCommand
-  id: AirlockStationCaptainLocked
+- type: entity 
+  parent: AirlockEidoCommand
+  id: AirlockEidoStationCaptainLocked
   suffix: Station Captain, Locked
   components:
   - type: ContainerFill
@@ -340,8 +209,8 @@
       board: [ DoorElectronicsStationCaptain ]
 
 - type: entity
-  parent: AirlockCommand
-  id: AirlockChiefMedicalOfficerLocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoChiefMedicalOfficerLocked
   suffix: ChiefMedicalOfficer, Locked
   components:
   - type: ContainerFill
@@ -349,8 +218,8 @@
       board: [ DoorElectronicsChiefMedicalOfficer ]
 
 - type: entity
-  parent: AirlockCommand
-  id: AirlockChiefEngineerLocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoChiefEngineerLocked
   suffix: ChiefEngineer, Locked
   components:
   - type: ContainerFill
@@ -358,8 +227,8 @@
       board: [ DoorElectronicsChiefEngineer ]
 
 - type: entity
-  parent: AirlockCommand
-  id: AirlockHeadOfSecurityLocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoHeadOfSecurityLocked
   suffix: HeadOfSecurity, Locked
   components:
   - type: ContainerFill
@@ -367,8 +236,8 @@
       board: [ DoorElectronicsHeadOfSecurity ]
 
 - type: entity
-  parent: AirlockCommand
-  id: AirlockResearchDirectorLocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoResearchDirectorLocked
   suffix: ResearchDirector, Locked
   components:
   - type: ContainerFill
@@ -376,8 +245,8 @@
       board: [ DoorElectronicsResearchDirector ]
 
 - type: entity
-  parent: AirlockCommand
-  id: AirlockHeadOfPersonnelLocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoHeadOfPersonnelLocked
   suffix: HeadOfPersonnel, Locked
   components:
   - type: ContainerFill
@@ -385,8 +254,8 @@
       board: [ DoorElectronicsHeadOfPersonnel ]
 
 - type: entity
-  parent: AirlockCommand
-  id: AirlockQuartermasterLocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoQuartermasterLocked
   suffix: Quartermaster, Locked
   components:
   - type: ContainerFill
@@ -394,8 +263,8 @@
       board: [ DoorElectronicsQuartermaster ]
 
 - type: entity
-  parent: AirlockSecurity
-  id: AirlockSecurityLocked
+  parent: AirlockEidoSecurity
+  id: AirlockEidoSecurityLocked
   suffix: Security, Locked
   components:
   - type: ContainerFill
@@ -403,8 +272,8 @@
       board: [ DoorElectronicsSecurity ]
 
 - type: entity
-  parent: AirlockSecurity
-  id: AirlockDetectiveLocked
+  parent: AirlockEidoSecurity
+  id: AirlockEidoDetectiveLocked
   suffix: Detective, Locked
   components:
   - type: ContainerFill
@@ -412,8 +281,8 @@
       board: [ DoorElectronicsDetective ]
 
 - type: entity
-  parent: AirlockSecurity
-  id: AirlockBrigLocked
+  parent: AirlockEidoSecurity
+  id: AirlockEidoBrigLocked
   suffix: Brig, Locked
   components:
   - type: ContainerFill
@@ -421,8 +290,8 @@
       board: [ DoorElectronicsBrig ]
 
 - type: entity
-  parent: AirlockSecurity
-  id: AirlockSecurityLawyerLocked
+  parent: AirlockEidoSecurity
+  id: AirlockEidoSecurityLawyerLocked
   suffix: Security/Lawyer, Locked
   components:
   - type: ContainerFill
@@ -430,8 +299,8 @@
       board: [ DoorElectronicsSecurityLawyer ]
 
 - type: entity
-  parent: AirlockSecurity
-  id: AirlockArmoryLocked
+  parent: AirlockEidoSecurity
+  id: AirlockEidoArmoryLocked
   suffix: Armory, Locked
   components:
   - type: ContainerFill
@@ -441,8 +310,8 @@
     layoutId: AirlockArmory
 
 - type: entity
-  parent: AirlockSecurity
-  id: AirlockVaultLocked
+  parent: AirlockEidoSecurity
+  id: AirlockEidoVaultLocked
   suffix: Vault, Locked
   components:
   - type: ContainerFill
@@ -450,8 +319,8 @@
       board: [ DoorElectronicsVault ]
 
 - type: entity
-  parent: AirlockCommand
-  id: AirlockEVALocked
+  parent: AirlockEidoCommand
+  id: AirlockEidoEVALocked
   suffix: EVA, Locked
   components:
   - type: ContainerFill
@@ -461,7 +330,7 @@
 # Glass Airlocks
 - type: entity
   parent: AirlockGlass
-  id: AirlockServiceGlassLocked
+  id: AirlockEidoServiceGlassLocked
   suffix: Service, Locked
   components:
   - type: ContainerFill
@@ -471,8 +340,8 @@
     layoutId: AirlockService
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockLawyerGlassLocked
+  parent: AirlockEidoServiceGlassLocked
+  id: AirlockEidoLawyerGlassLocked
   suffix: Lawyer, Locked
   components:
   - type: ContainerFill
@@ -480,8 +349,8 @@
       board: [ DoorElectronicsLawyer ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockTheatreGlassLocked
+  parent: AirlockEidoServiceGlassLocked
+  id: AirlockEidoTheatreGlassLocked
   suffix: Theatre, Locked
   components:
   - type: ContainerFill
@@ -489,8 +358,8 @@
       board: [ DoorElectronicsTheatre ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockServiceTheatreGlassLocked
+  parent: AirlockEidoServiceGlassLocked
+  id: AirlockEidoServiceTheatreGlassLocked
   suffix: Service, Theatre, Locked
   components:
   - type: ContainerFill
@@ -498,8 +367,8 @@
       board: [ DoorElectronicsServiceTheatre ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockBarGlassLocked
+  parent: AirlockEidoServiceGlassLocked
+  id: AirlockEidoBarGlassLocked
   suffix: Bar, Locked
   components:
   - type: ContainerFill
@@ -507,8 +376,8 @@
       board: [ DoorElectronicsBar ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockBarKitchenGlassLocked
+  parent: AirlockEidoServiceGlassLocked
+  id: AirlockEidoBarKitchenGlassLocked
   suffix: Bar&Kitchen, Locked
   components:
   - type: ContainerFill
@@ -581,8 +450,8 @@
     layoutId: AirlockEngineering
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockKitchenGlassLocked
+  parent: AirlockEidoServiceGlassLocked
+  id: AirlockEidoKitchenGlassLocked
   suffix: Kitchen, Locked
   components:
   - type: ContainerFill
@@ -590,8 +459,8 @@
       board: [ DoorElectronicsKitchen ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockJanitorGlassLocked
+  parent: AirlockEidoServiceGlassLocked
+  id: AirlockEidoJanitorGlassLocked
   suffix: Janitor, Locked
   components:
   - type: ContainerFill
@@ -599,8 +468,8 @@
       board: [ DoorElectronicsJanitor ]
 
 - type: entity
-  parent: AirlockHydroponicsGlass
-  id: AirlockHydroGlassLocked
+  parent: AirlockEidoHydroponicsGlass
+  id: AirlockEidoHydroGlassLocked
   suffix: Hydroponics, Locked
   components:
   - type: ContainerFill
@@ -608,8 +477,8 @@
       board: [ DoorElectronicsHydroponics ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockChapelGlassLocked
+  parent: AirlockEidoServiceGlassLocked
+  id: AirlockEidoChapelGlassLocked
   suffix: Chapel, Locked
   components:
   - type: ContainerFill
@@ -617,8 +486,8 @@
       board: [ DoorElectronicsChapel ]
 
 - type: entity
-  parent: AirlockEngineeringGlass
-  id: AirlockEngineeringGlassLocked
+  parent: AirlockEidoEngineeringGlass
+  id: AirlockEidoEngineeringGlassLocked
   suffix: Engineering, Locked
   components:
   - type: ContainerFill
@@ -626,8 +495,8 @@
       board: [ DoorElectronicsEngineering ]
 
 - type: entity
-  parent: AirlockAtmosphericsGlass
-  id: AirlockAtmosphericsGlassLocked
+  parent: AirlockEidoAtmosphericsGlass
+  id: AirlockEidoAtmosphericsGlassLocked
   suffix: Atmospherics, Locked
   components:
   - type: ContainerFill
@@ -635,8 +504,8 @@
       board: [ DoorElectronicsAtmospherics ]
 
 - type: entity
-  parent: AirlockCargoGlass
-  id: AirlockCargoGlassLocked
+  parent: AirlockEidoCargoGlass
+  id: AirlockEidoCargoGlassLocked
   suffix: Cargo, Locked
   components:
   - type: ContainerFill
@@ -644,8 +513,8 @@
       board: [ DoorElectronicsCargo ]
 
 - type: entity
-  parent: AirlockSalvageGlass
-  id: AirlockSalvageGlassLocked
+  parent: AirlockEidoSalvageGlass
+  id: AirlockEidoSalvageGlassLocked
   suffix: Salvage, Locked
   components:
   - type: ContainerFill
@@ -653,17 +522,8 @@
       board: [ DoorElectronicsSalvage ]
 
 - type: entity
-  parent: AirlockMiningGlass
-  id: AirlockMiningGlassLocked
-  suffix: Mining(Salvage), Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSalvage ]
-
-- type: entity
-  parent: AirlockChemistryGlass
-  id: AirlockChemistryGlassLocked
+  parent: AirlockEidoChemistryGlass
+  id: AirlockEidoChemistryGlassLocked
   suffix: Chemistry, Locked
   components:
   - type: ContainerFill
@@ -671,8 +531,8 @@
       board: [ DoorElectronicsChemistry ]
 
 - type: entity
-  parent: AirlockMedicalGlass
-  id: AirlockMedicalMorgueGlassLocked
+  parent: AirlockEidoMedicalGlass
+  id: AirlockEidoMedicalMorgueGlassLocked
   suffix: Morgue, Locked
   components:
   - type: ContainerFill
@@ -680,8 +540,8 @@
       board: [ DoorElectronicsMorgue ]
 
 - type: entity
-  parent: AirlockMedicalGlass
-  id: AirlockMedicalGlassLocked
+  parent: AirlockEidoMedicalGlass
+  id: AirlockEidoMedicalGlassLocked
   suffix: Medical, Locked
   components:
   - type: ContainerFill
@@ -689,8 +549,8 @@
       board: [ DoorElectronicsMedical ]
 
 - type: entity
-  parent: AirlockVirologyGlass
-  id: AirlockVirologyGlassLocked
+  parent: AirlockEidoVirologyGlass
+  id: AirlockEidoVirologyGlassLocked
   suffix: Virology, Locked
   components:
   - type: ContainerFill
@@ -698,8 +558,8 @@
       board: [ DoorElectronicsMedical ]
 
 - type: entity
-  parent: AirlockScienceGlass
-  id: AirlockScienceGlassLocked
+  parent: AirlockEidoScienceGlass
+  id: AirlockEidoScienceGlassLocked
   suffix: Science, Locked
   components:
   - type: ContainerFill
@@ -707,8 +567,8 @@
       board: [ DoorElectronicsResearch ]
 
 - type: entity
-  parent: AirlockScienceGlass
-  id: AirlockMedicalScienceGlassLocked
+  parent: AirlockEidoScienceGlass
+  id: AirlockEidoMedicalScienceGlassLocked
   suffix: Medical/Science, Locked
   components:
   - type: ContainerFill
@@ -716,17 +576,8 @@
       board: [ DoorElectronicsMedicalResearch ]
 
 - type: entity
-  parent: AirlockCentralCommandGlass
-  id: AirlockCentralCommandGlassLocked
-  suffix: Colonial Command, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCentralCommand ]
-
-- type: entity
-  parent: AirlockCommandGlass
-  id: AirlockCommandGlassLocked
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoCommandGlassLocked
   suffix: Command, Locked
   components:
   - type: ContainerFill
@@ -734,17 +585,17 @@
       board: [ DoorElectronicsCommand ]
 
 - type: entity
-  parent: AirlockCommandGlass
-  id: AirlockCaptainGlassLocked
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoCaptainGlassLocked
   suffix: Captain, Locked
   components:
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCaptain ]
 
-- type: entity # Move this to _HL later
-  parent: AirlockCommandGlass
-  id: AirlockStationCaptainGlassLocked
+- type: entity 
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoStationCaptainGlassLocked
   suffix: Station Captain, Locked
   components:
   - type: ContainerFill
@@ -752,8 +603,8 @@
       board: [ DoorElectronicsStationCaptain ]
 
 - type: entity
-  parent: AirlockCommandGlass
-  id: AirlockChiefMedicalOfficerGlassLocked
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoChiefMedicalOfficerGlassLocked
   suffix: ChiefMedicalOfficer, Locked
   components:
   - type: ContainerFill
@@ -761,8 +612,8 @@
       board: [ DoorElectronicsChiefMedicalOfficer ]
 
 - type: entity
-  parent: AirlockCommandGlass
-  id: AirlockChiefEngineerGlassLocked
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoChiefEngineerGlassLocked
   suffix: ChiefEngineer, Locked
   components:
   - type: ContainerFill
@@ -770,8 +621,8 @@
       board: [ DoorElectronicsChiefEngineer ]
 
 - type: entity
-  parent: AirlockCommandGlass
-  id: AirlockHeadOfSecurityGlassLocked
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoHeadOfSecurityGlassLocked
   suffix: HeadOfSecurity, Locked
   components:
   - type: ContainerFill
@@ -779,8 +630,8 @@
       board: [ DoorElectronicsHeadOfSecurity ]
 
 - type: entity
-  parent: AirlockCommandGlass
-  id: AirlockResearchDirectorGlassLocked
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoResearchDirectorGlassLocked
   suffix: ResearchDirector, Locked
   components:
   - type: ContainerFill
@@ -788,8 +639,8 @@
       board: [ DoorElectronicsResearchDirector ]
 
 - type: entity
-  parent: AirlockCommandGlass
-  id: AirlockHeadOfPersonnelGlassLocked
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoHeadOfPersonnelGlassLocked
   suffix: HeadOfPersonnel, Locked
   components:
   - type: ContainerFill
@@ -797,8 +648,8 @@
       board: [ DoorElectronicsHeadOfPersonnel ]
 
 - type: entity
-  parent: AirlockCommandGlass
-  id: AirlockQuartermasterGlassLocked
+  parent: AirlockEidoCommandGlass
+  id: AirlockEidoQuartermasterGlassLocked
   suffix: Quartermaster, Locked
   components:
   - type: ContainerFill
@@ -806,8 +657,8 @@
       board: [ DoorElectronicsQuartermaster ]
 
 - type: entity
-  parent: AirlockSecurityGlass
-  id: AirlockSecurityGlassLocked
+  parent: AirlockEidoSecurityGlass
+  id: AirlockEidoSecurityGlassLocked
   suffix: Security, Locked
   components:
   - type: ContainerFill
@@ -815,8 +666,8 @@
       board: [ DoorElectronicsSecurity ]
 
 - type: entity
-  parent: AirlockSecurityGlass
-  id: AirlockDetectiveGlassLocked
+  parent: AirlockEidoSecurityGlass
+  id: AirlockEidoDetectiveGlassLocked
   suffix: Detective, Locked
   components:
   - type: ContainerFill
@@ -824,8 +675,8 @@
       board: [ DoorElectronicsDetective ]
 
 - type: entity
-  parent: AirlockSecurityGlass
-  id: AirlockBrigGlassLocked
+  parent: AirlockEidoSecurityGlass
+  id: AirlockEidoBrigGlassLocked
   suffix: Brig, Locked
   components:
   - type: ContainerFill
@@ -833,8 +684,8 @@
       board: [ DoorElectronicsBrig ]
 
 - type: entity
-  parent: AirlockSecurityGlass
-  id: AirlockSecurityLawyerGlassLocked
+  parent: AirlockEidoSecurityGlass
+  id: AirlockEidoSecurityLawyerGlassLocked
   suffix: Security/Lawyer, Locked
   components:
   - type: ContainerFill
@@ -842,8 +693,8 @@
       board: [ DoorElectronicsSecurityLawyer ]
 
 - type: entity
-  parent: AirlockSecurityGlass
-  id: AirlockArmoryGlassLocked
+  parent: AirlockEidoSecurityGlass
+  id: AirlockEidoArmoryGlassLocked
   suffix: Armory, Locked
   components:
   - type: ContainerFill
@@ -851,8 +702,8 @@
       board: [ DoorElectronicsArmory ]
 
 - type: entity
-  parent: AirlockCommandGlassLocked
-  id: AirlockEVAGlassLocked
+  parent: AirlockEidoCommandGlassLocked
+  id: AirlockEidoEVAGlassLocked
   suffix: EVA, Locked
   components:
   - type: ContainerFill
@@ -879,8 +730,8 @@
 
 # Maintenance Hatches
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintLocked
   suffix: Locked
   components:
   - type: ContainerFill
@@ -888,8 +739,8 @@
       board: [ DoorElectronicsMaintenance ]
 
 - type: entity
-  parent: AirlockMaintGlass
-  id: AirlockMaintGlassLocked
+  parent: AirlockHatch
+  id: AirlockEidoMaintBareLocked
   suffix: Locked
   components:
   - type: ContainerFill
@@ -897,8 +748,8 @@
       board: [ DoorElectronicsMaintenance ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintSalvageLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintSalvageLocked
   suffix: Salvage, Locked
   components:
   - type: ContainerFill
@@ -906,8 +757,8 @@
       board: [ DoorElectronicsSalvage ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintCargoLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintCargoLocked
   suffix: Cargo, Locked
   components:
   - type: ContainerFill
@@ -915,8 +766,8 @@
       board: [ DoorElectronicsCargo ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintCommandLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintCommandLocked
   suffix: Command, Locked
   components:
   - type: ContainerFill
@@ -924,8 +775,8 @@
       board: [ DoorElectronicsCommand ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintCommonLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintCommonLocked
   suffix: Common, Locked
   components:
   - type: ContainerFill
@@ -933,8 +784,8 @@
       board: [ DoorElectronicsMaintenance ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintEngiLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintEngiLocked
   suffix: Engineering, Locked
   components:
   - type: ContainerFill
@@ -942,8 +793,8 @@
       board: [ DoorElectronicsEngineering ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintAtmoLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintAtmoLocked
   suffix: Atmospherics, Locked
   components:
   - type: ContainerFill
@@ -951,8 +802,8 @@
       board: [ DoorElectronicsAtmospherics ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintBarLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintBarLocked
   suffix: Bar, Locked
   components:
   - type: ContainerFill
@@ -960,8 +811,8 @@
       board: [ DoorElectronicsBar ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintBarKitchenLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintBarKitchenLocked
   suffix: Bar&Kitchen, Locked
   components:
   - type: ContainerFill
@@ -969,8 +820,8 @@
       board: [ DoorElectronicsBarKitchen ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintChapelLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintChapelLocked
   suffix: Chapel, Locked
   components:
   - type: ContainerFill
@@ -978,8 +829,8 @@
       board: [ DoorElectronicsChapel ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintHydroLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintHydroLocked
   suffix: Hydroponics, Locked
   components:
   - type: ContainerFill
@@ -987,8 +838,8 @@
       board: [ DoorElectronicsHydroponics ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintJanitorLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintJanitorLocked
   suffix: Janitor, Locked
   components:
   - type: ContainerFill
@@ -996,8 +847,8 @@
       board: [ DoorElectronicsJanitor ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintLawyerLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintLawyerLocked
   suffix: Lawyer, Locked
   components:
   - type: ContainerFill
@@ -1005,8 +856,8 @@
       board: [ DoorElectronicsLawyer ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintServiceLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintServiceLocked
   suffix: Service, Locked
   components:
   - type: ContainerFill
@@ -1016,8 +867,8 @@
     layoutId: AirlockService
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintTheatreLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintTheatreLocked
   suffix: Theatre, Locked
   components:
   - type: ContainerFill
@@ -1025,8 +876,8 @@
       board: [ DoorElectronicsTheatre ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintServiceTheatreLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintServiceTheatreLocked
   suffix: Service, Theatre, Locked
   components:
   - type: ContainerFill
@@ -1034,8 +885,8 @@
       board: [ DoorElectronicsServiceTheatre ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintKitchenLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintKitchenLocked
   suffix: Kitchen, Locked
   components:
   - type: ContainerFill
@@ -1043,8 +894,8 @@
       board: [ DoorElectronicsKitchen ]
 
 - type: entity
-  parent: AirlockMaintServiceLocked
-  id: AirlockMaintKitchenHydroLocked
+  parent: AirlockEidoMaintServiceLocked
+  id: AirlockEidoMaintKitchenHydroLocked
   suffix: Kitchen/Hydroponics, Locked
   components:
   - type: ContainerFill
@@ -1052,8 +903,8 @@
       board: [ DoorElectronicsKitchenHydroponics ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintIntLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintIntLocked
   suffix: Interior, Locked
   components:
   - type: ContainerFill
@@ -1061,8 +912,8 @@
       board: [ DoorElectronicsMaintenance ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintMedLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintMedLocked
   suffix: Medical, Locked
   components:
   - type: ContainerFill
@@ -1072,8 +923,8 @@
     layoutId: AirlockMedical
 
 - type: entity
-  parent: AirlockMaintMedLocked
-  id: AirlockMedicalMorgueMaintLocked
+  parent: AirlockEidoMaintMedLocked
+  id: AirlockEidoMedicalMorgueMaintLocked
   suffix: Morgue, Locked
   components:
   - type: ContainerFill
@@ -1081,8 +932,8 @@
       board: [ DoorElectronicsMorgue ]
 
 - type: entity
-  parent: AirlockMaintMedLocked
-  id: AirlockMaintChemLocked
+  parent: AirlockEidoMaintMedLocked
+  id: AirlockEidoMaintChemLocked
   suffix: Chemistry, Locked
   components:
   - type: ContainerFill
@@ -1090,8 +941,8 @@
       board: [ DoorElectronicsChemistry ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintRnDLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintRnDLocked
   suffix: Science, Locked
   components:
   - type: ContainerFill
@@ -1102,7 +953,7 @@
 
 - type: entity
   parent: AirlockMaintRnDLocked
-  id: AirlockMaintRnDMedLocked
+  id: AirlockEidoMaintRnDMedLocked
   suffix: Medical/Science, Locked
   components:
   - type: ContainerFill
@@ -1110,8 +961,8 @@
       board: [ DoorElectronicsMedicalResearch ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintSecLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintSecLocked
   suffix: Security, Locked
   components:
   - type: ContainerFill
@@ -1121,8 +972,8 @@
     layoutId: AirlockSecurity
 
 - type: entity
-  parent: AirlockMaintSecLocked
-  id: AirlockMaintDetectiveLocked
+  parent: AirlockEidoMaintSecLocked
+  id: AirlockEidoMaintDetectiveLocked
   suffix: Detective, Locked
   components:
   - type: ContainerFill
@@ -1130,8 +981,8 @@
       board: [ DoorElectronicsDetective ]
 
 - type: entity
-  parent: AirlockMaintCommandLocked
-  id: AirlockMaintHOPLocked
+  parent: AirlockEidoMaintCommandLocked
+  id: AirlockEidoMaintHOPLocked
   suffix: HeadOfPersonnel, Locked
   components:
   - type: ContainerFill
@@ -1139,8 +990,8 @@
       board: [ DoorElectronicsHeadOfPersonnel ]
 
 - type: entity
-  parent: AirlockMaintCommandLocked
-  id: AirlockMaintCaptainLocked
+  parent: AirlockEidoMaintCommandLocked
+  id: AirlockEidoMaintCaptainLocked
   suffix: Captain, Locked
   components:
   - type: ContainerFill
@@ -1148,8 +999,8 @@
       board: [ DoorElectronicsCaptain ]
 
 - type: entity
-  parent: AirlockMaintCommandLocked
-  id: AirlockMaintChiefEngineerLocked
+  parent: AirlockEidoMaintCommandLocked
+  id: AirlockEidoMaintChiefEngineerLocked
   suffix: ChiefEngineer, Locked
   components:
   - type: ContainerFill
@@ -1157,8 +1008,8 @@
       board: [ DoorElectronicsChiefEngineer ]
 
 - type: entity
-  parent: AirlockMaintCommandLocked
-  id: AirlockMaintChiefMedicalOfficerLocked
+  parent: AirlockEidoMaintCommandLocked
+  id: AirlockEidoMaintChiefMedicalOfficerLocked
   suffix: ChiefMedicalOfficer, Locked
   components:
   - type: ContainerFill
@@ -1166,8 +1017,8 @@
       board: [ DoorElectronicsChiefMedicalOfficer ]
 
 - type: entity
-  parent: AirlockMaintCommandLocked
-  id: AirlockMaintHeadOfSecurityLocked
+  parent: AirlockEidoMaintCommandLocked
+  id: AirlockEidoMaintHeadOfSecurityLocked
   suffix: HeadOfSecurity, Locked
   components:
   - type: ContainerFill
@@ -1175,8 +1026,8 @@
       board: [ DoorElectronicsHeadOfSecurity ]
 
 - type: entity
-  parent: AirlockMaintCommandLocked
-  id: AirlockMaintResearchDirectorLocked
+  parent: AirlockEidoMaintCommandLocked
+  id: AirlockEidoMaintResearchDirectorLocked
   suffix: ResearchDirector, Locked
   components:
   - type: ContainerFill
@@ -1184,8 +1035,8 @@
       board: [ DoorElectronicsResearchDirector ]
 
 - type: entity
-  parent: AirlockMaintCommandLocked
-  id: AirlockMaintQuartermasterLocked
+  parent: AirlockEidoMaintCommandLocked
+  id: AirlockEidoMaintQuartermasterLocked
   suffix: Quartermaster, Locked
   components:
   - type: ContainerFill
@@ -1193,8 +1044,8 @@
       board: [ DoorElectronicsQuartermaster ]
 
 - type: entity
-  parent: AirlockMaint
-  id: AirlockMaintArmoryLocked
+  parent: AirlockHatchMaintenance
+  id: AirlockEidoMaintArmoryLocked
   suffix: Armory, Locked
   components:
   - type: ContainerFill
@@ -1221,10 +1072,10 @@
     containers:
       board: [ DoorElectronicsNukeop ]
 
-# Shuttle airlocks
+# Shuttle Airlock
 - type: entity
-  parent: AirlockShuttle
-  id: AirlockExternalShuttleLocked
+  parent: AirlockShuttleMining
+  id: AirlockExternalShuttleMiningLocked
   suffix: External, Docking, Locked
   components:
   - type: ContainerFill
@@ -1232,26 +1083,8 @@
       board: [ DoorElectronicsExternal ]
 
 - type: entity
-  parent: AirlockShuttleSyndicate
-  id: AirlockExternalShuttleSyndicateLocked
-  suffix: External, Docking, Syndicate, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicateAgent ]
-
-- type: entity
-  parent: AirlockShuttleSyndicate
-  id: AirlockExternalShuttleNukeopLocked
-  suffix: External, Docking, Nukeop, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsNukeop ]
-
-- type: entity
-  parent: AirlockGlassShuttle
-  id: AirlockExternalGlassShuttleLocked
+  parent: AirlockGlassShuttleMining
+  id: AirlockExternalGlassShuttleMiningLocked
   suffix: External, Glass, Docking, Locked
   components:
   - type: ContainerFill
@@ -1259,112 +1092,74 @@
       board: [ DoorElectronicsExternal ]
 
 - type: entity
-  parent: AirlockGlassShuttleSyndicate
-  id: AirlockExternalGlassShuttleSyndicateLocked
-  suffix: Syndicate, Locked, Glass
+  parent: AirlockShuttleMining
+  id: AirlockSecurityShuttleMiningLocked
+  suffix: Security, Docking, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsSyndicateAgent ]
+      board: [ DoorElectronicsSecurity ]
 
 - type: entity
-  parent: AirlockGlassShuttleSyndicate
-  id: AirlockExternalGlassShuttleNukeopLocked
-  suffix: Nukeop, Locked, Glass
+  parent: AirlockGlassShuttleMining
+  id: AirlockSecurityGlassShuttleMiningLocked
+  suffix: Security, Glass, Docking, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsNukeop ]
+      board: [ DoorElectronicsSecurity ]
 
 - type: entity
-  parent: AirlockGlassShuttle
-  id: AirlockExternalGlassShuttleEmergencyLocked
-  suffix: External, Emergency, Glass, Docking, Locked
+  parent: AirlockShuttleMining
+  id: AirlockJanitorShuttleMiningLocked
+  suffix: Janitor, Docking, Locked
   components:
-  - type: PriorityDock
-    tag: DockEmergency
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsExternal ]
+      board: [ DoorElectronicsJanitor ]
 
 - type: entity
-  parent: AirlockGlassShuttle
-  id: AirlockExternalGlassShuttleArrivals
-  suffix: External, Arrivals, Glass, Docking
+  parent: AirlockGlassShuttleMining
+  id: AirlockJanitorGlassShuttleMiningLocked
+  suffix: Janitor, Glass, Docking, Locked
   components:
-  - type: PriorityDock
-    tag: DockArrivals
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsExternal ]
+      board: [ DoorElectronicsJanitor ]
 
 - type: entity
-  parent: AirlockGlassShuttle
-  id: AirlockExternalGlassShuttleEscape
-  suffix: External, Escape 3x4, Glass, Docking
-  components:
-  - type: GridFill
-    addComponents:
-    - type: IFF
-      flags:
-      - HideLabel
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsExternal ]
-
-#HighSecDoors
-- type: entity
-  parent: HighSecDoor
-  id: HighSecCentralCommandLocked
-  suffix: Colonial Command, Locked
+  parent: AirlockShuttleMining
+  id: AirlockCargoShuttleMiningLocked
+  suffix: Cargo, Docking, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentralCommand ]
+      board: [ DoorElectronicsCargo ]
 
 - type: entity
-  parent: HighSecDoor
-  id: HighSecCommandLocked
-  suffix: Command, Locked
+  parent: AirlockGlassShuttleMining
+  id: AirlockCargoGlassShuttleMiningLocked
+  suffix: Cargo, Glass, Docking, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCommand ]
+      board: [ DoorElectronicsCargo ]
 
 - type: entity
-  parent: HighSecDoor
-  id: HighSecCaptainLocked
-  suffix: Captain, Locked
+  parent: AirlockShuttleMining
+  id: AirlockMercenaryShuttleMiningLocked
+  suffix: Mercenary, Docking, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCaptain ]
+      board: [ DoorElectronicsMercenary ]
 
 - type: entity
-  parent: HighSecDoor
-  id: HighSecArmoryLocked
-  suffix: Armory, Locked
+  parent: AirlockGlassShuttleMining
+  id: AirlockMercenaryGlassShuttleMiningLocked
+  suffix: Mercenary, Glass, Docking, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsArmory ]
+      board: [ DoorElectronicsMercenary ]
 
-- type: entity
-  parent: HighSecDoor
-  id: HighSecEngineeringLocked
-  suffix: Engineering, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsEngineering ]
-
-#Airtight hatch
-
-- type: entity
-  parent: AirlockHatch
-  id: AirlockHatchSyndicate
-  suffix: Syndicate, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicateAgent ]

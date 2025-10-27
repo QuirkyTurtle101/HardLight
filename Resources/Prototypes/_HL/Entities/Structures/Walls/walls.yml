@@ -74,10 +74,10 @@
   parent: BaseStructure
   name: mountain rock
   suffix: Un-mineable
-  description: A craggy mountain wall. It is too hard to mine.
+  description: A dense basalt wall. It is too hard to mine.
   components:
   - type: Sprite
-    sprite: _HL/Structures/Walls/mountain_rock.rsi
+    sprite: _HL/Structures/Walls/mountain_rock_ore.rsi
     state: full
   - type: Damageable
     damageContainer: Inorganic
