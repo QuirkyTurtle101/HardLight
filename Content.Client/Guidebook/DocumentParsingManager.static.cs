@@ -60,7 +60,7 @@ public sealed partial class DocumentParsingManager
     private static readonly Parser<char, Unit> TryStartParagraph =
         Try(SkipNewline.Then(SkipNewline)).Then(SkipWhitespaces);
 
-    // Added Try to make sure we don't grab <!-- comments
+    // Added Try to make sure we don't miss <!-- comments
     private static readonly Parser<char, Unit> TryLookTextEnd =
         Lookahead(OneOf(TryStartTag, TryStartList, TryStartParagraph, Try(Whitespace.SkipUntil(End)), Try(String("<!--").Then(Return(Unit.Value)))));
 
