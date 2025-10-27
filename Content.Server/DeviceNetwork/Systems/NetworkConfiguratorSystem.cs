@@ -633,12 +633,11 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
         }
     }
 
-    public void OnDeviceListShutdown(EntityUid confUid, Entity<DeviceListComponent> list)
+    public void OnDeviceListShutdown(Entity<NetworkConfiguratorComponent?> conf, Entity<DeviceListComponent> list)
     {
-        // Avoid noisy resolve logs by manually checking components.
-        list.Comp.Configurators.Remove(confUid);
-        if (TryComp(confUid, out NetworkConfiguratorComponent? confComp))
-            confComp.ActiveDeviceList = null;
+        list.Comp.Configurators.Remove(conf.Owner);
+        if (Resolve(conf.Owner, ref conf.Comp))
+            conf.Comp.ActiveDeviceList = null;
     }
 
     /// <summary>
@@ -866,20 +865,19 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
                     .Select(v => (v.Key, MetaData(v.Value).EntityName)).ToHashSet()));
     }
 
-    public void OnDeviceShutdown(EntityUid confUid, Entity<DeviceNetworkComponent> device)
+    public void OnDeviceShutdown(Entity<NetworkConfiguratorComponent?> conf, Entity<DeviceNetworkComponent> device)
     {
-        // The configurator entity may already be gone or missing the component. Handle gracefully.
-        device.Comp.Configurators.Remove(confUid);
-        if (!TryComp(confUid, out NetworkConfiguratorComponent? confComp))
+        device.Comp.Configurators.Remove(conf.Owner);
+        if (!Resolve(conf.Owner, ref conf.Comp))
             return;
 
-        foreach (var (addr, dev) in confComp.Devices)
+        foreach (var (addr, dev) in conf.Comp.Devices)
         {
             if (device.Owner == dev)
-                confComp.Devices.Remove(addr);
+                conf.Comp.Devices.Remove(addr);
         }
 
-        UpdateListUiState(confUid, confComp);
+        UpdateListUiState(conf, conf.Comp);
     }
 
     private void OnUiOpenAttempt(EntityUid uid, NetworkConfiguratorComponent configurator, ActivatableUIOpenAttemptEvent args)

@@ -35,7 +35,7 @@
     damageModifierSet: Wood
   - type: Kudzu
     growthTickChance: 0.1
-    spreadChance: 0.4
+    spreadChance: 0.2
     # Heals each time it manages to do a growth tick:
     damageRecovery:
       types:
@@ -230,6 +230,16 @@
     drawdepth: FloorTiles
     layers:
     - state: hive_weed0
+  - type: Kudzu
+    growthTickChance: 0.1
+    spreadChance: 0.4
+    # Heals each time it manages to do a growth tick:
+    damageRecovery:
+      types:
+        Slash: -0.8
+        Heat: -2.0
+        Cold: -2.0
+        Blunt: -0.8 # Needs to be balanced (approx 3x) with vacuum damage to stall but not kill Kudzu
   - type: IconSmooth
     key: cm_xeno_weeds
     base: hive_weed
