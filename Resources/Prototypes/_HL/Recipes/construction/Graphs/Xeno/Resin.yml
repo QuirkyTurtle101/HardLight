@@ -86,7 +86,16 @@
       - material: RoyalResin
         amount: 5
         doAfter: 3
-
+    
+    - to: XenoTurret
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: RoyalResin
+        amount: 6
+        doAfter: 3
+        
     - to: XenoHiveWeeds
       completed:
       - !type:SnapToGrid
@@ -128,6 +137,9 @@
 
   - node: XenoHiveWeeds
     entity: XenoHiveWeeds
+  
+  - node: XenoTurret
+    entity: WeaponTurretXeno
     
   # Deconstruction is down here
   # - node: nest

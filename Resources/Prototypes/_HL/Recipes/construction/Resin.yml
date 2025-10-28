@@ -158,6 +158,21 @@
   conditions:
     - !type:TileNotBlocked 
 
+- type: construction
+  id: XenoTurret
+  graph: ResinStructures
+  startNode: start
+  targetNode: XenoTurret
+  category: construction-category-Xeno
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  entityWhitelist:
+    tags:
+    - ResinStructures
+  conditions:
+    - !type:TileNotBlocked 
 
 
 

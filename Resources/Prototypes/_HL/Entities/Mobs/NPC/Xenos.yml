@@ -363,6 +363,9 @@
     - ActionXenoRest
     - ActionXenoAcid
     - ActionXenoLayEgg
+    evolveIn: 120
+    evolvesTo:
+      - MobXenoWarrior
     restHealing:
       types:
         Blunt: -0.5
@@ -390,7 +393,7 @@
     action: ActionSericulture
     productionLength: 2
     entityProduced: MaterialRoyalResin1
-    hungerCost: 1
+    hungerCost: 0.3
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -521,6 +524,9 @@
     actionIds:
     - ActionXenoRest
     - ActionXenoAcid
+    evolveIn: 120
+      evolvesTo:
+      - MobXenoAcidRunnerPrimed
     restHealing:
       types:
         Blunt: -0.5
@@ -748,6 +754,9 @@
       actionIds:
       - ActionXenoRest
       - ActionXenoAcid
+      evolveIn: 120
+      evolvesTo:
+      - MobXenoBoiler
       restHealing:
         types:
           Blunt: -0.5
@@ -845,6 +854,9 @@
       actionIds:
       - ActionXenoRest
       - ActionXenoAcid
+      evolveIn: 120
+      evolvesTo:
+      - MobXenoBoxerWarrior
       restHealing:
         types:
           Blunt: -0.8
@@ -878,7 +890,24 @@
         types:
           Blunt: 10
           Piercing: 3
-
+    - type: Xeno
+      actionIds:
+      - ActionXenoRest
+      - ActionXenoAcid
+      - ActionXenoEvolve
+      evolveIn: 120
+      evolvesTo:
+      - MobXenoRounyNPC
+      restHealing:
+        types:
+          Blunt: -0.5
+          Slash: -0.3
+          Piercing: -0.3
+          Heat: -0.05
+          Shock: -0.05
+      restHealingCritMultiplier: 2.0
+      
+      
 - type: entity
   name: Carrier
   id: MobXenoCarrier
@@ -1085,10 +1114,18 @@
     - type: MovementSpeedModifier
       baseWalkSpeed : 3.5
       baseSprintSpeed : 3.5
+    - type: Sericulture
+    action: ActionSericulture
+    productionLength: 2
+    entityProduced: MaterialRoyalResin1
+    hungerCost: 0.1
     - type: Xeno
       actionIds:
       - ActionXenoRest
       - ActionXenoAcid
+      evolveIn: 120
+      evolvesTo:
+      - MobXenoCarrier
       restHealing:
         types:
           Blunt: -0.5
@@ -1765,4 +1802,23 @@
         - MobXenoNeutralPraetorian
         - MobXenoNeutralDrone
         - MobXenoNeutralRavager
+      chance: 1
+      
+- type: entity
+  name: Egg spawner
+  id: XenoEggSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - sprite: Mobs/Aliens/Xenos/drone.rsi
+          state: sleeping
+    - type: RandomSpawner
+      prototypes:
+        - MobXenoSpeedyLarva
+        - MobXenoSneakyLarva
+        - MobXenoMaleLarva
+        - MobXenoFemaleLarva
+        - MobXenoBeefyLarva
       chance: 1
