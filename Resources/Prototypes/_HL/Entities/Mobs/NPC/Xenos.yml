@@ -41,7 +41,7 @@
   - type: Sericulture
     action: ActionSericulture
     productionLength: 2
-    entityProduced: Resin
+    entityProduced: MaterialResin
     hungerCost: 0
   - type: Xeno
     actionIds:
@@ -389,7 +389,7 @@
   - type: Sericulture
     action: ActionSericulture
     productionLength: 2
-    entityProduced: RoyalResin
+    entityProduced: MaterialRoyalResin
     hungerCost: 0
   - type: Tag
     tags:

@@ -95,7 +95,40 @@
       - material: RoyalResin
         amount: 2
         doAfter: 1
-        
+    
+
+    #Nodes
+    
+  - node: XenoWeeds
+    entity: XenoWeeds
+
+  - node: WallXenoResin
+    entity: WallXenoResin
+
+  - node: WallXenoMembrane
+    entity: WallXenoMembrane
+
+  - node: DoorXenoResin
+    entity: DoorXenoResin
+
+  - node: XenoNest
+    entity: XenoNest
+
+  - node: XenoWeedsWall
+    entity: XenoWeedsWall
+
+  - node: WallXenoResinThick
+    entity: WallXenoResinThick
+
+  - node: WallXenoMembraneThick
+    entity: WallXenoMembraneThick
+
+  - node: DoorXenoResinThick
+    entity: DoorXenoResinThick
+
+  - node: XenoHiveWeeds
+    entity: XenoHiveWeeds
+    
   # Deconstruction is down here
   # - node: nest
     # entity: WebNest
