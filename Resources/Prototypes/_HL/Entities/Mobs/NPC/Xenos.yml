@@ -1115,10 +1115,10 @@
       baseWalkSpeed : 3.5
       baseSprintSpeed : 3.5
     - type: Sericulture
-    action: ActionSericulture
-    productionLength: 2
-    entityProduced: MaterialRoyalResin1
-    hungerCost: 0.1
+      action: ActionSericulture
+      productionLength: 2
+      entityProduced: MaterialRoyalResin1
+      hungerCost: 0.1
     - type: Xeno
       actionIds:
       - ActionXenoRest
