@@ -9,11 +9,11 @@
         "name": "icon"
     },
     {
-        "name": "Resin-inhand-left",
+        "name": "resin-inhand-left",
         "directions": 4
     },
     {
-        "name": "Resin-inhand-right",
+        "name": "resin-inhand-right",
         "directions": 4
     }
   ]
