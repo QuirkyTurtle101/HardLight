@@ -26,6 +26,9 @@
 
 - type: Tag
   id: NFSpeedLoaderPistol45
+  
+- type: Tag
+  id: ResinStructures
 
 - type: Tag
   id: NFMagazineRifle20
