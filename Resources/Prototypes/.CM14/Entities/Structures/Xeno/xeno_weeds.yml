@@ -121,6 +121,9 @@
 #      collection: FootstepWater
 #      params:
 #        volume: 8
+  - type: Construction
+    graph: ResinStructures
+    node: XenoWeeds
 
 - type: entity # TODO CM14 description and sound
   id: XenoWeedsEntity
@@ -282,6 +285,9 @@
         hive_weed14: ""
     - 0:
         hive_weed15: ""
+  - type: Construction
+    graph: ResinStructures
+    node: XenoHiveWeeds
 
 - type: entity # TODO CM14 sound
   parent: XenoHiveWeeds

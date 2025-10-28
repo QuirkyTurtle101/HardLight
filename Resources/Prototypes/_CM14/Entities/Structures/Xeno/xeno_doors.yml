@@ -87,6 +87,9 @@
   # - type: XenoConstruct
     # destroyWeeds: false
   # - type: ResinDoor
+  - type: Construction
+    graph: ResinStructures
+    node: DoorXenoResin
 
 - type: entity
   parent: DoorXenoResin
@@ -134,3 +137,6 @@
     # plasma: 145
   # - type: XenoStructureUpgradeable
     # to: null
+  - type: Construction
+    graph: ResinStructures
+    node: DoorXenoResinThick
