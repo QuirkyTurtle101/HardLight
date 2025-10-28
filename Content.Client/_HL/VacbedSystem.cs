@@ -1,3 +1,4 @@
+using Content.Client.Medical.Cryogenics;
 using Content.Shared._HL.Vacbed;
 using Content.Shared.Medical.Cryogenics;
 using Content.Shared.Verbs;
@@ -31,15 +32,18 @@ public sealed class VacbedSystem : SharedVacbedSystem
             return;
         }
 
-        if (isFull)
+        args.Sprite.LayerSetState(VacbedVisualLayers.Base, "atmos");
+        args.Sprite.LayerSetState(VacbedVisualLayers.Door, "atmos_door");
+
+        if (!isFull)
         {
-            args.Sprite.LayerSetState(VacbedVisualLayers.Base, "atmos");
-            args.Sprite.LayerSetState(VacbedVisualLayers.Door, "atmos_door");
             args.Sprite.LayerSetVisible(VacbedVisualLayers.Door, true);
+            args.Sprite.DrawDepth = (int)DrawDepth.Mobs;
         }
         else
         {
             args.Sprite.LayerSetVisible(VacbedVisualLayers.Door, false);
+            args.Sprite.DrawDepth = (int)DrawDepth.Objects;
         }
     }
 }

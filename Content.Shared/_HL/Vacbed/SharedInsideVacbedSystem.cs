@@ -1,3 +1,6 @@
+using Content.Shared.Eye.Blinding.Components;
+using Content.Shared.Eye.Blinding.Systems;
+using Content.Shared.Inventory;
 using Content.Shared.Standing;
 using Robust.Shared.Containers;
 
@@ -5,15 +8,29 @@ namespace Content.Shared._HL.Vacbed;
 
 public abstract partial class SharedVacbedSystem
 {
-    public virtual void InitializeInsideCryopod()
+    [Dependency] private readonly BlindableSystem _blindableSystem = default!;
+
+    public virtual void InitializeInsideVacbed()
     {
         SubscribeLocalEvent<InsideVacbedComponent, DownAttemptEvent>(HandleDown);
         SubscribeLocalEvent<InsideVacbedComponent, EntGotRemovedFromContainerMessage>(OnEntGotRemovedFromContainer);
+        SubscribeLocalEvent<InsideVacbedComponent, ComponentInit>(InsideVacbedInit);
+        SubscribeLocalEvent<InsideVacbedComponent, CanSeeAttemptEvent>(OnVacbedTrySee);
     }
 
     private void HandleDown(EntityUid uid, InsideVacbedComponent component, DownAttemptEvent args)
     {
         args.Cancel(); //keeps person inside standing
+    }
+
+    private void InsideVacbedInit(EntityUid uid, InsideVacbedComponent insideVacbedComponent, ComponentInit args)
+    {
+        _blindableSystem.UpdateIsBlind(insideVacbedComponent.Owner);
+    }
+
+    private void OnVacbedTrySee(EntityUid uid, InsideVacbedComponent insideVacbedComponent, CanSeeAttemptEvent args)
+    {
+        args.Cancel();
     }
 
     private void OnEntGotRemovedFromContainer(EntityUid uid, InsideVacbedComponent component, EntGotRemovedFromContainerMessage args)
@@ -24,5 +41,7 @@ public abstract partial class SharedVacbedSystem
         }
 
         RemComp<InsideVacbedComponent>(uid);
+        _blindableSystem.UpdateIsBlind(component.Owner);
     }
+
 }

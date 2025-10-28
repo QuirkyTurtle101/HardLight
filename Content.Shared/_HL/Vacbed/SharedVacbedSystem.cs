@@ -11,6 +11,7 @@ using Content.Shared.Stunnable;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
 using Robust.Shared.Serialization;
+using Content.Shared.Eye.Blinding.Components;
 
 namespace Content.Shared._HL.Vacbed;
 
@@ -27,6 +28,7 @@ public abstract partial class SharedVacbedSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<VacbedComponent, CanDropTargetEvent>(OnVacbedCanDropOn);
+        InitializeInsideVacbed();
     }
 
     private void OnVacbedCanDropOn(EntityUid uid, VacbedComponent component, ref CanDropTargetEvent args)
