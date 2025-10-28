@@ -32,3 +32,6 @@
     blacklist:
       components:
       - StorageFill
+      - PresetIdCard
+      - IdCard
+      - Access
