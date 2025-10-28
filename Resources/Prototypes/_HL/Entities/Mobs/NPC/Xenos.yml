@@ -41,8 +41,8 @@
   - type: Sericulture
     action: ActionSericulture
     productionLength: 2
-    entityProduced: MaterialResin
-    hungerCost: 0
+    entityProduced: MaterialResin1
+    hungerCost: 0.1
   - type: Xeno
     actionIds:
     - ActionXenoRest
@@ -389,8 +389,8 @@
   - type: Sericulture
     action: ActionSericulture
     productionLength: 2
-    entityProduced: MaterialRoyalResin
-    hungerCost: 0
+    entityProduced: MaterialRoyalResin1
+    hungerCost: 1
   - type: Tag
     tags:
     - DoorBumpOpener
