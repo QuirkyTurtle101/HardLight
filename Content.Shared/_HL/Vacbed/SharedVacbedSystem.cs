@@ -113,7 +113,7 @@ public abstract partial class SharedVacbedSystem : EntitySystem
 
     protected void AddAlternativeVerbs(EntityUid uid, VacbedComponent vacbedComponent, GetVerbsEvent<AlternativeVerb> args)
     {
-        if (!args.CanAccess || !args.CanInteract)
+        if (!args.CanAccess || !args.CanInteract || args.User == vacbedComponent.BodyContainer.ContainedEntity)
             return;
 
         if(vacbedComponent.BodyContainer.ContainedEntity != null)

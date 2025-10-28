@@ -23,7 +23,8 @@ public abstract partial class SharedVacbedSystem
         args.Cancel(); //keeps person inside standing
     }
 
-    private void InsideVacbedInit(EntityUid uid, InsideVacbedComponent insideVacbedComponent, ComponentInit args)
+    //should be private but has to be public so i can override it in server system
+    public virtual void InsideVacbedInit(EntityUid uid, InsideVacbedComponent insideVacbedComponent, ComponentInit args)
     {
         _blindableSystem.UpdateIsBlind(insideVacbedComponent.Owner);
     }
@@ -33,7 +34,8 @@ public abstract partial class SharedVacbedSystem
         args.Cancel();
     }
 
-    private void OnEntGotRemovedFromContainer(EntityUid uid, InsideVacbedComponent component, EntGotRemovedFromContainerMessage args)
+    //should be private but has to be public so i can override it in server system
+    public virtual void OnEntGotRemovedFromContainer(EntityUid uid, InsideVacbedComponent component, EntGotRemovedFromContainerMessage args)
     {
         if (Terminating(uid))
         {

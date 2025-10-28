@@ -2,7 +2,7 @@
   name: vacbed
   id: Vacbed
   parent: BaseStructure
-  description: placeholder description
+  description: Smells like latex and admemes.
   components:
   - type: Sprite
     sprite: Structures/Storage/closet.rsi
@@ -25,3 +25,16 @@
         !type:ContainerSlot
         showEnts: true
   - type: Vacbed
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Inflatable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:EmptyAllContainersBehaviour
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
