@@ -525,8 +525,8 @@
     - ActionXenoRest
     - ActionXenoAcid
     evolveIn: 120
-      evolvesTo:
-      - MobXenoAcidRunnerPrimed
+    evolvesTo:
+    - MobXenoAcidRunnerPrimed
     restHealing:
       types:
         Blunt: -0.5
