@@ -336,32 +336,26 @@
       event: !type:ToggleActionEvent
 
 - type: entity
-  parent: BaseAction
   id: FakeMindShieldToggleAction
   name: '[color=green]Toggle Fake Mindshield[/color]'
   description: Turn the Fake Mindshield implant's transmission on/off
   components:
-  - type: Action
+  - type: InstantAction
     icon: { sprite: Interface/Actions/actions_fakemindshield.rsi, state: icon }
     iconOn: { sprite: Interface/Actions/actions_fakemindshield.rsi, state: icon-on }
     itemIconStyle: NoItem
     useDelay: 1
-    raiseOnUser: true
-  - type: InstantAction
     event: !type:FakeMindShieldToggleEvent
-  - type: Tag
-    tags:
-    - FakeMindShieldImplant
 
 - type: entity
-  parent: BaseToggleAction
   id: ActionToggleParamedicSiren
   name: Toggle Paramedic Siren
   description: Toggles the paramedic siren on and off.
   components:
-  - type: Action
+  - type: InstantAction
     icon:
       sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
       state: icon-siren
     useDelay: 1
     itemIconStyle: BigAction
+    event: !type:ToggleActionEvent
