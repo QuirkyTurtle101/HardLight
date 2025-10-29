@@ -23,7 +23,7 @@
   - ShipyardChisel
   - ShipyardComet
   - ShipyardConstruct
-  - ShipyardCopperhead
+  # - ShipyardCopperhead
   - ShipyardCourier
   - ShipyardCrossroads
   - ShipyardDruid
@@ -160,10 +160,10 @@
   name: guide-entry-shipyard-construct
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Construct.xml"
 
-- type: guideEntry
-  id: ShipyardCopperhead
-  name: guide-entry-shipyard-copperhead
-  text: "/ServerInfo/_NF/Guidebook/Shipyard/Copperhead.xml"
+# - type: guideEntry
+#   id: ShipyardCopperhead
+#   name: guide-entry-shipyard-copperhead
+#   text: "/ServerInfo/_NF/Guidebook/Shipyard/Copperhead.xml"
 
 - type: guideEntry
   id: ShipyardCourier
