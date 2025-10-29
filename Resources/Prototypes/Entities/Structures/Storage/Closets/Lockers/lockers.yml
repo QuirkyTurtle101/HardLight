@@ -16,8 +16,6 @@
       path: /Audio/Effects/woodenclosetclose.ogg
     openSound:
       path: /Audio/Effects/woodenclosetopen.ogg
-  - type: Paintable
-    group: null # not shaped like other lockers
 
 # Basic
 - type: entity
@@ -169,20 +167,6 @@
   - type: AccessReader
 #    access: [ [ "Engineering" ] ] # Frontier
 
-# Evac Repair
-- type: entity
-  parent: LockerBase
-  id: LockerEvacRepair
-  name: evac repair locker
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_evac_door
-  - type: AccessReader
-    access: [ [ "Engineering" ] ]
-
 # Freezer
 - type: entity
   id: LockerFreezerBase
@@ -203,8 +187,6 @@
     node: done
     containers:
     - entity_storage
-  - type: Paintable
-    group: null
 
 - type: entity
   id: LockerFreezer

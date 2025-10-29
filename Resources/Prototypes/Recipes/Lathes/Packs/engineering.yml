@@ -12,7 +12,6 @@
   # - NetworkConfigurator # Frontier: downgrade vs. multitool
   - Signaller
   - SprayPainter
-  - SprayPainterAmmo
   - FlashlightLantern
   # - HandheldGPSBasic # Frontier: little value
   - TRayScanner
