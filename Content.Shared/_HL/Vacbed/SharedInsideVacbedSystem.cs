@@ -1,6 +1,4 @@
-using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Eye.Blinding.Systems;
-using Content.Shared.Inventory;
 using Content.Shared.Standing;
 using Robust.Shared.Containers;
 

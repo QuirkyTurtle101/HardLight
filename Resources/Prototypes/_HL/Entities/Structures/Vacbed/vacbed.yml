@@ -15,7 +15,17 @@
       visible: false
   - type: Appearance
   - type: Physics
-    bodyType: static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        density: 75
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: Transform
     noRot: true
   - type: Anchorable
@@ -23,7 +33,13 @@
     containers:
       insidebody:
         !type:ContainerSlot
-        showEnts: true
+        showEnts: false
+  - type: SolutionContainerManager
+    solutions:
+      test:
+        maxVol: 200
+  - type: DrainableSolution
+    solution: test
   - type: Vacbed
   - type: Damageable
     damageContainer: Inorganic
