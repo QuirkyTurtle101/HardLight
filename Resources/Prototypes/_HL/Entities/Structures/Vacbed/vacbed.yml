@@ -5,14 +5,12 @@
   description: Smells like latex and admemes.
   components:
   - type: Sprite
-    sprite: Structures/Storage/closet.rsi
+    sprite: _HL/Structures/vacbed.rsi
     noRot: true
+    offset: 0, 0.09375
     layers:
-    - state: generic
+    - state: vacbed
       map: ["enum.VacbedVisualLayers.Base"]
-    - state: generic_door
-      map: ["enum.VacbedVisualLayers.Door"]
-      visible: false
   - type: Appearance
   - type: Physics
   - type: Fixtures

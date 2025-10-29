@@ -10,6 +10,7 @@ public sealed partial class VacbedComponent : Component
 {
     public ContainerSlot BodyContainer = default!;
 
+    //the vacbed can't actually be locked atm but this is here for future proofing
     [ViewVariables]
     [DataField]
     public bool Locked { get; set; }

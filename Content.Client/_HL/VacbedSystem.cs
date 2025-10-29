@@ -27,29 +27,25 @@ public sealed class VacbedSystem : SharedVacbedSystem
 
         if (args.Sprite == null) { return; }
 
-        if (!_appearance.TryGetData<bool>(uid, VacbedComponent.VacbedVisuals.ContainsEntity, out var isFull, args.Component))
+        if (!_appearance.TryGetData<bool>(uid, VacbedComponent.VacbedVisuals.ContainsEntity, out var isEmpty, args.Component))
         {
             return;
         }
 
-        args.Sprite.LayerSetState(VacbedVisualLayers.Base, "atmos");
-        args.Sprite.LayerSetState(VacbedVisualLayers.Door, "atmos_door");
-
-        if (!isFull)
+        if (isEmpty)
         {
-            args.Sprite.LayerSetVisible(VacbedVisualLayers.Door, true);
-            args.Sprite.DrawDepth = (int)DrawDepth.Mobs;
+            args.Sprite.LayerSetState(VacbedVisualLayers.Base, "vacbed");
         }
         else
         {
-            args.Sprite.LayerSetVisible(VacbedVisualLayers.Door, false);
-            args.Sprite.DrawDepth = (int)DrawDepth.Objects;
+            args.Sprite.LayerSetState(VacbedVisualLayers.Base, "vacbed_filled");
         }
     }
 }
 
+//i'm genuinely too lazy to check if there's an easier way to handle visuals than this
+//it shouldn't need a layer to work but SpriteComponent seems to assume it exists so here we are
 public enum VacbedVisualLayers : byte
 {
     Base,
-    Door,
 }
