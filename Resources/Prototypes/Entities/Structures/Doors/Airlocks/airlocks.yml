@@ -325,7 +325,7 @@
   suffix: Xeno
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/xeno.rsi
+    sprite: _RMC14/Structures/Xenos/xeno_resin_door.rsi
   - type: Paintable
     group: null
 
