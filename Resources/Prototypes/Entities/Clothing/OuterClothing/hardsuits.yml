@@ -622,7 +622,7 @@
         whitelist:
           tags:
             - PowerCell
-            - PowerCellHigh
+            # - PowerCellHigh
   - type: EnergyDomeGenerator
     damageEnergyDraw: 6
     domePrototype: EnergyDomeSmallBlue
@@ -947,7 +947,7 @@
         whitelist:
           tags:
             - PowerCell
-            - PowerCellHigh
+            # - PowerCellHigh
   - type: EnergyDomeGenerator
     damageEnergyDraw: 6
     domePrototype: EnergyDomeSmallBlue
@@ -988,7 +988,7 @@
         whitelist:
           tags:
             - PowerCell
-            - PowerCellHigh
+            # - PowerCellHigh
   - type: EnergyDomeGenerator
     damageEnergyDraw: 6
     domePrototype: EnergyDomeSmallBlue
@@ -1025,7 +1025,7 @@
         whitelist:
           tags:
             - PowerCell
-            - PowerCellHigh
+            # - PowerCellHigh
   - type: EnergyDomeGenerator
     damageEnergyDraw: 6
     domePrototype: EnergyDomeSmallBlue

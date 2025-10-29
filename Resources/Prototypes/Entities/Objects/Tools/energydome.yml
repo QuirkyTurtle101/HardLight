@@ -27,7 +27,7 @@
         whitelist:
           tags:
             - PowerCell
-            - PowerCellHigh
+            # - PowerCellHigh
   - type: EnergyDomeGenerator
     damageEnergyDraw: 7
     domePrototype: EnergyDomeSmallRed
@@ -78,7 +78,7 @@
         whitelist:
           tags:
             - PowerCell
-            - PowerCellSmall
+            # - PowerCellSmall
   - type: EnergyDomeGenerator
     damageEnergyDraw: 7
     domePrototype: EnergyDomeMediumBlue
