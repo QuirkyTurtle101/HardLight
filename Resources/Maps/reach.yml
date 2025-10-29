@@ -13970,7 +13970,7 @@ entities:
     - type: Transform
       pos: 21.5,-2.5
       parent: 2
-- proto: LockerChemistryFilled
+- proto: HLLockerChemistryFilled
   entities:
   - uid: 1648
     components:
@@ -14010,7 +14010,7 @@ entities:
     - type: Transform
       pos: 24.5,-0.5
       parent: 2
-- proto: LockerHeadOfSecurityFilledHardsuit
+- proto: HLLockerHeadOfSecurityFilledHardsuit
   entities:
   - uid: 1653
     components:

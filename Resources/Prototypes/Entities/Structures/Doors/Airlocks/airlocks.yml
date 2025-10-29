@@ -131,9 +131,9 @@
     sprite: Structures/Doors/Airlocks/Standard/syndicate.rsi
 
 - type: entity
-  parent: AirlockCargo
+  parent: Airlock  # Reparented from AirlockCargo to use as the parent for Eidolon Doors
   id: AirlockMining
-  suffix: Mining(Salvage)
+  suffix: Mining
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/mining.rsi
@@ -294,9 +294,9 @@
     sprite: Structures/Doors/Airlocks/Glass/syndicate.rsi
 
 - type: entity
-  parent: AirlockCargoGlass
+  parent: AirlockGlass # Reparented from AirlockCargoGlass to serve as parent for Eidolon doors
   id: AirlockMiningGlass
-  suffix: Mining(Salvage)
+  suffix: Mining
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/mining.rsi
