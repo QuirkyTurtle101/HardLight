@@ -166,7 +166,7 @@
 
 #Goliath Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseC1Contraband] # Frontier: BaseCargoContraband<BaseC1Contraband
+  parent: [ClothingOuterHardsuitBase, BaseC3ExpeditionContraband] # Frontier: BaseCargoContraband<BaseC1Contraband
   id: ClothingOuterHardsuitGoliath
   name: goliath hardsuit
   description: A lightweight hardsuit, adorned with a patchwork of thick, chitinous goliath hide.
@@ -201,7 +201,7 @@
 
 #Maxim Hardsuit
 - type: entity
-  parent: ClothingOuterHardsuitBase # Removed BaseCargoContraband
+  parent: [ClothingOuterHardsuitBase, BaseC3ExpeditionContraband] # Removed BaseCargoContraband
   id: ClothingOuterHardsuitMaxim
   name: salvager maxim hardsuit
   description: Fire. Heat. These things forge great weapons, they also forge great salvagers.
@@ -257,7 +257,7 @@
 
 #Security Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable] # Removed BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingOuterHardsuitBase, BaseC3ExpeditionContraband] # Removed BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: ClothingOuterHardsuitSecurity
   name: security hardsuit
   description: A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor.
@@ -288,7 +288,7 @@
 
 #Brigmedic Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable] # Removed BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingOuterHardsuitBase, BaseC3ExpeditionContraband] # Removed BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: ClothingOuterHardsuitBrigmedic
   name: brigmedic hardsuit
   description: Special hardsuit of the guardian angel of the brig. It is the medical version of the security hardsuit.
@@ -315,7 +315,7 @@
 
 #Warden's Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable] # BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingOuterHardsuitBase, BaseC3ExpeditionContraband] # BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: ClothingOuterHardsuitWarden
   name: warden's hardsuit
   description: A specialized riot suit geared to combat low pressure environments.
@@ -486,7 +486,7 @@
 
 #Head of Security's Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable] # BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingOuterHardsuitBase, BaseC3ExpeditionContraband] # BaseCommandContraband<BaseC2ContrabandUnredeemable
   id: ClothingOuterHardsuitSecurityRed
   name: head of security's hardsuit
   description: A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor.
