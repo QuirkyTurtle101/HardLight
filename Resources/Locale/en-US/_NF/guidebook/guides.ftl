@@ -64,7 +64,6 @@ guide-entry-shipyard-chisel = Chisel
 guide-entry-shipyard-comet = Comet
 guide-entry-shipyard-courier = Courier
 guide-entry-shipyard-construct = Construct
-guide-entry-shipyard-copperhead = Copperhead
 guide-entry-shipyard-crossroads = Crossroads
 guide-entry-shipyard-druid = Druid
 guide-entry-shipyard-eagle = Eagle

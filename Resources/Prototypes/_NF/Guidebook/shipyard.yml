@@ -280,7 +280,6 @@
   name: guide-entry-shipyard-nightlight
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Nightlight.xml"
 
-
 - type: guideEntry
   id: ShipyardNook
   name: guide-entry-shipyard-nook
