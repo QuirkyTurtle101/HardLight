@@ -34,7 +34,7 @@
 
 - type: entity
   id: EnergyDomeSmallPink
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   parent: EnergyDomeBase
   components:
   - type: Sprite
