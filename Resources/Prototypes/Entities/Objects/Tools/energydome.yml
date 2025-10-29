@@ -29,7 +29,7 @@
             - PowerCell
             - PowerCellHigh
   - type: EnergyDomeGenerator
-    damageEnergyDraw: 5
+    damageEnergyDraw: 7
     domePrototype: EnergyDomeSmallRed
   - type: PowerCellDraw
     drawRate: 10
