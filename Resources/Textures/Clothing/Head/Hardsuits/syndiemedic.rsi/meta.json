@@ -8,10 +8,10 @@
   },
   "states": [
     {
-  "copyright": "Taken from ex666 https://github.com/ss220-space/Paradise/blob/master220/icons/mob/clothing/suit.dmi"
+      "name": "icon-flash"
     },
     {
-      "name": "icon-flash"
+      "name": "icon"
     },
     {
       "name": "off-equipped-HELMET",
