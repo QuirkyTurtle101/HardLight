@@ -8,11 +8,11 @@
   },
   "states": [
     {
-      "name": "chestplate_protogen_female",
+      "name": "chestplate_female_protogen",
       "directions": 4
     },
     {
-      "name": "chestplate_protogen_male",
+      "name": "chestplate_male_protogen",
       "directions": 4
     }
   ]
